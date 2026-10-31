@@ -171,7 +171,7 @@
     "UUP": 0.0,
     "DBC": 24.8,
     "GLD": 0.0,
-    "TLT": 75.1,
+    "TLT": 75.2,
     "BIL": 0.0,
     "equity_breadth": 0.0,
     "credit_breadth": 66.7,
@@ -1157,7 +1157,7 @@
   {
     "date": "2009-12-18",
     "regime": "EQUITY EXPANSION",
-    "QQQ": 145.9,
+    "QQQ": 145.8,
     "UUP": 0.0,
     "DBC": 0.0,
     "GLD": 0.0,
@@ -4037,7 +4037,7 @@
   {
     "date": "2013-10-11",
     "regime": "EQUITY EXPANSION",
-    "QQQ": 139.3,
+    "QQQ": 139.2,
     "UUP": 0.0,
     "DBC": 0.0,
     "GLD": 0.0,
@@ -6362,7 +6362,7 @@
   {
     "date": "2016-11-18",
     "regime": "EQUITY EXPANSION",
-    "QQQ": 130.4,
+    "QQQ": 130.3,
     "UUP": 0.0,
     "DBC": 0.0,
     "GLD": 0.0,
@@ -9512,7 +9512,7 @@
   {
     "date": "2021-01-15",
     "regime": "EQUITY EXPANSION",
-    "QQQ": 130.6,
+    "QQQ": 130.7,
     "UUP": 0.0,
     "DBC": 0.0,
     "GLD": 0.0,
@@ -10082,7 +10082,7 @@
   {
     "date": "2021-10-15",
     "regime": "EQUITY EXPANSION",
-    "QQQ": 103.7,
+    "QQQ": 103.8,
     "UUP": 0.0,
     "DBC": 0.0,
     "GLD": 0.0,
