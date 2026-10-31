@@ -976,6 +976,42 @@ table.flow-table tr:hover { background: var(--bg-hover); }
     }
   });
 
+  // Dynamic Live Hydration from signals_latest.json
+  fetch('./signals_latest.json')
+    .then(res => res.json())
+    .then(data => {
+      if (!data || !data.full_metrics) return;
+      console.log('Hydrating live quant signals from signals_latest.json, Date:', data.as_of_date);
+      
+      const badge = document.querySelector('.badge-live');
+      if (badge) badge.innerHTML = `<i class="dot-pulse"></i> LIVE SYNCED · DATA AS-OF ${data.as_of_date}`;
+
+      nodes.forEach(node => {
+        const m = data.full_metrics[node.id];
+        if (m) {
+          node.price = m.Price;
+          node.r20 = m.Ret20d;
+          node.r60 = m.Ret60d;
+          node.r252 = m.Ret252d;
+          node.score = m.Score;
+          node.vol = m.Vol20d;
+          node.high40 = m.DistHigh40;
+          node.sma200 = m.DistSMA200;
+
+          if (node.id === 'BIL') {
+            node.status = 'cash';
+          } else if (node.score > data.cash_hurdle_bil_score) {
+            node.status = 'inflow';
+          } else {
+            node.status = 'outflow';
+          }
+        }
+      });
+    })
+    .catch(err => {
+      console.log('Static baseline active (CORS or local view)');
+    });
+
   let hoveredNode = null;
 
   function resize() {
