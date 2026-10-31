@@ -11,20 +11,20 @@
     "qqq_vol20d": 22.64,
     "qqq_exposure": 0.0,
     "target_weights": {
-      "EEM": 0.0,
-      "BIL": 0.0,
-      "VNQ": 0.0,
       "BND": 0.0,
-      "EFA": 0.0,
       "UUP": 0.7133,
-      "SPY": 0.0,
+      "EEM": 0.0,
       "QQQ": 0.0,
+      "VNQ": 0.0,
       "GLD": 0.0,
-      "IEF": 0.0,
-      "HYG": 0.0,
+      "EFA": 0.0,
       "DBC": 0.2867,
+      "IEF": 0.0,
       "TLT": 0.0,
-      "FXY": 0.0
+      "FXY": 0.0,
+      "HYG": 0.0,
+      "BIL": 0.0,
+      "SPY": 0.0
     },
     "execution_plan": [
       {
@@ -48,20 +48,20 @@
     "selected_core": "SPY",
     "core_exposure": 1.5,
     "target_weights": {
-      "EEM": 0.0,
-      "BIL": 0.0,
-      "VNQ": 0.0,
       "BND": 0.0,
-      "EFA": 0.0,
       "UUP": 0.0,
-      "SPY": 1.5,
+      "EEM": 0.0,
       "QQQ": 0.0,
+      "VNQ": 0.0,
       "GLD": 0.0,
-      "IEF": 0.0,
-      "HYG": 0.0,
+      "EFA": 0.0,
       "DBC": 0.0,
+      "IEF": 0.0,
       "TLT": 0.0,
-      "FXY": 0.0
+      "FXY": 0.0,
+      "HYG": 0.0,
+      "BIL": 0.0,
+      "SPY": 1.5
     }
   },
   "full_metrics": {

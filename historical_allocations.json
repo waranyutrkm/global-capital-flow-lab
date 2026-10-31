@@ -171,7 +171,7 @@
     "UUP": 0.0,
     "DBC": 24.8,
     "GLD": 0.0,
-    "TLT": 75.2,
+    "TLT": 75.1,
     "BIL": 0.0,
     "equity_breadth": 0.0,
     "credit_breadth": 66.7,
@@ -887,7 +887,7 @@
   {
     "date": "2009-08-14",
     "regime": "EQUITY EXPANSION",
-    "QQQ": 127.7,
+    "QQQ": 127.8,
     "UUP": 0.0,
     "DBC": 0.0,
     "GLD": 0.0,
@@ -1592,7 +1592,7 @@
   {
     "date": "2010-07-30",
     "regime": "EQUITY CAUTION",
-    "QQQ": 98.2,
+    "QQQ": 98.3,
     "UUP": 0.0,
     "DBC": 0.0,
     "GLD": 0.8,
@@ -4037,7 +4037,7 @@
   {
     "date": "2013-10-11",
     "regime": "EQUITY EXPANSION",
-    "QQQ": 139.2,
+    "QQQ": 139.3,
     "UUP": 0.0,
     "DBC": 0.0,
     "GLD": 0.0,
@@ -10082,7 +10082,7 @@
   {
     "date": "2021-10-15",
     "regime": "EQUITY EXPANSION",
-    "QQQ": 103.8,
+    "QQQ": 103.7,
     "UUP": 0.0,
     "DBC": 0.0,
     "GLD": 0.0,
