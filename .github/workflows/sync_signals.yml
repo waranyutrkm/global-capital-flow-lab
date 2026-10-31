@@ -1,6 +1,12 @@
 name: Global Capital Flow Sync & Deployment
 
 on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'signals_latest.json'
+      - 'allocation_orders.csv'
   schedule:
     # Runs at 21:30 UTC every Monday-Friday (after US market close)
     - cron: '30 21 * * 1-5'
