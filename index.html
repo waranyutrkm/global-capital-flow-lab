@@ -169,14 +169,26 @@ button { cursor: pointer; font: inherit; }
 .legend-item { display: flex; align-items: center; gap: 6px; }
 .legend-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
 
-/* Section Tabs */
-.tabs-nav { display: flex; gap: 10px; margin-bottom: 16px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px; }
-.tab-btn {
-  background: transparent; border: none; padding: 6px 14px; font-size: 13px; font-weight: 800; font-family: var(--font-mono);
-  color: var(--text-muted); border-radius: var(--radius-sm); transition: all .15s ease;
+/* Section Tabs Sticky Header */
+.tabs-nav {
+  display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 1px solid var(--border-subtle);
+  padding: 10px 0; position: sticky; top: 0; z-index: 1000;
+  background: rgba(14, 21, 37, 0.95); backdrop-filter: blur(12px); flex-wrap: wrap;
 }
-.tab-btn:hover { color: var(--text-primary); background: var(--bg-hover); }
-.tab-btn.active { color: var(--cyan-400); background: var(--blue-bg); border: 1px solid var(--blue-border); }
+.tab-btn {
+  background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 8px 16px; font-size: 12.5px; font-weight: 850; font-family: var(--font-mono);
+  color: var(--text-secondary); border-radius: var(--radius-sm); cursor: pointer; transition: all .15s ease;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.tab-btn:hover { color: var(--text-primary); background: var(--bg-hover); border-color: var(--cyan-400); }
+.tab-btn.active { color: #fff; background: var(--blue-bg); border: 1px solid var(--cyan-400); box-shadow: 0 0 12px rgba(6, 182, 212, 0.3); }
+
+.btn-jump {
+  background: var(--bg-card); color: var(--cyan-400); border: 1px solid var(--border-subtle);
+  padding: 6px 12px; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 11px; font-weight: 800;
+  display: inline-flex; align-items: center; gap: 6px; cursor: pointer; transition: all .15s ease;
+}
+.btn-jump:hover { background: var(--blue-bg); border-color: var(--cyan-400); color: #fff; }
 
 /* 4 Macro Sleeves Grid */
 .sleeves-grid {
@@ -309,6 +321,20 @@ table.flow-table tr:hover { background: var(--bg-hover); }
       <p style="margin:0; font-size:11.5px; color:var(--slate-400); line-height:1.5;">
         <strong>กลไกการสลับ:</strong> หากเลือก <em>โหมดพื้นฐาน (Simple Cash Switch)</em> จะสลับไปถือ <strong>เงินสด (BIL) 100%</strong> เพื่อรอตลาดฟื้นตัว | หากเลือก <em>โหมดสร้างผลตอบแทน (Haven Alpha)</em> จะหมุนไปถือ <strong>UUP 71.3% + DBC 28.7%</strong> เพื่อสร้างผลตอบแทนขณะที่หุ้นตก
       </p>
+      <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
+        <button class="btn-jump" onclick="switchTab('tab1')">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          [1] แผนที่เงินทุน &amp; 4 SLEEVES
+        </button>
+        <button class="btn-jump" onclick="switchTab('tab2')">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          [2] สถิติ ROLLING WINDOWS &amp; SENSITIVITY
+        </button>
+        <button class="btn-jump" onclick="switchTab('tab3')">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 9l-5 5-4-4-6 6"/></svg>
+          [3] ไทม์ซีรีส์ประวัติพอร์ต (927 สัปดาห์)
+        </button>
+      </div>
     </div>
     <div class="verdict-kpi" style="border-left:1px solid var(--border-subtle); padding-left:16px;">
       <span class="kpi-title">คำสั่งปฏิบัติการ (Action)</span>
@@ -317,58 +343,68 @@ table.flow-table tr:hover { background: var(--bg-hover); }
     </div>
   </section>
 
-  <!-- Dynamic World Map of Assets (Interactive Constellation Canvas) -->
-  <section class="constellation-panel">
-    <div class="panel-head">
-      <div>
-        <h2 class="panel-title">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-400)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-          แผนที่กลุ่มดาวสินทรัพย์โลก &amp; อนุภาคการไหลของสภาพคล่อง (Global Asset Constellation Map)
-        </h2>
-        <div class="panel-subtitle">จำลอง 5 ทวีปเศรษฐกิจมหภาคโลก พร้อมกระแสอนุภาค (Animated Particles) เคลื่อนย้ายจากแหล่ง Outflow สู่ Inflow Sinks</div>
-      </div>
-      <div class="canvas-toolbar">
-        <button class="btn-filter active" id="btnFilterAll" onclick="setFilter('all')">ทุกลำธารการไหล (ALL)</button>
-        <button class="btn-filter" id="btnFilterActive" onclick="setFilter('active')">เฉพาะเส้นทางหลัก (ACTIVE SINK)</button>
-        <button class="btn-filter" id="btnFilterEquities" onclick="setFilter('equities')">หมุนออกจากหุ้น (EQUITY DRAIN)</button>
-        <button class="btn-filter" id="btnFilterHavens" onclick="setFilter('havens')">หลุมหลบภัย (SAFE HAVENS)</button>
-      </div>
-    </div>
-
-    <div class="map-container" id="mapContainer">
-      <canvas id="constellationCanvas"></canvas>
-
-      <!-- HUD on hover -->
-      <div class="map-hud" id="mapHud">
-        <div class="hud-title"><span id="hudTicker">QQQ</span> <span id="hudRole" style="font-size:10px; color:var(--text-muted);">US Tech Growth</span></div>
-        <div class="hud-metric"><span>ราคาปิด (Close):</span> <span class="hud-val" id="hudPrice">$690.49</span></div>
-        <div class="hud-metric"><span>Multi-Horizon Score:</span> <span class="hud-val" id="hudScore">-0.08 pts</span></div>
-        <div class="hud-metric"><span>ผลตอบแทน 20D / 60D:</span> <span class="hud-val" id="hudRet">-7.88% / -3.28%</span></div>
-        <div class="hud-metric"><span>20D Realized Vol:</span> <span class="hud-val" id="hudVol">22.64%</span></div>
-        <div class="hud-metric"><span>ระยะห่างจาก 40D High:</span> <span class="hud-val" id="hudHigh">-9.11%</span></div>
-        <div class="hud-metric"><span>ระยะห่างจาก SMA200:</span> <span class="hud-val" id="hudSma">+1.79% (Lagging)</span></div>
-        <div class="hud-metric"><span>สถานะกระแสเงิน:</span> <span class="hud-val" id="hudStatus">[CAPITAL OUTFLOW]</span></div>
-      </div>
-
-      <!-- Legend Overlay -->
-      <div class="legend-badge">
-        <div class="legend-item"><span class="legend-dot" style="background:var(--emerald-400); box-shadow:0 0 6px var(--emerald-400);"></span> Inflow Sink (เงินไหลเข้าสุทธิ)</div>
-        <div class="legend-item"><span class="legend-dot" style="background:var(--cyan-400); box-shadow:0 0 6px var(--cyan-400);"></span> Cash Hurdle / Reserve Anchor</div>
-        <div class="legend-item"><span class="legend-dot" style="background:var(--amber-400);"></span> Neutral / Selective Buffer</div>
-        <div class="legend-item"><span class="legend-dot" style="background:var(--rose-400); box-shadow:0 0 6px var(--rose-400);"></span> Outflow Drain (เงินถูกเทขาย)</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Navigation Tabs -->
-  <div class="tabs-nav">
-    <button class="tab-btn active" id="tabBtn1" onclick="switchTab('tab1')">[1] สี่เสาหลักหมุนเวียนทุนโลก (4 MACRO SLEEVES)</button>
-    <button class="tab-btn" id="tabBtn2" onclick="switchTab('tab2')">[2] สถิติ ROLLING WINDOWS &amp; BREADTH SENSITIVITY (2008–2026)</button>
-    <button class="tab-btn" id="tabBtn3" onclick="switchTab('tab3')">[3] ไทม์ซีรีส์ประวัติการปรับพอร์ต (HISTORICAL ALLOCATION TIME SERIES)</button>
+  <!-- Sticky Top Navigation Tabs -->
+  <div class="tabs-nav" id="mainTabsNav">
+    <button class="tab-btn active" id="tabBtn1" onclick="switchTab('tab1')">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+      [1] แผนที่กระแสเงินทุนโลก &amp; 4 เสาหลัก (CONSTELLATION &amp; 4 SLEEVES)
+    </button>
+    <button class="tab-btn" id="tabBtn2" onclick="switchTab('tab2')">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+      [2] สถิติ ROLLING WINDOWS &amp; BREADTH SENSITIVITY (2008–2026)
+    </button>
+    <button class="tab-btn" id="tabBtn3" onclick="switchTab('tab3')">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 9l-5 5-4-4-6 6"/></svg>
+      [3] ไทม์ซีรีส์ประวัติการปรับพอร์ต (HISTORICAL ALLOCATION TIME SERIES)
+    </button>
   </div>
 
-  <!-- TAB 1: 4 Macro Sleeves Grid & Master Flow Matrix -->
+  <!-- TAB 1: Constellation Map, 4 Macro Sleeves & Master Matrix -->
   <div id="tab1Content">
+    <!-- Dynamic World Map of Assets (Interactive Constellation Canvas) -->
+    <section class="constellation-panel">
+      <div class="panel-head">
+        <div>
+          <h2 class="panel-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-400)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            แผนที่กลุ่มดาวสินทรัพย์โลก &amp; อนุภาคการไหลของสภาพคล่อง (Global Asset Constellation Map)
+          </h2>
+          <div class="panel-subtitle">จำลอง 5 ทวีปเศรษฐกิจมหภาคโลก พร้อมกระแสอนุภาค (Animated Particles) เคลื่อนย้ายจากแหล่ง Outflow สู่ Inflow Sinks</div>
+        </div>
+        <div class="canvas-toolbar">
+          <button class="btn-filter active" id="btnFilterAll" onclick="setFilter('all')">ทุกลำธารการไหล (ALL)</button>
+          <button class="btn-filter" id="btnFilterActive" onclick="setFilter('active')">เฉพาะเส้นทางหลัก (ACTIVE SINK)</button>
+          <button class="btn-filter" id="btnFilterEquities" onclick="setFilter('equities')">หมุนออกจากหุ้น (EQUITY DRAIN)</button>
+          <button class="btn-filter" id="btnFilterHavens" onclick="setFilter('havens')">หลุมหลบภัย (SAFE HAVENS)</button>
+        </div>
+      </div>
+
+      <div class="map-container" id="mapContainer">
+        <canvas id="constellationCanvas"></canvas>
+
+        <!-- HUD on hover -->
+        <div class="map-hud" id="mapHud">
+          <div class="hud-title"><span id="hudTicker">QQQ</span> <span id="hudRole" style="font-size:10px; color:var(--text-muted);">US Tech Growth</span></div>
+          <div class="hud-metric"><span>ราคาปิด (Close):</span> <span class="hud-val" id="hudPrice">$690.49</span></div>
+          <div class="hud-metric"><span>Multi-Horizon Score:</span> <span class="hud-val" id="hudScore">-0.08 pts</span></div>
+          <div class="hud-metric"><span>ผลตอบแทน 20D / 60D:</span> <span class="hud-val" id="hudRet">-7.88% / -3.28%</span></div>
+          <div class="hud-metric"><span>20D Realized Vol:</span> <span class="hud-val" id="hudVol">22.64%</span></div>
+          <div class="hud-metric"><span>ระยะห่างจาก 40D High:</span> <span class="hud-val" id="hudHigh">-9.11%</span></div>
+          <div class="hud-metric"><span>ระยะห่างจาก SMA200:</span> <span class="hud-val" id="hudSma">+1.79% (Lagging)</span></div>
+          <div class="hud-metric"><span>สถานะกระแสเงิน:</span> <span class="hud-val" id="hudStatus">[CAPITAL OUTFLOW]</span></div>
+        </div>
+
+        <!-- Legend Overlay -->
+        <div class="legend-badge">
+          <div class="legend-item"><span class="legend-dot" style="background:var(--emerald-400); box-shadow:0 0 6px var(--emerald-400);"></span> Inflow Sink (เงินไหลเข้าสุทธิ)</div>
+          <div class="legend-item"><span class="legend-dot" style="background:var(--cyan-400); box-shadow:0 0 6px var(--cyan-400);"></span> Cash Hurdle / Reserve Anchor</div>
+          <div class="legend-item"><span class="legend-dot" style="background:var(--amber-400);"></span> Neutral / Selective Buffer</div>
+          <div class="legend-item"><span class="legend-dot" style="background:var(--rose-400); box-shadow:0 0 6px var(--rose-400);"></span> Outflow Drain (เงินถูกเทขาย)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 Macro Sleeves Grid & Master Flow Matrix -->
     <section class="sleeves-grid">
       
       <!-- Sleeve 1: Real Assets & Commodities -->
@@ -1433,11 +1469,21 @@ table.flow-table tr:hover { background: var(--bg-hover); }
     document.getElementById('tab3Content').style.display = tabId === 'tab3' ? 'block' : 'none';
 
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    if (tabId === 'tab1') document.getElementById('tabBtn1').classList.add('active');
-    if (tabId === 'tab2') document.getElementById('tabBtn2').classList.add('active');
+    if (tabId === 'tab1') document.getElementById('tabBtn1')?.classList.add('active');
+    if (tabId === 'tab2') document.getElementById('tabBtn2')?.classList.add('active');
     if (tabId === 'tab3') {
-      document.getElementById('tabBtn3').classList.add('active');
+      document.getElementById('tabBtn3')?.classList.add('active');
       setTimeout(renderHistoryChart, 50);
+    }
+
+    if (window.location.hash !== '#' + tabId) {
+      history.replaceState(null, null, '#' + tabId);
+    }
+
+    // Scroll smoothly to tab nav if scrolled past
+    if (window.scrollY > 380) {
+      const navEl = document.getElementById('mainTabsNav');
+      if (navEl) navEl.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
