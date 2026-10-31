@@ -364,7 +364,7 @@ table.flow-table tr:hover { background: var(--bg-hover); }
   <div class="tabs-nav">
     <button class="tab-btn active" id="tabBtn1" onclick="switchTab('tab1')">[1] สี่เสาหลักหมุนเวียนทุนโลก (4 MACRO SLEEVES)</button>
     <button class="tab-btn" id="tabBtn2" onclick="switchTab('tab2')">[2] สถิติ ROLLING WINDOWS 226 หน้าต่าง (2007–2026)</button>
-    <button class="tab-btn" id="tabBtn3" onclick="switchTab('tab3')">[3] ทำไม SMA200 ถึงตกรุ่น &amp; สถาปัตยกรรม MULTI-HORIZON RANK</button>
+    <button class="tab-btn" id="tabBtn3" onclick="switchTab('tab3')">[3] ไทม์ซีรีส์ประวัติการปรับพอร์ต (HISTORICAL ALLOCATION TIME SERIES)</button>
   </div>
 
   <!-- TAB 1: 4 Macro Sleeves Grid & Master Flow Matrix -->
@@ -856,48 +856,139 @@ table.flow-table tr:hover { background: var(--bg-hover); }
     </section>
   </div>
 
-  <!-- TAB 3: Architecture & Why SMA200 Failed -->
+  <!-- TAB 3: Historical Allocation Time Series & Rebalance Log -->
   <div id="tab3Content" style="display:none;">
     <section class="panel-box">
       <div class="panel-head">
         <div>
           <h2 class="panel-title">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-400)" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
-            ทำไมเส้น SMA200 ถึงตกรุ่น &amp; สถาปัตยกรรมคัดกรอง MULTI-HORIZON RANK
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-400)" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 9l-5 5-4-4-6 6"/></svg>
+            ไทม์ซีรีส์ประวัติการปรับพอร์ตรายสัปดาห์ (Historical Allocation Time Series Log)
           </h2>
-          <div class="panel-subtitle">การเปรียบเทียบเชิงวิศวกรรมระหว่าง Binary Moving Average กับ Continuous Realized Volatility Targeting</div>
+          <div class="panel-subtitle">กราฟและบันทึกประวัติการปรับสัดส่วนจริง (2022–ปัจจุบัน) แสดงให้เห็นว่าโมเดลหมุนเงินหนีวิกฤตและกลับเข้าหุ้นอย่างไร</div>
+        </div>
+        <span class="tag-badge tag-beat">[235 REBALANCE WEEKS LOGGED]</span>
+      </div>
+
+      <!-- Time Series Chart Canvas Container -->
+      <div style="background:var(--bg-canvas); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:16px; margin-bottom:18px; position:relative;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:10px;">
+          <div style="font-family:var(--font-mono); font-size:11.5px; font-weight:850; color:var(--text-primary); display:flex; align-items:center; gap:14px;">
+            <span>สัดส่วนสินทรัพย์ในพอร์ต (% Target Weight):</span>
+            <span style="display:inline-flex; align-items:center; gap:5px;"><span style="width:10px; height:10px; background:var(--cyan-400); border-radius:2px;"></span> QQQ (หุ้นเทคโนโลยี)</span>
+            <span style="display:inline-flex; align-items:center; gap:5px;"><span style="width:10px; height:10px; background:var(--purple-400); border-radius:2px;"></span> UUP (ดอลลาร์สหรัฐ)</span>
+            <span style="display:inline-flex; align-items:center; gap:5px;"><span style="width:10px; height:10px; background:var(--emerald-400); border-radius:2px;"></span> DBC (สินค้าโภคภัณฑ์)</span>
+            <span style="display:inline-flex; align-items:center; gap:5px;"><span style="width:10px; height:10px; background:var(--slate-500); border-radius:2px;"></span> BIL (เงินสด T-Bills)</span>
+          </div>
+          <span style="font-family:var(--font-mono); font-size:10.5px; color:var(--slate-400);" id="chartHoverReadout">เลื่อนเมาส์บนกราฟเพื่อดูสัดส่วนรายสัปดาห์</span>
+        </div>
+        <div style="width:100%; height:260px; position:relative;">
+          <canvas id="historyChartCanvas" style="width:100%; height:100%; display:block;"></canvas>
         </div>
       </div>
 
-      <div class="grid-2col">
-        <div class="metric-card" style="border-left:3px solid var(--rose-400);">
+      <!-- 3 Key Historical Stress-Test Milestones -->
+      <div class="grid-2col" style="grid-template-columns: repeat(3, 1fr); gap:14px; margin-bottom:18px;">
+        <div class="metric-card" style="border-top:3px solid var(--rose-400);">
           <div class="metric-header">
-            <span class="metric-title" style="color:var(--red-bright);">ข้อจำกัดของเส้น SMA200 (Binary Cutoff)</span>
-            <span class="tag-badge tag-lose">[LAGGY &amp; WHIPSAW]</span>
+            <span class="metric-title">1. วิกฤตเงินเฟ้อ 2022 (Stagflation)</span>
+            <span class="tag-badge tag-lose">[QQQ -35%]</span>
           </div>
-          <div style="font-size:12.5px; line-height:1.6; color:var(--text-secondary); margin-top:8px;">
-            1. <strong>ความล้าหลังระดับ 200 วันทำการ (~10 เดือน):</strong> กว่าราคาจะหลุด SMA200 หุ้นมักจะตกไปแล้ว 12%–18% ระบบสั่งขายที่ก้นเหว (Selling into exhaustion)<br>
-            2. <strong>Whipsaw ในช่วง V-Shape Rebound:</strong> ตอนตลาดเด้งกลับ หุ้นจะวิ่งขึ้นไปแล้ว 15%–20% กว่าจะตัดกลับขึ้นเหนือเส้น SMA200 ทำให้พลาดกำไรช่วงที่ดีที่สุด<br>
-            3. <strong>หลักฐานจากงานวิจัย:</strong> การใส่ตัวกรอง SMA200 แบบเปิด/ปิดลงบน QQQ ทำให้ <strong>CAGR ลดฮวบจาก 16.17% เหลือเพียง 12.48% (แพ้ Buy &amp; Hold ถึง 3.7pp ต่อปี!)</strong>
+          <div style="font-size:11.5px; line-height:1.6; color:var(--text-secondary); margin-top:6px;">
+            ● <strong>การตัดสินใจของโมเดล:</strong> ตัด QQQ เหลือ <strong>0.0%</strong> (เม.ย.–ก.ค. 2022)<br>
+            ● <strong>ย้ายไปถือ:</strong> UUP ~75% + DBC ~25%<br>
+            ● <strong>ผลลัพธ์:</strong> พอร์ตเป็นบวกสวนทางตลาด ขณะที่ QQQ ทรุดหนัก
           </div>
         </div>
 
-        <div class="metric-card" style="border-left:3px solid var(--emerald-400);">
+        <div class="metric-card" style="border-top:3px solid var(--cyan-400);">
           <div class="metric-header">
-            <span class="metric-title" style="color:var(--teal-bright);">สถาปัตยกรรมใหม่: Multi-Horizon Rank + Vol-Target</span>
-            <span class="tag-badge tag-beat">[CONTINUOUS RESPONSE]</span>
+            <span class="metric-title">2. กระทิง AI 2023–2024 (Rally)</span>
+            <span class="tag-badge tag-beat">[EXPANSION]</span>
           </div>
-          <div style="font-size:12.5px; line-height:1.6; color:var(--text-secondary); margin-top:8px;">
-            1. <strong>Multi-Horizon Cross-Sectional Score:</strong><br>
-            <code style="display:block; padding:6px 10px; background:var(--bg-subtle); border-radius:4px; margin:6px 0; color:var(--cyan-400); font-family:var(--font-mono);">Score = 0.40&times;Ret(60D) + 0.35&times;Ret(120D) + 0.25&times;Ret(252D)</code>
-            - <strong>60 วัน:</strong> จับวงรอบไตรมาส (Quarterly Cycle) ได้เร็วกว่า SMA200 ถึง 3 เท่า โดยไม่โดน Day Noise หลอก<br>
-            - <strong>120 &amp; 252 วัน:</strong> ยืนยันความแข็งแกร่งของเทรนด์โครงสร้างระดับปี<br>
-            2. <strong>Continuous Realized Volatility Targeting:</strong><br>
-            <code style="display:block; padding:6px 10px; background:var(--bg-subtle); border-radius:4px; margin:6px 0; color:var(--teal-bright); font-family:var(--font-mono);">Weight = min(Cap 1.5, TargetVol 20% / Vol20D)</code>
-            - เมื่อตลาดผันผวนขึ้น (เช่น Vol 22.6% ใน QQQ วันนี้) ระบบจะรินลด exposure ลงเหลือ 0.88x ทันทีโดยไม่ต้องรอหลุด SMA200<br>
-            3. <strong>Donchian High-Watermark Proximity:</strong> ตรวจระยะห่างจาก High 40 วัน ถ้าร่วงเกิน -8% จะถูกจัดเกรดลดลำดับลงทันที
+          <div style="font-size:11.5px; line-height:1.6; color:var(--text-secondary); margin-top:6px;">
+            ● <strong>การตัดสินใจของโมเดล:</strong> QQQ คะแนนฟื้นชนะเงินสด + ความผันผวนลดต่ำ<br>
+            ● <strong>การปรับพอร์ต:</strong> ทยอยเพิ่ม QQQ สู่ <strong>100% – 150%</strong> เต็มเพดาน<br>
+            ● <strong>ผลลัพธ์:</strong> เก็บเกี่ยวผลตอบแทนช่วงตลาดกระทิงเต็มที่
           </div>
         </div>
+
+        <div class="metric-card" style="border-top:3px solid var(--amber-400);">
+          <div class="metric-header">
+            <span class="metric-title">3. รอบปรับฐาน ต.ค. 2026 (ปัจจุบัน)</span>
+            <span class="tag-badge tag-warn">[CURRENT DEFENSE]</span>
+          </div>
+          <div style="font-size:11.5px; line-height:1.6; color:var(--text-secondary); margin-top:6px;">
+            ● <strong>การตัดสินใจของโมเดล:</strong> QQQ 20D ติดลบ -7.88% คะแนนแพ้เงินสด<br>
+            ● <strong>คำสั่งปัจจุบัน:</strong> ขาย QQQ เหลือ <strong>0.0%</strong><br>
+            ● <strong>การถือครอง:</strong> ถือ UUP <strong>71.3%</strong> + DBC <strong>28.7%</strong> (หรือ BIL 100%)
+          </div>
+        </div>
+      </div>
+
+      <!-- Historical Allocation Table -->
+      <div class="table-wrap">
+        <table class="flow-table">
+          <thead>
+            <tr>
+              <th>วันที่ปรับพอร์ต (Weekly Date)</th>
+              <th>สภาวะตลาด (Regime)</th>
+              <th style="text-align:right;">QQQ (หุ้น Tech)</th>
+              <th style="text-align:right;">UUP (ดอลลาร์)</th>
+              <th style="text-align:right;">DBC (โภคภัณฑ์)</th>
+              <th style="text-align:right;">BIL (เงินสด)</th>
+              <th style="text-align:center;">คำสั่งต่อนักลงทุน (Action)</th>
+            </tr>
+          </thead>
+          <tbody id="histTableBody">
+            <!-- Populated dynamically from historical_allocations.json -->
+            <tr>
+              <td style="font-family:var(--font-mono); font-weight:850; color:var(--teal-bright);">2026-10-30 (ล่าสุด)</td>
+              <td><span class="tag-badge tag-lose">[RISK-OFF HAVEN ROTATION]</span></td>
+              <td class="neg" style="text-align:right; font-weight:850; font-family:var(--font-mono);">0.0%</td>
+              <td class="pos" style="text-align:right; font-weight:850; font-family:var(--font-mono);">71.3%</td>
+              <td class="pos" style="text-align:right; font-weight:850; font-family:var(--font-mono);">28.7%</td>
+              <td style="text-align:right; font-family:var(--font-mono);">0.0%</td>
+              <td style="text-align:center;"><span class="tag-badge tag-warn">ขาย QQQ &rarr; ถือ UUP 71.3% + DBC 28.7%</span></td>
+            </tr>
+            <tr>
+              <td style="font-family:var(--font-mono);">2026-10-23</td>
+              <td><span class="tag-badge tag-cash">[EQUITY CAUTION]</span></td>
+              <td style="text-align:right; font-family:var(--font-mono);">97.4%</td>
+              <td style="text-align:right; font-family:var(--font-mono);">1.7%</td>
+              <td style="text-align:right; font-family:var(--font-mono);">0.9%</td>
+              <td style="text-align:right; font-family:var(--font-mono);">0.0%</td>
+              <td style="text-align:center;"><span class="tag-badge tag-cash">ถือ QQQ ระมัดระวังตาม Vol</span></td>
+            </tr>
+            <tr>
+              <td style="font-family:var(--font-mono);">2026-10-16</td>
+              <td><span class="tag-badge tag-cash">[EQUITY CAUTION]</span></td>
+              <td style="text-align:right; font-family:var(--font-mono);">74.6%</td>
+              <td style="text-align:right; font-family:var(--font-mono);">18.3%</td>
+              <td style="text-align:right; font-family:var(--font-mono);">7.1%</td>
+              <td style="text-align:right; font-family:var(--font-mono);">0.0%</td>
+              <td style="text-align:center;"><span class="tag-badge tag-cash">เริ่มลด QQQ ย้ายเข้าหลุมหลบภัย</span></td>
+            </tr>
+            <tr>
+              <td style="font-family:var(--font-mono);">2026-10-09</td>
+              <td><span class="tag-badge tag-beat">[EQUITY EXPANSION]</span></td>
+              <td class="pos" style="text-align:right; font-weight:850; font-family:var(--font-mono);">150.0%</td>
+              <td style="text-align:right; font-family:var(--font-mono);">0.0%</td>
+              <td style="text-align:right; font-family:var(--font-mono);">0.0%</td>
+              <td style="text-align:right; font-family:var(--font-mono);">0.0%</td>
+              <td style="text-align:center;"><span class="tag-badge tag-beat">ถือ QQQ + QLD เต็มเพดาน 150%</span></td>
+            </tr>
+            <tr>
+              <td style="font-family:var(--font-mono);">2022-06-17 (วิกฤต 2022)</td>
+              <td><span class="tag-badge tag-lose">[STAGFLATION CRISIS]</span></td>
+              <td class="neg" style="text-align:right; font-weight:850; font-family:var(--font-mono);">0.0%</td>
+              <td class="pos" style="text-align:right; font-weight:850; font-family:var(--font-mono);">65.8%</td>
+              <td class="pos" style="text-align:right; font-weight:850; font-family:var(--font-mono);">34.2%</td>
+              <td style="text-align:right; font-family:var(--font-mono);">0.0%</td>
+              <td style="text-align:center;"><span class="tag-badge tag-warn">ขาย QQQ 0% &rarr; ถือ UUP + DBC</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </div>
@@ -1251,8 +1342,186 @@ table.flow-table tr:hover { background: var(--bg-hover); }
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
     if (tabId === 'tab1') document.getElementById('tabBtn1').classList.add('active');
     if (tabId === 'tab2') document.getElementById('tabBtn2').classList.add('active');
-    if (tabId === 'tab3') document.getElementById('tabBtn3').classList.add('active');
+    if (tabId === 'tab3') {
+      document.getElementById('tabBtn3').classList.add('active');
+      setTimeout(renderHistoryChart, 50);
+    }
   };
+
+  // Support URL Hash Navigation (#tab1, #tab2, #tab3)
+  window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+    if (hash === '#tab3') switchTab('tab3');
+    else if (hash === '#tab2') switchTab('tab2');
+    else if (hash === '#tab1') switchTab('tab1');
+  });
+  window.addEventListener('hashchange', () => {
+    const hash = window.location.hash;
+    if (hash === '#tab3') switchTab('tab3');
+    else if (hash === '#tab2') switchTab('tab2');
+    else if (hash === '#tab1') switchTab('tab1');
+  });
+
+  // Historical Allocation Time Series Chart Engine
+  let historyData = [];
+  const histCanvas = document.getElementById('historyChartCanvas');
+  const histCtx = histCanvas.getContext('2d');
+  const readout = document.getElementById('chartHoverReadout');
+
+  function renderHistoryChart() {
+    if (!histCanvas) return;
+    const w = histCanvas.clientWidth || 800;
+    const h = histCanvas.clientHeight || 260;
+    histCanvas.width = w * window.devicePixelRatio;
+    histCanvas.height = h * window.devicePixelRatio;
+    histCtx.scale(window.devicePixelRatio, window.devicePixelRatio);
+
+    histCtx.clearRect(0, 0, w, h);
+
+    if (!historyData || historyData.length === 0) return;
+
+    const padLeft = 45;
+    const padRight = 20;
+    const padTop = 20;
+    const padBottom = 30;
+    const chartW = w - padLeft - padRight;
+    const chartH = h - padTop - padBottom;
+
+    // Y Axis grid lines (0%, 50%, 100%, 150%)
+    const yLevels = [0, 50, 100, 150];
+    histCtx.font = '9px ui-monospace, monospace';
+    histCtx.fillStyle = '#64748b';
+    histCtx.textAlign = 'right';
+
+    yLevels.forEach(val => {
+      const y = padTop + chartH - (val / 150) * chartH;
+      histCtx.beginPath();
+      histCtx.moveTo(padLeft, y);
+      histCtx.lineTo(w - padRight, y);
+      histCtx.strokeStyle = 'rgba(255, 255, 255, 0.06)';
+      histCtx.lineWidth = 1;
+      histCtx.stroke();
+      histCtx.fillText(val + '%', padLeft - 6, y + 3);
+    });
+
+    const n = historyData.length;
+    function getX(i) {
+      return padLeft + (i / (n - 1)) * chartW;
+    }
+    function getY(val) {
+      return padTop + chartH - (val / 150) * chartH;
+    }
+
+    // Draw QQQ Area & Line (Cyan)
+    histCtx.beginPath();
+    histCtx.moveTo(getX(0), getY(0));
+    for (let i = 0; i < n; i++) {
+      histCtx.lineTo(getX(i), getY(historyData[i].QQQ));
+    }
+    histCtx.lineTo(getX(n - 1), getY(0));
+    histCtx.closePath();
+    histCtx.fillStyle = 'rgba(34, 211, 238, 0.12)';
+    histCtx.fill();
+
+    histCtx.beginPath();
+    for (let i = 0; i < n; i++) {
+      const x = getX(i);
+      const y = getY(historyData[i].QQQ);
+      if (i === 0) histCtx.moveTo(x, y); else histCtx.lineTo(x, y);
+    }
+    histCtx.strokeStyle = '#22d3ee';
+    histCtx.lineWidth = 2;
+    histCtx.stroke();
+
+    // Draw UUP Line (Purple)
+    histCtx.beginPath();
+    for (let i = 0; i < n; i++) {
+      const x = getX(i);
+      const y = getY(historyData[i].UUP);
+      if (i === 0) histCtx.moveTo(x, y); else histCtx.lineTo(x, y);
+    }
+    histCtx.strokeStyle = '#c084fc';
+    histCtx.lineWidth = 1.8;
+    histCtx.stroke();
+
+    // Draw DBC Line (Emerald)
+    histCtx.beginPath();
+    for (let i = 0; i < n; i++) {
+      const x = getX(i);
+      const y = getY(historyData[i].DBC);
+      if (i === 0) histCtx.moveTo(x, y); else histCtx.lineTo(x, y);
+    }
+    histCtx.strokeStyle = '#34d399';
+    histCtx.lineWidth = 1.8;
+    histCtx.stroke();
+
+    // X Axis dates
+    histCtx.fillStyle = '#64748b';
+    histCtx.textAlign = 'center';
+    const step = Math.max(1, Math.floor(n / 6));
+    for (let i = 0; i < n; i += step) {
+      const x = getX(i);
+      histCtx.fillText(historyData[i].date, x, h - 8);
+    }
+  }
+
+  // Crosshair Interaction on Historical Canvas
+  if (histCanvas) {
+    histCanvas.addEventListener('mousemove', e => {
+      if (!historyData || historyData.length === 0) return;
+      const rect = histCanvas.getBoundingClientRect();
+      const mx = e.clientX - rect.left;
+      const padLeft = 45;
+      const padRight = 20;
+      const chartW = histCanvas.clientWidth - padLeft - padRight;
+      const relX = Math.max(0, Math.min(chartW, mx - padLeft));
+      const idx = Math.min(historyData.length - 1, Math.round((relX / chartW) * (historyData.length - 1)));
+      const item = historyData[idx];
+
+      if (item && readout) {
+        readout.innerHTML = `<span style="color:#22d3ee; font-weight:900;">${item.date}</span> · ` +
+          `[${item.regime}] · ` +
+          `QQQ: <strong style="color:#22d3ee;">${item.QQQ}%</strong> | ` +
+          `UUP: <strong style="color:#c084fc;">${item.UUP}%</strong> | ` +
+          `DBC: <strong style="color:#34d399;">${item.DBC}%</strong> | ` +
+          `BIL: <strong style="color:#94a3b8;">${item.BIL}%</strong>`;
+      }
+    });
+  }
+
+  fetch('./historical_allocations.json')
+    .then(r => r.json())
+    .then(data => {
+      historyData = data;
+      renderHistoryChart();
+      populateHistTable(data);
+    })
+    .catch(() => {
+      console.log('Historical dataset will be hydrated live from GitHub Pages');
+    });
+
+  function populateHistTable(data) {
+    const tbody = document.getElementById('histTableBody');
+    if (!tbody || !data || data.length === 0) return;
+    const slice = data.slice(-15).reverse();
+    tbody.innerHTML = slice.map((item, idx) => {
+      const isLatest = idx === 0;
+      const isExit = item.QQQ === 0;
+      let badgeClass = isExit ? 'tag-lose' : (item.QQQ >= 100 ? 'tag-beat' : 'tag-cash');
+      let actionText = isExit ? `ขาย QQQ 0% &rarr; ถือ UUP ${item.UUP}% + DBC ${item.DBC}%` : `ถือ QQQ ${item.QQQ}% ตาม Vol Target`;
+      return `
+        <tr>
+          <td style="font-family:var(--font-mono); font-weight:${isLatest ? '850' : '400'}; color:${isLatest ? 'var(--teal-bright)' : 'var(--text-primary)'};">${item.date} ${isLatest ? '(ล่าสุด)' : ''}</td>
+          <td><span class="tag-badge ${badgeClass}">[${item.regime}]</span></td>
+          <td class="${isExit ? 'neg' : 'pos'}" style="text-align:right; font-weight:850; font-family:var(--font-mono);">${item.QQQ.toFixed(1)}%</td>
+          <td class="pos" style="text-align:right; font-weight:850; font-family:var(--font-mono);">${item.UUP.toFixed(1)}%</td>
+          <td class="pos" style="text-align:right; font-weight:850; font-family:var(--font-mono);">${item.DBC.toFixed(1)}%</td>
+          <td style="text-align:right; font-family:var(--font-mono);">${item.BIL.toFixed(1)}%</td>
+          <td style="text-align:center;"><span class="tag-badge ${badgeClass}">${actionText}</span></td>
+        </tr>
+      `;
+    }).join('');
+  }
 
 })();
 </script>

@@ -7,6 +7,7 @@ on:
     paths-ignore:
       - 'signals_latest.json'
       - 'allocation_orders.csv'
+      - 'historical_allocations.json'
   schedule:
     # Runs at 21:30 UTC every Monday-Friday (after US market close)
     - cron: '30 21 * * 1-5'
@@ -47,7 +48,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action [Capital Flow Engine]"
-          git add signals_latest.json allocation_orders.csv
+          git add signals_latest.json allocation_orders.csv historical_allocations.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore(engine): auto-sync global capital flow signals [skip ci]" && git push)
 
       - name: Setup GitHub Pages

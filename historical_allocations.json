@@ -1,0 +1,2352 @@
+[
+  {
+    "date": "2022-05-06",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 84.6,
+    "DBC": 15.4,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-05-13",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 81.6,
+    "DBC": 18.4,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-05-20",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 53.6,
+    "DBC": 46.4,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-05-27",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 64.1,
+    "DBC": 35.8,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-06-03",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 64.6,
+    "DBC": 35.4,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-06-10",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 52.1,
+    "DBC": 47.9,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-06-17",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 75.0,
+    "DBC": 25.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-06-24",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 78.6,
+    "DBC": 21.4,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-07-01",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 71.9,
+    "DBC": 28.1,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-07-08",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 52.1,
+    "DBC": 47.9,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-07-15",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 35.0,
+    "DBC": 65.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-07-22",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 50.2,
+    "DBC": 49.8,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-07-29",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 72.5,
+    "DBC": 27.5,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-08-05",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 79.6,
+    "DBC": 20.4,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-08-12",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-08-19",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 100.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-08-26",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 75.7,
+    "DBC": 24.3,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-09-02",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 100.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-09-09",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 100.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-09-16",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 100.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-09-23",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 100.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-09-30",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 100.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-10-07",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 77.9,
+    "DBC": 22.1,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-10-14",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 78.4,
+    "DBC": 21.6,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-10-21",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 100.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-10-28",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 84.6,
+    "DBC": 15.4,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-11-04",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 80.6,
+    "DBC": 19.4,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-11-11",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 63.9,
+    "DBC": 36.1,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-11-18",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 100.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-11-25",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 100.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-12-02",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 52.6,
+    "DBC": 47.4,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-12-09",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 62.6,
+    "DBC": 0.0,
+    "GLD": 37.4,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-12-16",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 31.1,
+    "GLD": 68.9,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-12-23",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 28.8,
+    "GLD": 71.2,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2022-12-30",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 19.7,
+    "GLD": 80.3,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-01-06",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 100.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-01-13",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 23.6,
+    "GLD": 76.4,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-01-20",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 23.8,
+    "GLD": 76.2,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-01-27",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 100.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-02-03",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 100.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-02-10",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 100.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-02-17",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 100.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-02-24",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 100.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-03-03",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 100.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-03-10",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 100.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-03-17",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 60.2,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 39.8,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-03-24",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 69.8,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 11.3,
+    "TLT": 18.9,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-03-31",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 68.8,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 31.2,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-04-07",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 99.3,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.2,
+    "TLT": 0.5,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-04-14",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-04-21",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 146.5,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-04-28",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-05-05",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-05-12",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-05-19",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-05-26",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-06-02",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-06-09",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-06-16",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-06-23",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 124.4,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-06-30",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 123.7,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-07-07",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 115.1,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-07-14",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 120.8,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-07-21",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 127.8,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-07-28",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 126.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-08-04",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 94.9,
+    "UUP": 0.0,
+    "DBC": 2.1,
+    "GLD": 3.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-08-11",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 129.8,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-08-18",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 123.4,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-08-25",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 136.4,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-09-01",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 99.5,
+    "UUP": 0.0,
+    "DBC": 0.5,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-09-08",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 101.4,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-09-15",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 122.4,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-09-22",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 93.3,
+    "UUP": 4.8,
+    "DBC": 1.9,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-09-29",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-10-06",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 129.8,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-10-13",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 128.4,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-10-20",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 140.9,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-10-27",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 122.3,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-11-03",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 63.5,
+    "UUP": 27.5,
+    "DBC": 0.0,
+    "GLD": 9.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-11-10",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 60.9,
+    "UUP": 28.7,
+    "DBC": 0.0,
+    "GLD": 10.4,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-11-17",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 74.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 26.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-11-24",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 114.8,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-12-01",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-12-08",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-12-15",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-12-22",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2023-12-29",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-01-05",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 103.8,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-01-12",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 105.6,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-01-19",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 94.9,
+    "UUP": 2.7,
+    "DBC": 0.0,
+    "GLD": 2.4,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-01-26",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 95.3,
+    "UUP": 2.3,
+    "DBC": 0.0,
+    "GLD": 2.3,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-02-02",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-02-09",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-02-16",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-02-23",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-03-01",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-03-08",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 148.3,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-03-15",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-03-22",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 123.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-03-29",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 134.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-04-05",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 143.2,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-04-12",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-04-19",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 115.9,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-04-26",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 72.8,
+    "UUP": 0.0,
+    "DBC": 15.8,
+    "GLD": 11.4,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-05-03",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 71.0,
+    "UUP": 18.4,
+    "DBC": 0.0,
+    "GLD": 10.5,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-05-10",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 69.6,
+    "UUP": 0.0,
+    "DBC": 18.4,
+    "GLD": 12.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-05-17",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-05-24",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-05-31",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-06-07",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 144.5,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-06-14",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 124.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-06-21",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 118.8,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-06-28",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-07-05",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 138.6,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-07-12",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-07-19",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 90.4,
+    "UUP": 6.8,
+    "DBC": 0.0,
+    "GLD": 2.9,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-07-26",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 84.4,
+    "UUP": 11.3,
+    "DBC": 0.0,
+    "GLD": 4.3,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-08-02",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-08-09",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 147.9,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-08-16",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 70.8,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 18.9,
+    "TLT": 10.4,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-08-23",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 79.1,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 13.8,
+    "TLT": 7.2,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-08-30",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 101.5,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-09-06",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 59.5,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 22.6,
+    "TLT": 17.8,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-09-13",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 57.2,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 23.4,
+    "TLT": 19.4,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-09-20",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 56.8,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 25.1,
+    "TLT": 18.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-09-27",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 57.3,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 24.8,
+    "TLT": 17.9,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-10-04",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 107.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-10-11",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-10-18",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-10-25",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-11-01",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-11-08",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 90.7,
+    "UUP": 7.1,
+    "DBC": 0.0,
+    "GLD": 2.2,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-11-15",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 72.3,
+    "UUP": 21.1,
+    "DBC": 0.0,
+    "GLD": 6.6,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-11-22",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 70.6,
+    "UUP": 25.1,
+    "DBC": 0.0,
+    "GLD": 4.3,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-11-29",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 75.7,
+    "UUP": 18.2,
+    "DBC": 0.0,
+    "GLD": 6.1,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-12-06",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 96.2,
+    "UUP": 2.9,
+    "DBC": 0.0,
+    "GLD": 1.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-12-13",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-12-20",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 122.8,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2024-12-27",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 122.6,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-01-03",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-01-10",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-01-17",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 127.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-01-24",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 122.4,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-01-31",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 116.2,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-02-07",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-02-14",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-02-21",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 122.6,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-02-28",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 99.3,
+    "UUP": 0.5,
+    "DBC": 0.0,
+    "GLD": 0.2,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-03-07",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 52.0,
+    "GLD": 48.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-03-14",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 59.2,
+    "GLD": 40.8,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-03-21",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 60.0,
+    "GLD": 40.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-03-28",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 100.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-04-04",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 49.2,
+    "TLT": 50.8,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-04-11",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 100.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-04-18",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 100.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-04-25",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 100.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-05-02",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 100.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-05-09",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 100.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-05-16",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 85.3,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 14.7,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-05-23",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 100.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-05-30",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 70.3,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 29.7,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-06-06",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 73.6,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 26.4,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-06-13",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 130.1,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-06-20",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-06-27",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 128.8,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-07-04",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 131.4,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-07-11",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 134.9,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-07-18",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 148.4,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-07-25",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-08-01",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-08-08",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 113.9,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-08-15",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 114.1,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-08-22",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 108.5,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-08-29",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 134.1,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-09-05",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-09-12",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-09-19",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-09-26",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-10-03",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-10-10",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 142.4,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-10-17",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 135.5,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-10-24",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 127.6,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-10-31",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 123.9,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-11-07",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 105.1,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-11-14",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 113.9,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-11-21",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 113.3,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-11-28",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 73.3,
+    "UUP": 0.0,
+    "DBC": 13.9,
+    "GLD": 12.8,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-12-05",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 83.4,
+    "UUP": 0.0,
+    "DBC": 8.7,
+    "GLD": 7.9,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-12-12",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 77.6,
+    "UUP": 0.0,
+    "DBC": 10.9,
+    "GLD": 11.5,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-12-19",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 98.0,
+    "UUP": 0.0,
+    "DBC": 1.0,
+    "GLD": 1.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2025-12-26",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-01-02",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-01-09",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-01-16",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-01-23",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-01-30",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-02-06",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-02-13",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-02-20",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-02-27",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-03-06",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-03-13",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-03-20",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 58.8,
+    "GLD": 41.2,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-03-27",
+    "regime": "RISK-OFF HAVEN ROTATION",
+    "QQQ": 0.0,
+    "UUP": 0.0,
+    "DBC": 52.1,
+    "GLD": 47.9,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-04-03",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 87.9,
+    "UUP": 0.0,
+    "DBC": 9.3,
+    "GLD": 2.9,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-04-10",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 69.8,
+    "UUP": 0.0,
+    "DBC": 23.5,
+    "GLD": 6.7,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-04-17",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 66.7,
+    "UUP": 0.0,
+    "DBC": 14.8,
+    "GLD": 18.5,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-04-24",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-05-01",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 131.9,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-05-08",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 120.8,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-05-15",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 114.2,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 111.8,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-05-29",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 111.2,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-06-05",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 87.5,
+    "UUP": 9.2,
+    "DBC": 3.2,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-06-12",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 81.7,
+    "UUP": 10.6,
+    "DBC": 7.7,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-06-19",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 77.6,
+    "UUP": 12.6,
+    "DBC": 9.8,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-06-26",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 68.7,
+    "UUP": 20.1,
+    "DBC": 11.2,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-07-03",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 83.6,
+    "UUP": 11.2,
+    "DBC": 5.2,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-07-10",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 86.0,
+    "UUP": 11.6,
+    "DBC": 2.4,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-07-17",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 84.1,
+    "UUP": 14.0,
+    "DBC": 1.9,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-07-24",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 103.6,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-07-31",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 106.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-08-07",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 70.8,
+    "UUP": 23.5,
+    "DBC": 5.8,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-08-14",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 99.4,
+    "UUP": 0.5,
+    "DBC": 0.1,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-08-21",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 89.9,
+    "UUP": 0.0,
+    "DBC": 5.1,
+    "GLD": 5.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-08-28",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 89.6,
+    "UUP": 0.0,
+    "DBC": 6.2,
+    "GLD": 4.2,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-09-04",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-09-11",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-09-18",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-09-25",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-10-02",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-10-09",
+    "regime": "EQUITY EXPANSION",
+    "QQQ": 150.0,
+    "UUP": 0.0,
+    "DBC": 0.0,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-10-16",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 74.6,
+    "UUP": 18.3,
+    "DBC": 7.1,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-10-23",
+    "regime": "EQUITY CAUTION",
+    "QQQ": 97.4,
+    "UUP": 1.7,
+    "DBC": 0.9,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  },
+  {
+    "date": "2026-10-30",
+    "regime": "RISK-OFF ROTATION TO HAVENS",
+    "QQQ": 0.0,
+    "UUP": 71.3,
+    "DBC": 28.7,
+    "GLD": 0.0,
+    "TLT": 0.0,
+    "BIL": 0.0
+  }
+]
