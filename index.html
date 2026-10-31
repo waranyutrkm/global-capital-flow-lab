@@ -865,63 +865,78 @@ table.flow-table tr:hover { background: var(--bg-hover); }
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-400)" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 9l-5 5-4-4-6 6"/></svg>
             ไทม์ซีรีส์ประวัติการปรับพอร์ตรายสัปดาห์ (Historical Allocation Time Series Log)
           </h2>
-          <div class="panel-subtitle">กราฟและบันทึกประวัติการปรับสัดส่วนจริง (2022–ปัจจุบัน) แสดงให้เห็นว่าโมเดลหมุนเงินหนีวิกฤตและกลับเข้าหุ้นอย่างไร</div>
+          <div class="panel-subtitle">กราฟและบันทึกประวัติการปรับสัดส่วนจริงครบทั้งประวัติศาสตร์ร่วม 14 ETFs (2008–ปัจจุบัน 18.4 ปี) พร้อมตัววัด Multi-Horizon Cash-Hurdle Breadth รายหมวด</div>
         </div>
-        <span class="tag-badge tag-beat">[235 REBALANCE WEEKS LOGGED]</span>
+        <span class="tag-badge tag-beat">[927 REBALANCE WEEKS LOGGED · 2008–2026]</span>
       </div>
 
       <!-- Time Series Chart Canvas Container -->
       <div style="background:var(--bg-canvas); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:16px; margin-bottom:18px; position:relative;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:10px;">
-          <div style="font-family:var(--font-mono); font-size:11.5px; font-weight:850; color:var(--text-primary); display:flex; align-items:center; gap:14px;">
+          <div style="font-family:var(--font-mono); font-size:11.5px; font-weight:850; color:var(--text-primary); display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
             <span>สัดส่วนสินทรัพย์ในพอร์ต (% Target Weight):</span>
             <span style="display:inline-flex; align-items:center; gap:5px;"><span style="width:10px; height:10px; background:var(--cyan-400); border-radius:2px;"></span> QQQ (หุ้นเทคโนโลยี)</span>
             <span style="display:inline-flex; align-items:center; gap:5px;"><span style="width:10px; height:10px; background:var(--purple-400); border-radius:2px;"></span> UUP (ดอลลาร์สหรัฐ)</span>
             <span style="display:inline-flex; align-items:center; gap:5px;"><span style="width:10px; height:10px; background:var(--emerald-400); border-radius:2px;"></span> DBC (สินค้าโภคภัณฑ์)</span>
+            <span style="display:inline-flex; align-items:center; gap:5px;"><span style="width:10px; height:10px; background:var(--amber-400); border-radius:2px;"></span> TLT (พันธบัตร 20Y+)</span>
             <span style="display:inline-flex; align-items:center; gap:5px;"><span style="width:10px; height:10px; background:var(--slate-500); border-radius:2px;"></span> BIL (เงินสด T-Bills)</span>
           </div>
-          <span style="font-family:var(--font-mono); font-size:10.5px; color:var(--slate-400);" id="chartHoverReadout">เลื่อนเมาส์บนกราฟเพื่อดูสัดส่วนรายสัปดาห์</span>
+          <span style="font-family:var(--font-mono); font-size:10.5px; color:var(--slate-400);" id="chartHoverReadout">เลื่อนเมาส์บนกราฟเพื่อดูสัดส่วนและค่า Breadth รายสัปดาห์</span>
         </div>
         <div style="width:100%; height:260px; position:relative;">
           <canvas id="historyChartCanvas" style="width:100%; height:100%; display:block;"></canvas>
         </div>
       </div>
 
-      <!-- 3 Key Historical Stress-Test Milestones -->
-      <div class="grid-2col" style="grid-template-columns: repeat(3, 1fr); gap:14px; margin-bottom:18px;">
+      <!-- 4 Key Historical Stress-Test Milestones -->
+      <div class="grid-2col" style="grid-template-columns: repeat(4, 1fr); gap:12px; margin-bottom:18px;">
         <div class="metric-card" style="border-top:3px solid var(--rose-400);">
           <div class="metric-header">
-            <span class="metric-title">1. วิกฤตเงินเฟ้อ 2022 (Stagflation)</span>
-            <span class="tag-badge tag-lose">[QQQ -35%]</span>
+            <span class="metric-title">1. วิกฤตสินเชื่อ 2008 (GFC)</span>
+            <span class="tag-badge tag-lose">[QQQ -47.4%]</span>
           </div>
-          <div style="font-size:11.5px; line-height:1.6; color:var(--text-secondary); margin-top:6px;">
-            ● <strong>การตัดสินใจของโมเดล:</strong> ตัด QQQ เหลือ <strong>0.0%</strong> (เม.ย.–ก.ค. 2022)<br>
+          <div style="font-size:11px; line-height:1.55; color:var(--text-secondary); margin-top:6px;">
+            ● <strong>สภาวะ:</strong> Equity Breadth ร่วง 0%<br>
+            ● <strong>คำสั่ง:</strong> ตัด QQQ เหลือ <strong>0.0%</strong><br>
+            ● <strong>ย้ายไปถือ:</strong> UUP 54% + TLT 46%<br>
+            ● <strong>ผลลัพธ์:</strong> พอร์ตเป็นบวกสวนตลาด <strong>+6.1%</strong>
+          </div>
+        </div>
+
+        <div class="metric-card" style="border-top:3px solid var(--purple-400);">
+          <div class="metric-header">
+            <span class="metric-title">2. วิกฤตเงินเฟ้อ 2022</span>
+            <span class="tag-badge tag-lose">[QQQ -33.2%]</span>
+          </div>
+          <div style="font-size:11px; line-height:1.55; color:var(--text-secondary); margin-top:6px;">
+            ● <strong>สภาวะ:</strong> Commodity Breadth 100%<br>
+            ● <strong>คำสั่ง:</strong> ตัด QQQ เหลือ <strong>0.0%</strong><br>
             ● <strong>ย้ายไปถือ:</strong> UUP ~75% + DBC ~25%<br>
-            ● <strong>ผลลัพธ์:</strong> พอร์ตเป็นบวกสวนทางตลาด ขณะที่ QQQ ทรุดหนัก
+            ● <strong>ผลลัพธ์:</strong> พอร์ตเป็นบวก <strong>+7.6% ถึง +11.8%</strong>
           </div>
         </div>
 
         <div class="metric-card" style="border-top:3px solid var(--cyan-400);">
           <div class="metric-header">
-            <span class="metric-title">2. กระทิง AI 2023–2024 (Rally)</span>
+            <span class="metric-title">3. กระทิง AI 2023–2024</span>
             <span class="tag-badge tag-beat">[EXPANSION]</span>
           </div>
-          <div style="font-size:11.5px; line-height:1.6; color:var(--text-secondary); margin-top:6px;">
-            ● <strong>การตัดสินใจของโมเดล:</strong> QQQ คะแนนฟื้นชนะเงินสด + ความผันผวนลดต่ำ<br>
-            ● <strong>การปรับพอร์ต:</strong> ทยอยเพิ่ม QQQ สู่ <strong>100% – 150%</strong> เต็มเพดาน<br>
-            ● <strong>ผลลัพธ์:</strong> เก็บเกี่ยวผลตอบแทนช่วงตลาดกระทิงเต็มที่
+          <div style="font-size:11px; line-height:1.55; color:var(--text-secondary); margin-top:6px;">
+            ● <strong>สภาวะ:</strong> Equity Breadth > 80% ชนะเงินสด<br>
+            ● <strong>คำสั่ง:</strong> ขยาย QQQ สู่ <strong>100% – 150%</strong><br>
+            ● <strong>ผลลัพธ์:</strong> เก็บเกี่ยวผลตอบแทนรอบกระทิงเต็มที่
           </div>
         </div>
 
         <div class="metric-card" style="border-top:3px solid var(--amber-400);">
           <div class="metric-header">
-            <span class="metric-title">3. รอบปรับฐาน ต.ค. 2026 (ปัจจุบัน)</span>
+            <span class="metric-title">4. รอบปรับฐาน ต.ค. 2026</span>
             <span class="tag-badge tag-warn">[CURRENT DEFENSE]</span>
           </div>
-          <div style="font-size:11.5px; line-height:1.6; color:var(--text-secondary); margin-top:6px;">
-            ● <strong>การตัดสินใจของโมเดล:</strong> QQQ 20D ติดลบ -7.88% คะแนนแพ้เงินสด<br>
-            ● <strong>คำสั่งปัจจุบัน:</strong> ขาย QQQ เหลือ <strong>0.0%</strong><br>
-            ● <strong>การถือครอง:</strong> ถือ UUP <strong>71.3%</strong> + DBC <strong>28.7%</strong> (หรือ BIL 100%)
+          <div style="font-size:11px; line-height:1.55; color:var(--text-secondary); margin-top:6px;">
+            ● <strong>สภาวะ:</strong> QQQ 20D -7.88% หลุด Cash Hurdle<br>
+            ● <strong>คำสั่ง:</strong> ขาย QQQ เหลือ <strong>0.0%</strong><br>
+            ● <strong>การถือครอง:</strong> ถือ UUP <strong>71.3%</strong> + DBC <strong>28.7%</strong>
           </div>
         </div>
       </div>
@@ -1455,6 +1470,17 @@ table.flow-table tr:hover { background: var(--bg-hover); }
     histCtx.lineWidth = 1.8;
     histCtx.stroke();
 
+    // Draw TLT Line (Amber)
+    histCtx.beginPath();
+    for (let i = 0; i < n; i++) {
+      const x = getX(i);
+      const y = getY(historyData[i].TLT || 0);
+      if (i === 0) histCtx.moveTo(x, y); else histCtx.lineTo(x, y);
+    }
+    histCtx.strokeStyle = '#f59e0b';
+    histCtx.lineWidth = 1.8;
+    histCtx.stroke();
+
     // X Axis dates
     histCtx.fillStyle = '#64748b';
     histCtx.textAlign = 'center';
@@ -1479,12 +1505,14 @@ table.flow-table tr:hover { background: var(--bg-hover); }
       const item = historyData[idx];
 
       if (item && readout) {
+        let breadthTxt = item.equity_breadth !== undefined ? ` · [Eq Breadth: <strong>${item.equity_breadth}%</strong> | Com: <strong>${item.commodity_breadth}%</strong>]` : '';
         readout.innerHTML = `<span style="color:#22d3ee; font-weight:900;">${item.date}</span> · ` +
           `[${item.regime}] · ` +
           `QQQ: <strong style="color:#22d3ee;">${item.QQQ}%</strong> | ` +
           `UUP: <strong style="color:#c084fc;">${item.UUP}%</strong> | ` +
           `DBC: <strong style="color:#34d399;">${item.DBC}%</strong> | ` +
-          `BIL: <strong style="color:#94a3b8;">${item.BIL}%</strong>`;
+          `TLT: <strong style="color:#f59e0b;">${item.TLT || 0}%</strong> | ` +
+          `BIL: <strong style="color:#94a3b8;">${item.BIL}%</strong>` + breadthTxt;
       }
     });
   }
@@ -1503,16 +1531,23 @@ table.flow-table tr:hover { background: var(--bg-hover); }
   function populateHistTable(data) {
     const tbody = document.getElementById('histTableBody');
     if (!tbody || !data || data.length === 0) return;
-    const slice = data.slice(-15).reverse();
+    const slice = data.slice(-20).reverse();
     tbody.innerHTML = slice.map((item, idx) => {
       const isLatest = idx === 0;
       const isExit = item.QQQ === 0;
       let badgeClass = isExit ? 'tag-lose' : (item.QQQ >= 100 ? 'tag-beat' : 'tag-cash');
-      let actionText = isExit ? `ขาย QQQ 0% &rarr; ถือ UUP ${item.UUP}% + DBC ${item.DBC}%` : `ถือ QQQ ${item.QQQ}% ตาม Vol Target`;
+      let havenNames = [];
+      if (item.UUP > 0) havenNames.push(`UUP ${item.UUP}%`);
+      if (item.DBC > 0) havenNames.push(`DBC ${item.DBC}%`);
+      if (item.TLT > 0) havenNames.push(`TLT ${item.TLT}%`);
+      if (item.GLD > 0) havenNames.push(`GLD ${item.GLD}%`);
+      if (item.BIL > 0) havenNames.push(`BIL ${item.BIL}%`);
+      let actionText = isExit ? `ขาย QQQ 0% &rarr; ถือ ${havenNames.join(' + ') || 'BIL 100%'}` : `ถือ QQQ ${item.QQQ}% ตาม Vol Target`;
+      let breadthTag = item.equity_breadth !== undefined ? ` <span style="font-size:9.5px; opacity:0.85;">(Eq: ${item.equity_breadth}%)</span>` : '';
       return `
         <tr>
           <td style="font-family:var(--font-mono); font-weight:${isLatest ? '850' : '400'}; color:${isLatest ? 'var(--teal-bright)' : 'var(--text-primary)'};">${item.date} ${isLatest ? '(ล่าสุด)' : ''}</td>
-          <td><span class="tag-badge ${badgeClass}">[${item.regime}]</span></td>
+          <td><span class="tag-badge ${badgeClass}">[${item.regime}]${breadthTag}</span></td>
           <td class="${isExit ? 'neg' : 'pos'}" style="text-align:right; font-weight:850; font-family:var(--font-mono);">${item.QQQ.toFixed(1)}%</td>
           <td class="pos" style="text-align:right; font-weight:850; font-family:var(--font-mono);">${item.UUP.toFixed(1)}%</td>
           <td class="pos" style="text-align:right; font-weight:850; font-family:var(--font-mono);">${item.DBC.toFixed(1)}%</td>

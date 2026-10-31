@@ -208,32 +208,49 @@ def generate_deterministic_allocation(latest_date, df):
 # ---------------------------------------------------------
 # 4. ORDER GENERATION & HISTORICAL TIME SERIES PERSISTENCE
 # ---------------------------------------------------------
+# 4. HISTORICAL ALLOCATION TIME SERIES (2008–2026 FULL HISTORY)
+# ---------------------------------------------------------
+EQUITY_SLEEVE = ['SPY', 'QQQ', 'EFA', 'EEM', 'VNQ']
+CREDIT_SLEEVE = ['HYG', 'BND', 'IEF']
+COMMODITY_SLEEVE = ['DBC', 'GLD']
+HAVEN_SLEEVE = ['UUP', 'TLT', 'BIL', 'FXY']
+
 def generate_historical_allocations(raw_data):
-    """Generates weekly historical allocation time series for the dashboard."""
-    weekly = raw_data[['QQQ', 'BIL', 'DBC', 'UUP', 'GLD', 'TLT']].resample('W-FRI').last().dropna()
+    """
+    Generates weekly historical allocation time series and sleeve-level breadth
+    across the entire mutual history (2008–2026).
+    """
+    returns_1d = raw_data.pct_change(fill_method=None)
+    ret60 = raw_data.pct_change(60, fill_method=None) * 100
+    ret120 = raw_data.pct_change(120, fill_method=None) * 100
+    ret252 = raw_data.pct_change(252, fill_method=None) * 100
+    vol20 = returns_1d.rolling(20).std() * np.sqrt(252) * 100
+
+    scores = (
+        MOM_WEIGHTS[60] * ret60 +
+        MOM_WEIGHTS[120] * ret120 +
+        MOM_WEIGHTS[252] * ret252
+    )
+
+    weekly_dates = raw_data.resample('W-FRI').last().dropna(how='all').index
+    valid_dates = [d for d in weekly_dates if d >= pd.Timestamp('2008-06-01') and d in raw_data.index]
     records = []
-    
-    for i in range(26, len(weekly)):
-        dt = weekly.index[i].strftime('%Y-%m-%d')
-        p_curr = weekly.iloc[i]
-        p_60 = weekly.iloc[max(0, i-12)]
-        p_120 = weekly.iloc[max(0, i-24)]
-        p_252 = weekly.iloc[max(0, i-52)] if i >= 52 else weekly.iloc[0]
-        
-        r60 = (p_curr / p_60 - 1) * 100
-        r120 = (p_curr / p_120 - 1) * 100
-        r252 = (p_curr / p_252 - 1) * 100
-        scores = MOM_WEIGHTS[60] * r60 + MOM_WEIGHTS[120] * r120 + MOM_WEIGHTS[252] * r252
-        
-        sub_w = weekly.iloc[max(0, i-4):i+1]
-        vols = sub_w.pct_change().std() * np.sqrt(52) * 100
-        
-        bil_score = scores['BIL']
-        qqq_score = scores['QQQ']
-        qqq_vol = max(8.0, vols['QQQ']) if not np.isnan(vols['QQQ']) else 20.0
-        
+
+    for dt in valid_dates:
+        dt_str = dt.strftime('%Y-%m-%d')
+        bil_score = scores.loc[dt, 'BIL']
+        qqq_score = scores.loc[dt, 'QQQ']
+        qqq_vol = max(8.0, vol20.loc[dt, 'QQQ']) if not np.isnan(vol20.loc[dt, 'QQQ']) else 20.0
+
+        # Sleeve-Level Multi-Horizon Cash-Hurdle Breadth (MCHB)
+        eq_b = sum(scores.loc[dt, t] > bil_score for t in EQUITY_SLEEVE) / len(EQUITY_SLEEVE) * 100
+        cr_b = sum(scores.loc[dt, t] > bil_score for t in CREDIT_SLEEVE) / len(CREDIT_SLEEVE) * 100
+        co_b = sum(scores.loc[dt, t] > bil_score for t in COMMODITY_SLEEVE) / len(COMMODITY_SLEEVE) * 100
+        ha_b = sum(scores.loc[dt, t] > bil_score for t in HAVEN_SLEEVE) / len(HAVEN_SLEEVE) * 100
+        flow_b = sum(scores.loc[dt, t] > bil_score for t in ALL_TICKERS) / len(ALL_TICKERS) * 100
+
         w = {'QQQ': 0.0, 'UUP': 0.0, 'DBC': 0.0, 'GLD': 0.0, 'TLT': 0.0, 'BIL': 0.0}
-        
+
         if qqq_score > bil_score:
             raw_exp = TARGET_VOLATILITY / qqq_vol
             exp = float(np.clip(raw_exp, 0.0, MAX_CORE_LEVERAGE))
@@ -244,38 +261,44 @@ def generate_historical_allocations(raw_data):
             exp = 0.0
             rem = 1.0
             regime = 'RISK-OFF HAVEN ROTATION'
-            
+
         havens = ['DBC', 'UUP', 'GLD', 'TLT']
-        valid_h = [h for h in havens if scores[h] > bil_score]
-        valid_h = sorted(valid_h, key=lambda h: scores[h], reverse=True)[:2]
-        
+        valid_h = [h for h in havens if scores.loc[dt, h] > bil_score]
+        valid_h = sorted(valid_h, key=lambda h: scores.loc[dt, h], reverse=True)[:2]
+
         if rem > 0.001:
             if valid_h:
-                inv_vols = [1.0 / max(4.0, vols[h] if not np.isnan(vols[h]) else 15.0) for h in valid_h]
+                inv_vols = [1.0 / max(4.0, vol20.loc[dt, h] if not np.isnan(vol20.loc[dt, h]) else 15.0) for h in valid_h]
                 sum_inv = sum(inv_vols)
                 for h, inv_v in zip(valid_h, inv_vols):
                     w[h] = round((inv_v / sum_inv) * rem, 4)
             else:
                 w['BIL'] = round(rem, 4)
-                if exp == 0: regime = 'FULL CASH DEFENSE'
-                
+                if exp == 0:
+                    regime = 'FULL CASH DEFENSE'
+
         records.append({
-            'date': dt,
+            'date': dt_str,
             'regime': regime,
             'QQQ': round(w['QQQ'] * 100, 1),
             'UUP': round(w['UUP'] * 100, 1),
             'DBC': round(w['DBC'] * 100, 1),
             'GLD': round(w['GLD'] * 100, 1),
             'TLT': round(w['TLT'] * 100, 1),
-            'BIL': round(w['BIL'] * 100, 1)
+            'BIL': round(w['BIL'] * 100, 1),
+            'equity_breadth': round(float(eq_b), 1),
+            'credit_breadth': round(float(cr_b), 1),
+            'commodity_breadth': round(float(co_b), 1),
+            'haven_breadth': round(float(ha_b), 1),
+            'net_flow_breadth': round(float(flow_b), 1)
         })
     return records
 
 
 def main():
     utc_now = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
-    print(f"[{utc_now}] Fetching 2Y daily data for {len(ALL_TICKERS)} macro ETFs...")
-    raw = yf.download(ALL_TICKERS, period="5y", progress=False)["Close"]
+    print(f"[{utc_now}] Fetching maximum mutual history (from 2007-05-30) for {len(ALL_TICKERS)} macro ETFs...")
+    raw = yf.download(ALL_TICKERS, start="2007-05-30", progress=False)["Close"]
     raw = raw.dropna(axis=0, how="all")
 
     latest_date, metrics_df = fetch_and_calculate_metrics()
