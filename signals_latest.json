@@ -10,20 +10,20 @@
     "name": "Pure Dynamic Market Tournament (Zero-Bias)",
     "regime": "DUOPOLY LEADERS (DBC 86.9% + UUP 13.1%)",
     "target_weights": {
-      "HYG": 0.0,
-      "EFA": 0.0,
+      "IEF": 0.0,
       "BIL": 0.0,
       "FXY": 0.0,
-      "SPY": 0.0,
-      "QQQ": 0.0,
-      "UUP": 0.1314,
-      "GLD": 0.0,
-      "DBC": 0.8686,
-      "TLT": 0.0,
-      "IEF": 0.0,
       "VNQ": 0.0,
+      "SPY": 0.0,
+      "GLD": 0.0,
+      "HYG": 0.0,
+      "DBC": 0.8686,
+      "UUP": 0.1314,
+      "EFA": 0.0,
+      "EEM": 0.0,
       "BND": 0.0,
-      "EEM": 0.0
+      "QQQ": 0.0,
+      "TLT": 0.0
     },
     "execution_plan": [
       {
@@ -77,20 +77,20 @@
     "qqq_vol20d": 22.64,
     "qqq_exposure": 0.0,
     "target_weights": {
-      "HYG": 0.0,
-      "EFA": 0.0,
+      "IEF": 0.0,
       "BIL": 0.0,
       "FXY": 0.0,
-      "SPY": 0.0,
-      "QQQ": 0.0,
-      "UUP": 0.1314,
-      "GLD": 0.0,
-      "DBC": 0.8686,
-      "TLT": 0.0,
-      "IEF": 0.0,
       "VNQ": 0.0,
+      "SPY": 0.0,
+      "GLD": 0.0,
+      "HYG": 0.0,
+      "DBC": 0.8686,
+      "UUP": 0.1314,
+      "EFA": 0.0,
+      "EEM": 0.0,
       "BND": 0.0,
-      "EEM": 0.0
+      "QQQ": 0.0,
+      "TLT": 0.0
     },
     "execution_plan": [
       {
@@ -129,20 +129,20 @@
     "selected_core": "DBC",
     "core_exposure": 1.0,
     "target_weights": {
-      "HYG": 0.0,
-      "EFA": 0.0,
+      "IEF": 0.0,
       "BIL": 0.0,
       "FXY": 0.0,
-      "SPY": 0.0,
-      "QQQ": 0.0,
-      "UUP": 0.1314,
-      "GLD": 0.0,
-      "DBC": 0.8686,
-      "TLT": 0.0,
-      "IEF": 0.0,
       "VNQ": 0.0,
+      "SPY": 0.0,
+      "GLD": 0.0,
+      "HYG": 0.0,
+      "DBC": 0.8686,
+      "UUP": 0.1314,
+      "EFA": 0.0,
+      "EEM": 0.0,
       "BND": 0.0,
-      "EEM": 0.0
+      "QQQ": 0.0,
+      "TLT": 0.0
     }
   },
   "full_metrics": {
