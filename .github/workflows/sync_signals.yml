@@ -1,0 +1,57 @@
+name: Global Capital Flow Sync & Deployment
+
+on:
+  schedule:
+    # Runs at 21:30 UTC every Monday-Friday (after US market close)
+    - cron: '30 21 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  calculate-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Deterministic Quant Allocation Engine
+        run: |
+          python engine.py
+
+      - name: Commit and Push Updated Signals
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action [Capital Flow Engine]"
+          git add signals_latest.json allocation_orders.csv
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(engine): auto-sync global capital flow signals [skip ci]" && git push)
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

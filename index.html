@@ -1,0 +1,1204 @@
+<!doctype html>
+<html lang="th" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Capital Flow &amp; Liquidity Constellation Radar · 80% World Market Cap Scanner</title>
+<style>
+:root {
+  /* Obsidian Quant Terminal DTCG Tokens (DESIGN.md) */
+  --navy-950: #070a10;
+  --navy-900: #0a0f1d;
+  --navy-850: #0e1524;
+  --navy-800: #121a2c;
+  --navy-750: #162035;
+  --navy-700: #1e2c48;
+  --slate-500: #64748b;
+  --slate-400: #94a3b8;
+  --slate-200: #e2e8f0;
+  --slate-100: #f1f5f9;
+  --white: #ffffff;
+  --emerald-400: #34d399;
+  --emerald-500: #10b981;
+  --emerald-600: #059669;
+  --cyan-400: #22d3ee;
+  --cyan-500: #06b6d4;
+  --cyan-600: #0891b2;
+  --purple-400: #c084fc;
+  --purple-500: #a855f7;
+  --amber-400: #fbbf24;
+  --amber-500: #f59e0b;
+  --rose-400: #fb7185;
+  --rose-500: #f43f5e;
+
+  --bg-canvas: var(--navy-950);
+  --bg-card: var(--navy-850);
+  --bg-subtle: var(--navy-800);
+  --bg-hover: var(--navy-750);
+  --text-primary: var(--slate-100);
+  --text-secondary: var(--slate-400);
+  --text-muted: var(--slate-500);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-focus: var(--cyan-500);
+
+  --teal-bright: var(--emerald-400);
+  --teal-bg: rgba(16, 185, 129, 0.12);
+  --teal-border: rgba(16, 185, 129, 0.35);
+
+  --blue-bright: var(--cyan-400);
+  --blue-bg: rgba(6, 182, 212, 0.12);
+  --blue-border: rgba(6, 182, 212, 0.35);
+
+  --purple-bright: var(--purple-400);
+  --purple-bg: rgba(168, 85, 247, 0.12);
+  --purple-border: rgba(168, 85, 247, 0.35);
+
+  --amber-bright: var(--amber-400);
+  --amber-bg: rgba(245, 158, 11, 0.12);
+  --amber-border: rgba(245, 158, 11, 0.35);
+
+  --red-bright: var(--rose-400);
+  --red-bg: rgba(244, 63, 94, 0.12);
+  --red-border: rgba(244, 63, 94, 0.35);
+
+  --radius-sm: 6px;
+  --radius-md: 9px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg-canvas); font-size: 13px; line-height: 1.5; min-height: 100vh; padding: 20px; }
+button { cursor: pointer; font: inherit; }
+
+.shell { max-width: 1520px; margin: auto; }
+
+/* Header */
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--border-subtle); flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 14px; }
+.mark {
+  width: 52px; height: 52px; display: grid; place-items: center;
+  background: linear-gradient(135deg, #06b6d4, #3b82f6 60%, #8b5cf6);
+  color: #fff; border-radius: var(--radius-md); font-size: 17px; font-weight: 900; font-family: var(--font-mono);
+  box-shadow: 0 0 24px rgba(6, 182, 212, 0.45);
+}
+.eyebrow { color: var(--teal-bright); font-size: 10.5px; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; font-family: var(--font-mono); }
+.brand h1 { font-size: 23px; line-height: 1.2; margin: 3px 0 2px; font-weight: 850; color: var(--text-primary); letter-spacing: -.02em; }
+.subhead { color: var(--text-muted); font-size: 12px; }
+
+.topbar-meta { text-align: right; font-family: var(--font-mono); font-size: 11px; }
+.badge-live {
+  display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px;
+  border-radius: 99px; background: var(--teal-bg); color: var(--teal-bright);
+  border: 1px solid var(--teal-border); font-weight: 850; font-size: 10px;
+}
+.dot-pulse { width: 6px; height: 6px; border-radius: 50%; background: currentColor; box-shadow: 0 0 8px currentColor; animation: pulse 1.8s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .4; transform: scale(0.85); } }
+
+/* Macro Verdict Banner */
+.verdict-banner {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(6, 182, 212, 0.06) 100%);
+  border: 1px solid var(--amber-border); border-left: 4px solid var(--amber-bright);
+  border-radius: var(--radius-lg); padding: 16px 20px; margin-bottom: 20px;
+  display: grid; grid-template-columns: auto 1fr auto; gap: 18px; align-items: center;
+}
+@media (max-width: 960px) { .verdict-banner { grid-template-columns: 1fr; } }
+
+.verdict-tag {
+  background: var(--amber-bg); color: var(--amber-bright); border: 1px solid var(--amber-border);
+  padding: 6px 12px; border-radius: var(--radius-sm); font-family: var(--font-mono); font-weight: 900; font-size: 12px;
+  letter-spacing: .05em; text-transform: uppercase; display: inline-block;
+}
+.verdict-text h3 { margin: 0 0 4px; font-size: 15px; font-weight: 850; color: var(--text-primary); }
+.verdict-text p { margin: 0; font-size: 12px; color: var(--text-secondary); line-height: 1.55; }
+.verdict-kpi { text-align: right; font-family: var(--font-mono); }
+.kpi-title { font-size: 10px; color: var(--text-muted); text-transform: uppercase; display: block; }
+.kpi-num { font-size: 20px; font-weight: 900; color: var(--amber-bright); }
+
+/* Global Asset Constellation Canvas (World Map of Assets) */
+.constellation-panel {
+  background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
+  padding: 20px; margin-bottom: 20px; position: relative; overflow: hidden;
+}
+.panel-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 10px; }
+.panel-title { font-size: 14.5px; font-weight: 850; color: var(--text-primary); margin: 0; display: flex; align-items: center; gap: 8px; }
+.panel-subtitle { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
+
+.canvas-toolbar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.btn-filter {
+  background: var(--bg-canvas); color: var(--text-secondary); border: 1px solid var(--border-subtle);
+  padding: 4px 10px; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+  transition: all .15s ease;
+}
+.btn-filter:hover { background: var(--bg-hover); color: var(--text-primary); }
+.btn-filter.active { background: var(--blue-bg); color: var(--blue-bright); border-color: var(--blue-border); }
+
+.map-container {
+  width: 100%; height: 500px; background: radial-gradient(circle at 50% 50%, #0d1424 0%, #070a10 85%);
+  border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
+  position: relative; overflow: hidden; cursor: crosshair;
+}
+#constellationCanvas { width: 100%; height: 100%; display: block; }
+
+/* Interactive Map HUD Overlay */
+.map-hud {
+  position: absolute; bottom: 16px; left: 16px; background: rgba(14, 21, 36, 0.92);
+  border: 1px solid var(--border-focus); border-radius: var(--radius-md); padding: 12px 16px;
+  font-family: var(--font-mono); font-size: 11.5px; pointer-events: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6); backdrop-filter: blur(8px);
+  min-width: 270px; display: none; z-index: 10;
+}
+.hud-title { font-weight: 900; font-size: 13px; color: var(--cyan-400); margin-bottom: 6px; display: flex; justify-content: space-between; }
+.hud-metric { display: flex; justify-content: space-between; margin-bottom: 3px; color: var(--slate-400); }
+.hud-val { font-weight: 850; color: var(--text-primary); }
+
+.legend-badge {
+  position: absolute; top: 16px; right: 16px; background: rgba(14, 21, 36, 0.88);
+  border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 8px 12px;
+  font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); display: flex; flex-direction: column; gap: 4px;
+  pointer-events: none; backdrop-filter: blur(6px);
+}
+.legend-item { display: flex; align-items: center; gap: 6px; }
+.legend-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+
+/* Section Tabs */
+.tabs-nav { display: flex; gap: 10px; margin-bottom: 16px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px; }
+.tab-btn {
+  background: transparent; border: none; padding: 6px 14px; font-size: 13px; font-weight: 800; font-family: var(--font-mono);
+  color: var(--text-muted); border-radius: var(--radius-sm); transition: all .15s ease;
+}
+.tab-btn:hover { color: var(--text-primary); background: var(--bg-hover); }
+.tab-btn.active { color: var(--cyan-400); background: var(--blue-bg); border: 1px solid var(--blue-border); }
+
+/* 4 Macro Sleeves Grid */
+.sleeves-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 20px;
+}
+@media (max-width: 1100px) { .sleeves-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .sleeves-grid { grid-template-columns: 1fr; } }
+
+.sleeve-card {
+  background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
+  padding: 16px; display: flex; flex-direction: column; justify-content: space-between;
+  transition: all .2s ease; position: relative; overflow: hidden;
+}
+.sleeve-card:hover { border-color: var(--border-focus); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+.sleeve-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+.sleeve-title { font-size: 13.5px; font-weight: 850; color: var(--text-primary); }
+.sleeve-weight { font-size: 10px; font-family: var(--font-mono); color: var(--text-muted); background: var(--bg-canvas); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border-subtle); }
+
+.sleeve-status-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.flow-direction-badge {
+  font-family: var(--font-mono); font-size: 10px; font-weight: 850; padding: 2px 7px; border-radius: 4px;
+}
+.flow-in { background: var(--teal-bg); color: var(--teal-bright); border: 1px solid var(--teal-border); }
+.flow-out { background: var(--red-bg); color: var(--red-bright); border: 1px solid var(--red-border); }
+.flow-neutral { background: var(--bg-subtle); color: var(--text-muted); border: 1px solid var(--border-subtle); }
+
+.sleeve-meter { height: 6px; background: var(--bg-subtle); border-radius: 99px; overflow: hidden; margin-bottom: 12px; }
+.sleeve-meter-fill { height: 100%; border-radius: 99px; transition: width .5s ease; }
+
+.asset-pill-list { display: flex; flex-direction: column; gap: 6px; }
+.asset-pill {
+  display: flex; justify-content: space-between; align-items: center; padding: 6px 10px;
+  background: var(--bg-canvas); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);
+  font-size: 11.5px; font-family: var(--font-mono);
+}
+.asset-pill:hover { background: var(--bg-hover); }
+.asset-ticker { font-weight: 850; color: var(--text-primary); }
+.asset-role { font-size: 10px; color: var(--text-muted); font-family: var(--font-sans); }
+.asset-flow { font-weight: 850; }
+
+/* Rolling Window Analysis & Architecture Panels */
+.panel-box {
+  background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
+  padding: 20px; margin-bottom: 20px;
+}
+.grid-2col { display: grid; grid-template-columns: 1.1fr 1fr; gap: 18px; }
+@media (max-width: 960px) { .grid-2col { grid-template-columns: 1fr; } }
+
+.metric-card {
+  background: var(--bg-canvas); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
+  padding: 14px; margin-bottom: 12px;
+}
+.metric-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; font-family: var(--font-mono); }
+.metric-title { font-weight: 850; font-size: 12px; color: var(--text-primary); }
+.metric-value { font-size: 18px; font-weight: 900; color: var(--cyan-400); }
+
+/* Master ETF Flow Table */
+.table-wrap { overflow-x: auto; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: var(--bg-card); margin-bottom: 20px; }
+table.flow-table { width: 100%; border-collapse: collapse; font-size: 12px; text-align: left; white-space: nowrap; }
+table.flow-table th {
+  background: var(--bg-canvas); color: var(--text-muted); font-size: 10px; font-weight: 850;
+  text-transform: uppercase; letter-spacing: .05em; padding: 10px 14px; border-bottom: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+}
+table.flow-table td { padding: 9px 14px; border-bottom: 1px solid var(--border-subtle); color: var(--text-primary); }
+table.flow-table tr:hover { background: var(--bg-hover); }
+
+.tag-badge { font-family: var(--font-mono); font-size: 10px; font-weight: 850; padding: 2px 7px; border-radius: 4px; display: inline-block; }
+.tag-beat { background: var(--teal-bg); color: var(--teal-bright); border: 1px solid var(--teal-border); }
+.tag-lose { background: var(--red-bg); color: var(--red-bright); border: 1px solid var(--red-border); }
+.tag-cash { background: var(--blue-bg); color: var(--blue-bright); border: 1px solid var(--blue-border); }
+.tag-warn { background: var(--amber-bg); color: var(--amber-bright); border: 1px solid var(--amber-border); }
+
+.pos { color: var(--teal-bright); }
+.neg { color: var(--red-bright); }
+
+/* Footnote */
+.footer-note { font-size: 11px; color: var(--text-muted); line-height: 1.6; padding: 12px 0; border-top: 1px solid var(--border-subtle); margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- Header -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark">80%</div>
+      <div>
+        <div class="eyebrow">GLOBAL CAPITAL ALLOCATION CONSTELLATION · 4 MACRO SLEEVES</div>
+        <h1>แผนที่การไหลของเงินทุนโลก &amp; โมเดลถ่วงน้ำหนักหลายมิติเวลา</h1>
+        <div class="subhead">ครอบคลุม 80% มูลค่าตลาดทุนโลก ($300T) · ไม่พึ่งพา SMA200 ล้าหลัง · ตรวจสอบผ่าน Rolling Window 226 หน้าต่าง (2007–2026)</div>
+      </div>
+    </div>
+    <div class="topbar-meta">
+      <div class="badge-live"><i class="dot-pulse"></i> LIVE PREVIEW · DATA AS-OF 2026-10-30</div>
+      <div style="color:var(--text-muted); margin-top:5px;">Causal Close · Multi-Horizon Rank &amp; Vol-Target Engine</div>
+    </div>
+  </header>
+
+  <!-- Macro Verdict Banner -->
+  <section class="verdict-banner">
+    <div>
+      <span class="verdict-tag">[STAGFLATION / FLIGHT TO COMMODITIES &amp; USD]</span>
+    </div>
+    <div class="verdict-text">
+      <h3>การวินิจฉัยกระแสเงินทุนโลก: ตอนนี้เงินหนีไปไหน และทำไม SMA200 ถึงล้าหลัง?</h3>
+      <p>
+        <strong>1. ทิศทางการหมุนของเงิน (Where is the money?):</strong> เงินโลกถูกดูดออกจากสินทรัพย์เสี่ยงสูง (Tech/QQQ -7.88% 20D, EM/EEM -9.80% 20D, และ Gold/GLD -6.41% 20D) ไหลตรงเข้าสู่ 2 หลุมหลบภัยหลัก: <strong>สินค้าโภคภัณฑ์/พลังงาน (DBC Score 22.70, +16.46% 60D, +52.98% 252D)</strong> และ <strong>ดอลลาร์สหรัฐ (UUP Score 5.02)</strong><br>
+        <strong>2. ข้อผิดพลาดร้ายแรงของ SMA200 (The Lag Problem):</strong> สังเกตว่า <strong>QQQ ยังอยู่เหนือ SMA200 (+1.79%)</strong> แต่มูลค่าได้ร่วงลงไปแล้ว -9.11% จากจุดสูงสุด 40 วัน และความผันผวนดีดขึ้นสู่ 22.64%! หากใช้ SMA200 เป็นสวิตช์เปิด/ปิด พอร์ตจะไม่ทำอะไรเลยจนกว่าจะขาดทุนหนัก แต่ระบบ <strong>Multi-Horizon Score (-0.08)</strong> และ <strong>Continuous Vol-Targeting</strong> ตรวจพบการรั่วไหลของเงินและสั่งตัดลด exposure อัตโนมัติล่วงหน้าเรียบร้อยแล้ว
+      </p>
+    </div>
+    <div class="verdict-kpi">
+      <span class="kpi-title">Cash Hurdle (BIL)</span>
+      <span class="kpi-num">1.88 pts</span>
+      <span style="font-size:10px; color:var(--text-muted); display:block;">4 จาก 14 สินทรัพย์ชนะเงินสด</span>
+    </div>
+  </section>
+
+  <!-- Dynamic World Map of Assets (Interactive Constellation Canvas) -->
+  <section class="constellation-panel">
+    <div class="panel-head">
+      <div>
+        <h2 class="panel-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-400)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          แผนที่กลุ่มดาวสินทรัพย์โลก &amp; อนุภาคการไหลของสภาพคล่อง (Global Asset Constellation Map)
+        </h2>
+        <div class="panel-subtitle">จำลอง 5 ทวีปเศรษฐกิจมหภาคโลก พร้อมกระแสอนุภาค (Animated Particles) เคลื่อนย้ายจากแหล่ง Outflow สู่ Inflow Sinks</div>
+      </div>
+      <div class="canvas-toolbar">
+        <button class="btn-filter active" id="btnFilterAll" onclick="setFilter('all')">ทุกลำธารการไหล (ALL)</button>
+        <button class="btn-filter" id="btnFilterActive" onclick="setFilter('active')">เฉพาะเส้นทางหลัก (ACTIVE SINK)</button>
+        <button class="btn-filter" id="btnFilterEquities" onclick="setFilter('equities')">หมุนออกจากหุ้น (EQUITY DRAIN)</button>
+        <button class="btn-filter" id="btnFilterHavens" onclick="setFilter('havens')">หลุมหลบภัย (SAFE HAVENS)</button>
+      </div>
+    </div>
+
+    <div class="map-container" id="mapContainer">
+      <canvas id="constellationCanvas"></canvas>
+
+      <!-- HUD on hover -->
+      <div class="map-hud" id="mapHud">
+        <div class="hud-title"><span id="hudTicker">QQQ</span> <span id="hudRole" style="font-size:10px; color:var(--text-muted);">US Tech Growth</span></div>
+        <div class="hud-metric"><span>ราคาปิด (Close):</span> <span class="hud-val" id="hudPrice">$690.49</span></div>
+        <div class="hud-metric"><span>Multi-Horizon Score:</span> <span class="hud-val" id="hudScore">-0.08 pts</span></div>
+        <div class="hud-metric"><span>ผลตอบแทน 20D / 60D:</span> <span class="hud-val" id="hudRet">-7.88% / -3.28%</span></div>
+        <div class="hud-metric"><span>20D Realized Vol:</span> <span class="hud-val" id="hudVol">22.64%</span></div>
+        <div class="hud-metric"><span>ระยะห่างจาก 40D High:</span> <span class="hud-val" id="hudHigh">-9.11%</span></div>
+        <div class="hud-metric"><span>ระยะห่างจาก SMA200:</span> <span class="hud-val" id="hudSma">+1.79% (Lagging)</span></div>
+        <div class="hud-metric"><span>สถานะกระแสเงิน:</span> <span class="hud-val" id="hudStatus">[CAPITAL OUTFLOW]</span></div>
+      </div>
+
+      <!-- Legend Overlay -->
+      <div class="legend-badge">
+        <div class="legend-item"><span class="legend-dot" style="background:var(--emerald-400); box-shadow:0 0 6px var(--emerald-400);"></span> Inflow Sink (เงินไหลเข้าสุทธิ)</div>
+        <div class="legend-item"><span class="legend-dot" style="background:var(--cyan-400); box-shadow:0 0 6px var(--cyan-400);"></span> Cash Hurdle / Reserve Anchor</div>
+        <div class="legend-item"><span class="legend-dot" style="background:var(--amber-400);"></span> Neutral / Selective Buffer</div>
+        <div class="legend-item"><span class="legend-dot" style="background:var(--rose-400); box-shadow:0 0 6px var(--rose-400);"></span> Outflow Drain (เงินถูกเทขาย)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Tabs -->
+  <div class="tabs-nav">
+    <button class="tab-btn active" id="tabBtn1" onclick="switchTab('tab1')">[1] สี่เสาหลักหมุนเวียนทุนโลก (4 MACRO SLEEVES)</button>
+    <button class="tab-btn" id="tabBtn2" onclick="switchTab('tab2')">[2] สถิติ ROLLING WINDOWS 226 หน้าต่าง (2007–2026)</button>
+    <button class="tab-btn" id="tabBtn3" onclick="switchTab('tab3')">[3] ทำไม SMA200 ถึงตกรุ่น &amp; สถาปัตยกรรม MULTI-HORIZON RANK</button>
+  </div>
+
+  <!-- TAB 1: 4 Macro Sleeves Grid & Master Flow Matrix -->
+  <div id="tab1Content">
+    <section class="sleeves-grid">
+      
+      <!-- Sleeve 1: Real Assets & Commodities -->
+      <div class="sleeve-card" style="border-top: 3px solid var(--emerald-400);">
+        <div>
+          <div class="sleeve-header">
+            <div>
+              <div class="sleeve-title">1. สินค้าโภคภัณฑ์ &amp; ทรัพย์สินจริง</div>
+              <div style="font-size:11px; color:var(--text-muted);">Real Assets &amp; Energy</div>
+            </div>
+            <span class="sleeve-weight">~10% World Cap</span>
+          </div>
+          <div class="sleeve-status-row">
+            <span class="flow-direction-badge flow-in">▲ PRIMARY INFLOW SINK</span>
+            <span style="font-family:var(--font-mono); font-size:11px; font-weight:850; color:var(--teal-bright);">Score: 22.70</span>
+          </div>
+          <div class="sleeve-meter"><div class="sleeve-meter-fill" style="width: 98%; background: var(--teal-bright);"></div></div>
+        </div>
+        <div class="asset-pill-list">
+          <div class="asset-pill">
+            <div><span class="asset-ticker">DBC</span> <span class="asset-role">Commodities</span></div>
+            <span class="asset-flow pos">+16.46% (60D)</span>
+          </div>
+          <div class="asset-pill">
+            <div><span class="asset-ticker">VNQ</span> <span class="asset-role">Real Estate</span></div>
+            <span class="asset-flow neg">-3.35% (60D)</span>
+          </div>
+          <div class="asset-pill">
+            <div><span class="asset-ticker">GLD</span> <span class="asset-role">Gold Haven</span></div>
+            <span class="asset-flow neg">-8.70% (60D)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sleeve 2: Cash & Currencies -->
+      <div class="sleeve-card" style="border-top: 3px solid var(--cyan-400);">
+        <div>
+          <div class="sleeve-header">
+            <div>
+              <div class="sleeve-title">2. เงินสด &amp; อัตราแลกเปลี่ยน</div>
+              <div style="font-size:11px; color:var(--text-muted);">Currencies &amp; Liquidity Router</div>
+            </div>
+            <span class="sleeve-weight">~15% World Cap</span>
+          </div>
+          <div class="sleeve-status-row">
+            <span class="flow-direction-badge flow-in">▲ CAPITAL INFLOW</span>
+            <span style="font-family:var(--font-mono); font-size:11px; font-weight:850; color:var(--cyan-400);">Score: 5.02</span>
+          </div>
+          <div class="sleeve-meter"><div class="sleeve-meter-fill" style="width: 75%; background: var(--cyan-400);"></div></div>
+        </div>
+        <div class="asset-pill-list">
+          <div class="asset-pill">
+            <div><span class="asset-ticker">UUP</span> <span class="asset-role">US Dollar Index</span></div>
+            <span class="asset-flow pos">+2.87% (60D)</span>
+          </div>
+          <div class="asset-pill">
+            <div><span class="asset-ticker">BIL</span> <span class="asset-role">Cash Hurdle Anchor</span></div>
+            <span class="asset-flow pos">+0.87% (60D)</span>
+          </div>
+          <div class="asset-pill">
+            <div><span class="asset-ticker">FXY</span> <span class="asset-role">Japanese Yen</span></div>
+            <span class="asset-flow pos">+0.52% (60D)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sleeve 3: Global Equities -->
+      <div class="sleeve-card" style="border-top: 3px solid var(--amber-400);">
+        <div>
+          <div class="sleeve-header">
+            <div>
+              <div class="sleeve-title">3. ตราสารทุนทั่วโลก</div>
+              <div style="font-size:11px; color:var(--text-muted);">Global Equities</div>
+            </div>
+            <span class="sleeve-weight">~35% World Cap</span>
+          </div>
+          <div class="sleeve-status-row">
+            <span class="flow-direction-badge flow-neutral">● ROTATION / CAPITAL DRAIN</span>
+            <span style="font-family:var(--font-mono); font-size:11px; font-weight:850; color:var(--amber-bright);">Score: 3.17</span>
+          </div>
+          <div class="sleeve-meter"><div class="sleeve-meter-fill" style="width: 45%; background: var(--amber-bright);"></div></div>
+        </div>
+        <div class="asset-pill-list">
+          <div class="asset-pill">
+            <div><span class="asset-ticker">SPY</span> <span class="asset-role">US S&amp;P 500</span></div>
+            <span class="asset-flow pos">+11.13% (252D)</span>
+          </div>
+          <div class="asset-pill">
+            <div><span class="asset-ticker">EFA</span> <span class="asset-role">Developed Ex-US</span></div>
+            <span class="asset-flow pos">+12.39% (252D)</span>
+          </div>
+          <div class="asset-pill">
+            <div><span class="asset-ticker">QQQ</span> <span class="asset-role">US Tech Growth</span></div>
+            <span class="asset-flow neg">-7.88% (20D)</span>
+          </div>
+          <div class="asset-pill">
+            <div><span class="asset-ticker">EEM</span> <span class="asset-role">Emerging Markets</span></div>
+            <span class="asset-flow neg">-9.80% (20D)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sleeve 4: Sovereign Debt & Credit -->
+      <div class="sleeve-card" style="border-top: 3px solid var(--rose-400);">
+        <div>
+          <div class="sleeve-header">
+            <div>
+              <div class="sleeve-title">4. ตราสารหนี้ &amp; พันธบัตร</div>
+              <div style="font-size:11px; color:var(--text-muted);">Fixed Income &amp; Credit</div>
+            </div>
+            <span class="sleeve-weight">~40% World Cap</span>
+          </div>
+          <div class="sleeve-status-row">
+            <span class="flow-direction-badge flow-out">▼ DURATION OUTFLOW</span>
+            <span style="font-family:var(--font-mono); font-size:11px; font-weight:850; color:var(--red-bright);">Score: -0.45</span>
+          </div>
+          <div class="sleeve-meter"><div class="sleeve-meter-fill" style="width: 20%; background: var(--red-bright);"></div></div>
+        </div>
+        <div class="asset-pill-list">
+          <div class="asset-pill">
+            <div><span class="asset-ticker">TLT</span> <span class="asset-role">20Y+ Treasury</span></div>
+            <span class="asset-flow neg">-5.99% (252D)</span>
+          </div>
+          <div class="asset-pill">
+            <div><span class="asset-ticker">IEF</span> <span class="asset-role">7-10Y Treasury</span></div>
+            <span class="asset-flow neg">-1.57% (252D)</span>
+          </div>
+          <div class="asset-pill">
+            <div><span class="asset-ticker">BND</span> <span class="asset-role">Total US Bond</span></div>
+            <span class="asset-flow neg">-0.32% (252D)</span>
+          </div>
+          <div class="asset-pill">
+            <div><span class="asset-ticker">HYG</span> <span class="asset-role">High Yield Credit</span></div>
+            <span class="asset-flow neg">-1.58% (60D)</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Master Flow Table (Ranked by Multi-Horizon Score) -->
+    <div class="table-wrap">
+      <table class="flow-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Ticker</th>
+            <th>Economic Role</th>
+            <th>Price ($)</th>
+            <th style="text-align:right;">20D %</th>
+            <th style="text-align:right;">60D %</th>
+            <th style="text-align:right;">120D %</th>
+            <th style="text-align:right;">252D %</th>
+            <th style="text-align:center;">Score (Composite)</th>
+            <th style="text-align:right;">Vol 20D</th>
+            <th style="text-align:right;">Dist 40D High</th>
+            <th style="text-align:right;">Dist SMA200</th>
+            <th style="text-align:center;">Cash Hurdle Verdict</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:850; color:var(--teal-bright);">1</td>
+            <td style="font-weight:900; font-family:var(--font-mono); color:var(--teal-bright);">DBC</td>
+            <td>Broad Commodities / Energy</td>
+            <td style="font-family:var(--font-mono);">$33.61</td>
+            <td class="pos" style="text-align:right;">+3.29%</td>
+            <td class="pos" style="text-align:right; font-weight:850;">+16.46%</td>
+            <td class="pos" style="text-align:right;">+8.21%</td>
+            <td class="pos" style="text-align:right;">+52.98%</td>
+            <td style="text-align:center; font-weight:900; color:var(--teal-bright);">22.70</td>
+            <td style="text-align:right;">11.62%</td>
+            <td style="text-align:right;">-1.44%</td>
+            <td class="pos" style="text-align:right;">+14.97%</td>
+            <td style="text-align:center;"><span class="tag-badge tag-beat">[BEAT CASH +20.8pp]</span></td>
+          </tr>
+          <tr>
+            <td style="font-weight:850; color:var(--cyan-400);">2</td>
+            <td style="font-weight:900; font-family:var(--font-mono); color:var(--cyan-400);">UUP</td>
+            <td>US Dollar Index Reserve</td>
+            <td style="font-family:var(--font-mono);">$29.00</td>
+            <td class="pos" style="text-align:right;">+0.38%</td>
+            <td class="pos" style="text-align:right; font-weight:850;">+2.87%</td>
+            <td class="pos" style="text-align:right;">+6.03%</td>
+            <td class="pos" style="text-align:right;">+7.03%</td>
+            <td style="text-align:center; font-weight:900; color:var(--cyan-400);">5.02</td>
+            <td style="text-align:right;">4.67%</td>
+            <td style="text-align:right;">-0.45%</td>
+            <td class="pos" style="text-align:right;">+3.85%</td>
+            <td style="text-align:center;"><span class="tag-badge tag-beat">[BEAT CASH +3.1pp]</span></td>
+          </tr>
+          <tr>
+            <td style="font-weight:850;">3</td>
+            <td style="font-weight:900; font-family:var(--font-mono);">SPY</td>
+            <td>US Core Large-Cap S&amp;P 500</td>
+            <td style="font-family:var(--font-mono);">$755.72</td>
+            <td class="neg" style="text-align:right;">-1.81%</td>
+            <td class="neg" style="text-align:right;">-1.43%</td>
+            <td class="pos" style="text-align:right;">+2.74%</td>
+            <td class="pos" style="text-align:right;">+11.13%</td>
+            <td style="text-align:center; font-weight:850;">3.17</td>
+            <td style="text-align:right;">11.59%</td>
+            <td style="text-align:right;">-3.00%</td>
+            <td class="pos" style="text-align:right;">+4.10%</td>
+            <td style="text-align:center;"><span class="tag-badge tag-beat">[BEAT CASH +1.3pp]</span></td>
+          </tr>
+          <tr>
+            <td style="font-weight:850;">4</td>
+            <td style="font-weight:900; font-family:var(--font-mono);">EFA</td>
+            <td>Developed Markets Ex-US</td>
+            <td style="font-family:var(--font-mono);">$103.37</td>
+            <td class="neg" style="text-align:right;">-0.57%</td>
+            <td class="neg" style="text-align:right;">-3.72%</td>
+            <td class="pos" style="text-align:right;">+1.22%</td>
+            <td class="pos" style="text-align:right;">+12.39%</td>
+            <td style="text-align:center; font-weight:850;">2.04</td>
+            <td style="text-align:right;">9.91%</td>
+            <td style="text-align:right;">-4.60%</td>
+            <td class="pos" style="text-align:right;">+0.92%</td>
+            <td style="text-align:center;"><span class="tag-badge tag-beat">[BEAT CASH +0.2pp]</span></td>
+          </tr>
+          <tr style="background:rgba(6,182,212,0.06); border-left:3px solid var(--cyan-400);">
+            <td style="font-weight:850; color:var(--cyan-400);">&bull;</td>
+            <td style="font-weight:900; font-family:var(--font-mono); color:var(--cyan-400);">BIL</td>
+            <td style="font-weight:800; color:var(--cyan-400);">Cash Hurdle (0-3M T-Bills)</td>
+            <td style="font-family:var(--font-mono);">$91.70</td>
+            <td class="pos" style="text-align:right;">+0.30%</td>
+            <td class="pos" style="text-align:right;">+0.87%</td>
+            <td class="pos" style="text-align:right;">+1.73%</td>
+            <td class="pos" style="text-align:right;">+3.69%</td>
+            <td style="text-align:center; font-weight:900; color:var(--cyan-400);">1.88</td>
+            <td style="text-align:right;">0.22%</td>
+            <td style="text-align:right;">0.00%</td>
+            <td class="pos" style="text-align:right;">+1.43%</td>
+            <td style="text-align:center;"><span class="tag-badge tag-cash">[BENCHMARK HURDLE]</span></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td style="font-weight:850; font-family:var(--font-mono);">VNQ</td>
+            <td>US Real Estate REITs</td>
+            <td style="font-family:var(--font-mono);">$93.94</td>
+            <td class="pos" style="text-align:right;">+4.96%</td>
+            <td class="neg" style="text-align:right;">-3.35%</td>
+            <td class="neg" style="text-align:right;">-1.14%</td>
+            <td class="pos" style="text-align:right;">+10.12%</td>
+            <td style="text-align:center;">0.79</td>
+            <td style="text-align:right;">16.47%</td>
+            <td style="text-align:right;">-1.32%</td>
+            <td class="pos" style="text-align:right;">+0.75%</td>
+            <td style="text-align:center;"><span class="tag-badge tag-lose">[LOSING TO CASH]</span></td>
+          </tr>
+          <tr style="background:rgba(244,63,94,0.05); border-left:3px solid var(--rose-400);">
+            <td>7</td>
+            <td style="font-weight:900; font-family:var(--font-mono); color:var(--red-bright);">QQQ</td>
+            <td>US Tech Growth Leaders</td>
+            <td style="font-family:var(--font-mono);">$690.49</td>
+            <td class="neg" style="text-align:right; font-weight:850;">-7.88%</td>
+            <td class="neg" style="text-align:right;">-3.28%</td>
+            <td class="neg" style="text-align:right;">-2.99%</td>
+            <td class="pos" style="text-align:right;">+9.12%</td>
+            <td style="text-align:center; font-weight:900; color:var(--red-bright);">-0.08</td>
+            <td style="text-align:right; font-weight:850; color:var(--red-bright);">22.64%</td>
+            <td style="text-align:right; font-weight:850; color:var(--red-bright);">-9.11%</td>
+            <td class="pos" style="text-align:right; color:var(--amber-bright);">+1.79% (Lag)</td>
+            <td style="text-align:center;"><span class="tag-badge tag-lose">[SCORE &lt; CASH · CUT EXPOSURE]</span></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td style="font-family:var(--font-mono);">BND</td>
+            <td>Total US Bond Market</td>
+            <td style="font-family:var(--font-mono);">$71.56</td>
+            <td class="pos" style="text-align:right;">+2.32%</td>
+            <td class="neg" style="text-align:right;">-0.25%</td>
+            <td class="neg" style="text-align:right;">-0.77%</td>
+            <td class="neg" style="text-align:right;">-0.32%</td>
+            <td style="text-align:center; color:var(--red-bright);">-0.45</td>
+            <td style="text-align:right;">4.24%</td>
+            <td style="text-align:right;">-0.19%</td>
+            <td class="neg" style="text-align:right;">-0.36%</td>
+            <td style="text-align:center;"><span class="tag-badge tag-lose">[LOSING TO CASH]</span></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td style="font-family:var(--font-mono);">HYG</td>
+            <td>High Yield Corporate Credit</td>
+            <td style="font-family:var(--font-mono);">$77.43</td>
+            <td class="pos" style="text-align:right;">+0.68%</td>
+            <td class="neg" style="text-align:right;">-1.58%</td>
+            <td class="neg" style="text-align:right;">-0.79%</td>
+            <td class="pos" style="text-align:right;">+1.45%</td>
+            <td style="text-align:center; color:var(--red-bright);">-0.55</td>
+            <td style="text-align:right;">3.77%</td>
+            <td style="text-align:right;">-1.75%</td>
+            <td class="neg" style="text-align:right;">-0.59%</td>
+            <td style="text-align:center;"><span class="tag-badge tag-lose">[CREDIT STRAIN]</span></td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td style="font-family:var(--font-mono);">FXY</td>
+            <td>Japanese Yen Trust</td>
+            <td style="font-family:var(--font-mono);">$58.19</td>
+            <td class="pos" style="text-align:right;">+0.21%</td>
+            <td class="pos" style="text-align:right;">+0.52%</td>
+            <td class="neg" style="text-align:right;">-0.39%</td>
+            <td class="neg" style="text-align:right;">-3.34%</td>
+            <td style="text-align:center; color:var(--red-bright);">-0.77</td>
+            <td style="text-align:right;">4.48%</td>
+            <td style="text-align:right;">-2.53%</td>
+            <td class="pos" style="text-align:right;">+0.50%</td>
+            <td style="text-align:center;"><span class="tag-badge tag-lose">[LOSING TO CASH]</span></td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td style="font-family:var(--font-mono);">IEF</td>
+            <td>7-10Y US Treasury Benchmark</td>
+            <td style="font-family:var(--font-mono);">$91.76</td>
+            <td class="pos" style="text-align:right;">+3.04%</td>
+            <td class="neg" style="text-align:right;">-0.58%</td>
+            <td class="neg" style="text-align:right;">-1.37%</td>
+            <td class="neg" style="text-align:right;">-1.57%</td>
+            <td style="text-align:center; color:var(--red-bright);">-1.11</td>
+            <td style="text-align:right;">5.51%</td>
+            <td style="text-align:right;">-0.19%</td>
+            <td class="neg" style="text-align:right;">-0.81%</td>
+            <td style="text-align:center;"><span class="tag-badge tag-lose">[DURATION DRAIN]</span></td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td style="font-family:var(--font-mono);">TLT</td>
+            <td>20Y+ US Treasury Bond</td>
+            <td style="font-family:var(--font-mono);">$81.84</td>
+            <td class="pos" style="text-align:right;">+5.63%</td>
+            <td class="neg" style="text-align:right;">-0.04%</td>
+            <td class="neg" style="text-align:right;">-2.47%</td>
+            <td class="neg" style="text-align:right;">-5.99%</td>
+            <td style="text-align:center; color:var(--red-bright);">-2.38</td>
+            <td style="text-align:right;">10.64%</td>
+            <td style="text-align:right;">-0.05%</td>
+            <td class="neg" style="text-align:right;">-1.67%</td>
+            <td style="text-align:center;"><span class="tag-badge tag-lose">[DURATION DRAIN]</span></td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td style="font-family:var(--font-mono); color:var(--red-bright);">EEM</td>
+            <td>Emerging Markets Equities</td>
+            <td style="font-family:var(--font-mono);">$61.04</td>
+            <td class="neg" style="text-align:right; font-weight:850;">-9.80%</td>
+            <td class="neg" style="text-align:right;">-6.12%</td>
+            <td class="neg" style="text-align:right;">-9.62%</td>
+            <td class="pos" style="text-align:right;">+11.11%</td>
+            <td style="text-align:center; color:var(--red-bright);">-3.04</td>
+            <td style="text-align:right; color:var(--red-bright);">21.63%</td>
+            <td style="text-align:right; color:var(--red-bright);">-11.66%</td>
+            <td class="neg" style="text-align:right;">-4.20%</td>
+            <td style="text-align:center;"><span class="tag-badge tag-lose">[EM CAPITAL DRAIN]</span></td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td style="font-family:var(--font-mono); color:var(--red-bright);">GLD</td>
+            <td>Gold Physical Trust</td>
+            <td style="font-family:var(--font-mono);">$355.78</td>
+            <td class="neg" style="text-align:right;">-6.41%</td>
+            <td class="neg" style="text-align:right;">-8.70%</td>
+            <td class="neg" style="text-align:right;">-18.15%</td>
+            <td class="neg" style="text-align:right;">-1.99%</td>
+            <td style="text-align:center; color:var(--red-bright); font-weight:900;">-10.33</td>
+            <td style="text-align:right; color:var(--red-bright);">21.14%</td>
+            <td style="text-align:right; color:var(--red-bright);">-12.54%</td>
+            <td class="neg" style="text-align:right;">-13.84%</td>
+            <td style="text-align:center;"><span class="tag-badge tag-lose">[GOLD HEAVY RETREAT]</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- TAB 2: Detailed Rolling Window Analysis (226 Windows) -->
+  <div id="tab2Content" style="display:none;">
+    <section class="panel-box">
+      <div class="panel-head">
+        <div>
+          <h2 class="panel-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-400)" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+            สถิติการทดสอบ ROLLING WINDOWS 226 หน้าต่าง (2007–2026)
+          </h2>
+          <div class="panel-subtitle">เลื่อนจุดเริ่มต้นการลงทุนทุกเดือน (Step 21 วันทำการ) พิสูจน์ว่าโมเดลชนะ QQQ จากทักษะหรือความบังเอิญ</div>
+        </div>
+        <span class="tag-badge tag-beat">[PASS C1–C7 VERIFIED]</span>
+      </div>
+
+      <div class="table-wrap">
+        <table class="flow-table">
+          <thead>
+            <tr>
+              <th>ระยะเวลา (Window H)</th>
+              <th>จำนวนหน้าต่าง (อิสระ)</th>
+              <th style="text-align:right;">อัตราการชนะ CAGR</th>
+              <th style="text-align:right;">Median &Delta;CAGR</th>
+              <th style="text-align:right;">p10 &Delta;CAGR (Worst 10%)</th>
+              <th style="text-align:center;">หน้าต่างที่แย่ที่สุด (จุดเริ่ม)</th>
+              <th style="text-align:right;">สัดส่วน MDD ดีกว่า</th>
+              <th style="text-align:right;">Sharpe ดีกว่า</th>
+              <th style="text-align:center;">โอกาสขาดทุน (Strategy vs QQQ)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight:900; font-family:var(--font-mono);">1 ปี (1-Year Window)</td>
+              <td>226 (19.8)</td>
+              <td class="pos" style="text-align:right; font-weight:850;">61%</td>
+              <td class="pos" style="text-align:right;">+1.82pp</td>
+              <td class="neg" style="text-align:right;">-7.38pp</td>
+              <td style="text-align:center;">-30.3pp (2008-12)</td>
+              <td style="text-align:right;">50%</td>
+              <td style="text-align:right;">32%</td>
+              <td style="text-align:center;">17% / 14%</td>
+            </tr>
+            <tr>
+              <td style="font-weight:900; font-family:var(--font-mono);">3 ปี (3-Year Window)</td>
+              <td>202 (6.6)</td>
+              <td class="pos" style="text-align:right; font-weight:850;">68%</td>
+              <td class="pos" style="text-align:right;">+1.88pp</td>
+              <td class="neg" style="text-align:right;">-2.99pp</td>
+              <td style="text-align:center;">-6.4pp (2008-12)</td>
+              <td class="pos" style="text-align:right; font-weight:850;">66%</td>
+              <td style="text-align:right;">59%</td>
+              <td style="text-align:center; font-weight:900; color:var(--teal-bright);">0% / 3% (ไม่เคยขาดทุน)</td>
+            </tr>
+            <tr style="background:rgba(16,185,129,0.06); border-left:3px solid var(--emerald-400);">
+              <td style="font-weight:900; font-family:var(--font-mono); color:var(--teal-bright);">5 ปี (5-Year Window)</td>
+              <td>178 (4.0)</td>
+              <td class="pos" style="text-align:right; font-weight:900; font-size:13px;">78%</td>
+              <td class="pos" style="text-align:right;">+1.13pp</td>
+              <td class="neg" style="text-align:right;">-0.84pp</td>
+              <td style="text-align:center;">-2.1pp (2015-08)</td>
+              <td class="pos" style="text-align:right; font-weight:850;">67%</td>
+              <td style="text-align:right;">65%</td>
+              <td style="text-align:center; font-weight:900; color:var(--teal-bright);">0% / 0%</td>
+            </tr>
+            <tr style="background:rgba(6,182,212,0.06); border-left:3px solid var(--cyan-400);">
+              <td style="font-weight:900; font-family:var(--font-mono); color:var(--cyan-400);">10 ปี (10-Year Window)</td>
+              <td>118 (2.0)</td>
+              <td class="pos" style="text-align:right; font-weight:900; font-size:14px;">86%</td>
+              <td class="pos" style="text-align:right; font-weight:900;">+0.86pp</td>
+              <td class="pos" style="text-align:right;">-0.12pp</td>
+              <td style="text-align:center; font-weight:850; color:var(--teal-bright);">-0.55pp (แย่สุดแทบไม่แพ้)</td>
+              <td class="pos" style="text-align:right; font-weight:900; color:var(--teal-bright);">99% (ชนะขาด)</td>
+              <td style="text-align:right;">76%</td>
+              <td style="text-align:center; font-weight:900; color:var(--teal-bright);">0% / 0%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-2col" style="margin-top:16px;">
+        <div class="metric-card">
+          <div class="metric-header">
+            <span class="metric-title">การกระจายของ CAGR ในหน้าต่าง 10 ปี (p10 / Median / p90)</span>
+            <span class="tag-badge tag-beat">[TAIL RISK CUTTING]</span>
+          </div>
+          <div style="font-size:12px; line-height:1.6; color:var(--text-secondary); margin-top:8px;">
+            ● <strong>โมเดลกลยุทธ์ (A vt20 cap 1.5):</strong> <span class="pos" style="font-weight:850;">16.8%</span> / <span class="pos" style="font-weight:850;">19.4%</span> / <span class="pos" style="font-weight:850;">21.7%</span><br>
+            ● <strong>ซื้อและถือ QQQ (Buy &amp; Hold):</strong> 13.3% / 18.5% / 21.2%<br>
+            <span style="display:block; margin-top:8px; padding-top:6px; border-top:1px dashed var(--border-subtle); color:var(--slate-200);">
+              <strong>ข้อค้นพบเชิงปริมาณ:</strong> ด้านล่าง (p10 Worst-Case) ของกลยุทธ์สูงกว่า QQQ ถึง <strong>+3.5pp</strong> ในขณะที่ด้านบน (p90) สูงกว่าเล็กน้อย แปลว่ากลยุทธ์ <em>"ตัดทิ้งทศวรรษที่สูญหาย (Lost Decade)"</em> ได้อย่างสมบูรณ์แบบ
+            </span>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-header">
+            <span class="metric-title">ต้นทุนทางพฤติกรรม (Behavioral Drawdown Duration)</span>
+            <span class="tag-badge tag-warn">[BEHAVIORAL TRAP]</span>
+          </div>
+          <div style="font-size:12px; line-height:1.6; color:var(--text-secondary); margin-top:8px;">
+            ● <strong>รูปแบบที่ตามหลัง QQQ (Lagging Phases):</strong><br>
+            - หลังวิกฤต 2008: ตามหลังส่วนนำสูงสุด <strong>9.1 ปี</strong> (2008-11 &rarr; 2018-01)<br>
+            - หลังวิกฤตโควิด 2020: ตามหลังส่วนนำสูงสุด <strong>6.6 ปี</strong> (2020-03 &rarr; ปัจจุบัน 2026)<br>
+            <span style="display:block; margin-top:8px; padding-top:6px; border-top:1px dashed var(--border-subtle); color:var(--amber-bright);">
+              <strong>คำเตือนต่อนักลงทุน:</strong> โมเดลจะนำ QQQ ขาดลอยตอนก้นวิกฤต (เพราะลดความเสียหายเหลือครึ่งเดียว) แต่จะถูก QQQ ไล่ตามช่วงเด้งกลับเร็ว (V-Shape) เพราะระบบยังถือระมัดระวังตอน Vol สูง ทำให้นักลงทุนรู้สึกว่าแพ้ QQQ ในช่วงตลาดกระทิงบ้าคลั่ง
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- TAB 3: Architecture & Why SMA200 Failed -->
+  <div id="tab3Content" style="display:none;">
+    <section class="panel-box">
+      <div class="panel-head">
+        <div>
+          <h2 class="panel-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-400)" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+            ทำไมเส้น SMA200 ถึงตกรุ่น &amp; สถาปัตยกรรมคัดกรอง MULTI-HORIZON RANK
+          </h2>
+          <div class="panel-subtitle">การเปรียบเทียบเชิงวิศวกรรมระหว่าง Binary Moving Average กับ Continuous Realized Volatility Targeting</div>
+        </div>
+      </div>
+
+      <div class="grid-2col">
+        <div class="metric-card" style="border-left:3px solid var(--rose-400);">
+          <div class="metric-header">
+            <span class="metric-title" style="color:var(--red-bright);">ข้อจำกัดของเส้น SMA200 (Binary Cutoff)</span>
+            <span class="tag-badge tag-lose">[LAGGY &amp; WHIPSAW]</span>
+          </div>
+          <div style="font-size:12.5px; line-height:1.6; color:var(--text-secondary); margin-top:8px;">
+            1. <strong>ความล้าหลังระดับ 200 วันทำการ (~10 เดือน):</strong> กว่าราคาจะหลุด SMA200 หุ้นมักจะตกไปแล้ว 12%–18% ระบบสั่งขายที่ก้นเหว (Selling into exhaustion)<br>
+            2. <strong>Whipsaw ในช่วง V-Shape Rebound:</strong> ตอนตลาดเด้งกลับ หุ้นจะวิ่งขึ้นไปแล้ว 15%–20% กว่าจะตัดกลับขึ้นเหนือเส้น SMA200 ทำให้พลาดกำไรช่วงที่ดีที่สุด<br>
+            3. <strong>หลักฐานจากงานวิจัย:</strong> การใส่ตัวกรอง SMA200 แบบเปิด/ปิดลงบน QQQ ทำให้ <strong>CAGR ลดฮวบจาก 16.17% เหลือเพียง 12.48% (แพ้ Buy &amp; Hold ถึง 3.7pp ต่อปี!)</strong>
+          </div>
+        </div>
+
+        <div class="metric-card" style="border-left:3px solid var(--emerald-400);">
+          <div class="metric-header">
+            <span class="metric-title" style="color:var(--teal-bright);">สถาปัตยกรรมใหม่: Multi-Horizon Rank + Vol-Target</span>
+            <span class="tag-badge tag-beat">[CONTINUOUS RESPONSE]</span>
+          </div>
+          <div style="font-size:12.5px; line-height:1.6; color:var(--text-secondary); margin-top:8px;">
+            1. <strong>Multi-Horizon Cross-Sectional Score:</strong><br>
+            <code style="display:block; padding:6px 10px; background:var(--bg-subtle); border-radius:4px; margin:6px 0; color:var(--cyan-400); font-family:var(--font-mono);">Score = 0.40&times;Ret(60D) + 0.35&times;Ret(120D) + 0.25&times;Ret(252D)</code>
+            - <strong>60 วัน:</strong> จับวงรอบไตรมาส (Quarterly Cycle) ได้เร็วกว่า SMA200 ถึง 3 เท่า โดยไม่โดน Day Noise หลอก<br>
+            - <strong>120 &amp; 252 วัน:</strong> ยืนยันความแข็งแกร่งของเทรนด์โครงสร้างระดับปี<br>
+            2. <strong>Continuous Realized Volatility Targeting:</strong><br>
+            <code style="display:block; padding:6px 10px; background:var(--bg-subtle); border-radius:4px; margin:6px 0; color:var(--teal-bright); font-family:var(--font-mono);">Weight = min(Cap 1.5, TargetVol 20% / Vol20D)</code>
+            - เมื่อตลาดผันผวนขึ้น (เช่น Vol 22.6% ใน QQQ วันนี้) ระบบจะรินลด exposure ลงเหลือ 0.88x ทันทีโดยไม่ต้องรอหลุด SMA200<br>
+            3. <strong>Donchian High-Watermark Proximity:</strong> ตรวจระยะห่างจาก High 40 วัน ถ้าร่วงเกิน -8% จะถูกจัดเกรดลดลำดับลงทันที
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footnote -->
+  <footer class="footer-note">
+    <strong>Data Provenance &amp; Verification Protocol:</strong> คำนวณจาก Adjusted Close ย้อนหลัง 252 วันทำการของ 14 ตัวแทนสินทรัพย์โลก (ครอบคลุม 80% Market Cap ทั่วโลก) ณ วันที่ 30 ต.ค. 2026 ปราศจาก Look-ahead bias ตามระเบียบวิธีวิจัยสถาบันใน <code>GLOBAL_ASSET_MOMENTUM_RESEARCH_REPORT_TH.md</code>, <code>BEAT_QQQ_TEST_PLAN_RESULTS_TH.md</code>, และ <code>ROLLING_WINDOW_VALIDATION_TH.md</code>
+  </footer>
+
+</div>
+
+<!-- Interactive Constellation Engine Script -->
+<script>
+(function() {
+  const canvas = document.getElementById('constellationCanvas');
+  const ctx = canvas.getContext('2d');
+  const container = document.getElementById('mapContainer');
+  const hud = document.getElementById('mapHud');
+
+  let width, height;
+  let currentFilter = 'all';
+
+  // 14 Global Macro Assets Data (As-of 2026-10-30 close)
+  const nodes = [
+    // Continent 1: Americas Equity Growth Core (Left Top)
+    { id: 'SPY', label: 'SPY', name: 'US S&P 500', group: 'americas', role: 'Equity Core', xPct: 0.18, yPct: 0.32, price: 755.72, r20: -1.81, r60: -1.43, r252: 11.13, score: 3.17, vol: 11.59, high40: -3.00, sma200: 4.10, status: 'inflow', rad: 20 },
+    { id: 'QQQ', label: 'QQQ', name: 'Nasdaq 100 Tech', group: 'americas', role: 'Tech Growth', xPct: 0.28, yPct: 0.22, price: 690.49, r20: -7.88, r60: -3.28, r252: 9.12, score: -0.08, vol: 22.64, high40: -9.11, sma200: 1.79, status: 'outflow', rad: 22 },
+
+    // Continent 2: Eurasia & Emerging World (Right Top)
+    { id: 'EFA', label: 'EFA', name: 'Developed Ex-US', group: 'eurasia', role: 'Dev Europe/Asia', xPct: 0.72, yPct: 0.24, price: 103.37, r20: -0.57, r60: -3.72, r252: 12.39, score: 2.04, vol: 9.91, high40: -4.60, sma200: 0.92, status: 'inflow', rad: 17 },
+    { id: 'EEM', label: 'EEM', name: 'Emerging Markets', group: 'eurasia', role: 'Emerging Asia/EM', xPct: 0.84, yPct: 0.35, price: 61.04, r20: -9.80, r60: -6.12, r252: 11.11, score: -3.04, vol: 21.63, high40: -11.66, sma200: -4.20, status: 'outflow', rad: 16 },
+
+    // Continent 3: Global Currency & Liquidity Citadel (Center Hub)
+    { id: 'BIL', label: 'BIL', name: '0-3M T-Bills (Cash Hurdle)', group: 'citadel', role: 'Cash Anchor', xPct: 0.50, yPct: 0.50, price: 91.70, r20: 0.30, r60: 0.87, r252: 3.69, score: 1.88, vol: 0.22, high40: 0.00, sma200: 1.43, status: 'cash', rad: 24 },
+    { id: 'UUP', label: 'UUP', name: 'US Dollar Index', group: 'citadel', role: 'Global Reserve', xPct: 0.42, yPct: 0.40, price: 29.00, r20: 0.38, r60: 2.87, r252: 7.03, score: 5.02, vol: 4.67, high40: -0.45, sma200: 3.85, status: 'inflow', rad: 18 },
+    { id: 'FXY', label: 'FXY', name: 'Japanese Yen', group: 'citadel', role: 'Funding Currency', xPct: 0.58, yPct: 0.42, price: 58.19, r20: 0.21, r60: 0.52, r252: -3.34, score: -0.77, vol: 4.48, high40: -2.53, sma200: 0.50, status: 'neutral', rad: 12 },
+
+    // Continent 4: Sovereign Debt & Credit Vault (Left Bottom)
+    { id: 'TLT', label: 'TLT', name: '20Y+ US Treasury', group: 'sovereign', role: 'Long Duration', xPct: 0.16, yPct: 0.72, price: 81.84, r20: 5.63, r60: -0.04, r252: -5.99, score: -2.38, vol: 10.64, high40: -0.05, sma200: -1.67, status: 'outflow', rad: 15 },
+    { id: 'IEF', label: 'IEF', name: '7-10Y US Treasury', group: 'sovereign', role: 'Intermediate Bond', xPct: 0.26, yPct: 0.65, price: 91.76, r20: 3.04, r60: -0.58, r252: -1.57, score: -1.11, vol: 5.51, high40: -0.19, sma200: -0.81, status: 'outflow', rad: 14 },
+    { id: 'BND', label: 'BND', name: 'Total US Bond Market', group: 'sovereign', role: 'Aggregate Debt', xPct: 0.28, yPct: 0.82, price: 71.56, r20: 2.32, r60: -0.25, r252: -0.32, score: -0.45, vol: 4.24, high40: -0.19, sma200: -0.36, status: 'neutral', rad: 15 },
+    { id: 'HYG', label: 'HYG', name: 'High Yield Credit', group: 'sovereign', role: 'Credit Spread', xPct: 0.38, yPct: 0.76, price: 77.43, r20: 0.68, r60: -1.58, r252: 1.45, score: -0.55, vol: 3.77, high40: -1.75, sma200: -0.59, status: 'neutral', rad: 13 },
+
+    // Continent 5: Real Asset & Commodity Basin (Right Bottom)
+    { id: 'DBC', label: 'DBC', name: 'Broad Commodities', group: 'realassets', role: 'Energy & Raw Mat', xPct: 0.82, yPct: 0.72, price: 33.61, r20: 3.29, r60: 16.46, r252: 52.98, score: 22.70, vol: 11.62, high40: -1.44, sma200: 14.97, status: 'inflow', rad: 26 },
+    { id: 'GLD', label: 'GLD', name: 'Gold Physical Trust', group: 'realassets', role: 'Inflation / Haven', xPct: 0.70, yPct: 0.64, price: 355.78, r20: -6.41, r60: -8.70, r252: -1.99, score: -10.33, vol: 21.14, high40: -12.54, sma200: -13.84, status: 'outflow', rad: 18 },
+    { id: 'VNQ', label: 'VNQ', name: 'US Real Estate REITs', group: 'realassets', role: 'Global Real Estate', xPct: 0.74, yPct: 0.84, price: 93.94, r20: 4.96, r60: -3.35, r252: 10.12, score: 0.79, vol: 16.47, high40: -1.32, sma200: 0.75, status: 'neutral', rad: 14 }
+  ];
+
+  // Streams of Capital Migration (Directed Flows)
+  const streams = [
+    // Major Outflow Drains -> Routed through BIL Cash Hub -> Injected to DBC & UUP
+    { from: 'QQQ', to: 'BIL', flowType: 'drain', color: '#f43f5e', speed: 1.8, particles: 6 },
+    { from: 'EEM', to: 'BIL', flowType: 'drain', color: '#f43f5e', speed: 2.0, particles: 6 },
+    { from: 'GLD', to: 'BIL', flowType: 'drain', color: '#f43f5e', speed: 1.6, particles: 5 },
+    { from: 'TLT', to: 'BIL', flowType: 'drain', color: '#f43f5e', speed: 1.2, particles: 4 },
+    { from: 'IEF', to: 'BIL', flowType: 'drain', color: '#f43f5e', speed: 1.0, particles: 3 },
+
+    // Inflow Channels: Central Liquidity Surge to DBC & UUP
+    { from: 'BIL', to: 'DBC', flowType: 'surge', color: '#10b981', speed: 2.6, particles: 10 },
+    { from: 'BIL', to: 'UUP', flowType: 'surge', color: '#06b6d4', speed: 1.9, particles: 7 },
+    { from: 'BIL', to: 'SPY', flowType: 'buffer', color: '#06b6d4', speed: 1.2, particles: 4 },
+    { from: 'BIL', to: 'EFA', flowType: 'buffer', color: '#06b6d4', speed: 1.1, particles: 4 }
+  ];
+
+  // Particle tracking
+  let particlePool = [];
+  streams.forEach(s => {
+    for (let i = 0; i < s.particles; i++) {
+      particlePool.push({
+        stream: s,
+        progress: Math.random(),
+        size: Math.random() * 2 + 2,
+        speedFactor: 0.003 * s.speed + Math.random() * 0.001
+      });
+    }
+  });
+
+  let hoveredNode = null;
+
+  function resize() {
+    width = container.clientWidth;
+    height = container.clientHeight;
+    canvas.width = width * window.devicePixelRatio;
+    canvas.height = height * window.devicePixelRatio;
+    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  function getNode(id) {
+    return nodes.find(n => n.id === id);
+  }
+
+  // Mouse interactivity
+  container.addEventListener('mousemove', e => {
+    const rect = container.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+
+    let found = null;
+    for (let n of nodes) {
+      const nx = n.xPct * width;
+      const ny = n.yPct * height;
+      const dist = Math.hypot(mx - nx, my - ny);
+      if (dist <= n.rad + 6) {
+        found = n;
+        break;
+      }
+    }
+    hoveredNode = found;
+
+    if (hoveredNode) {
+      hud.style.display = 'block';
+      hud.style.left = Math.min(mx + 18, width - 290) + 'px';
+      hud.style.top = Math.min(my + 18, height - 240) + 'px';
+
+      document.getElementById('hudTicker').textContent = hoveredNode.id;
+      document.getElementById('hudRole').textContent = hoveredNode.name + ' · ' + hoveredNode.role;
+      document.getElementById('hudPrice').textContent = '$' + hoveredNode.price.toFixed(2);
+      document.getElementById('hudScore').textContent = (hoveredNode.score >= 0 ? '+' : '') + hoveredNode.score.toFixed(2) + ' pts';
+      document.getElementById('hudRet').textContent = (hoveredNode.r20 >= 0 ? '+' : '') + hoveredNode.r20.toFixed(2) + '% / ' + (hoveredNode.r60 >= 0 ? '+' : '') + hoveredNode.r60.toFixed(2) + '%';
+      document.getElementById('hudVol').textContent = hoveredNode.vol.toFixed(2) + '%';
+      document.getElementById('hudHigh').textContent = hoveredNode.high40.toFixed(2) + '%';
+      document.getElementById('hudSma').textContent = (hoveredNode.sma200 >= 0 ? '+' : '') + hoveredNode.sma200.toFixed(2) + '%';
+
+      let statusText = '[BEATING CASH]';
+      if (hoveredNode.status === 'outflow') statusText = '[CAPITAL OUTFLOW · SCORE < CASH]';
+      else if (hoveredNode.id === 'DBC') statusText = '[PRIMARY MACRO INFLOW SINK]';
+      else if (hoveredNode.id === 'BIL') statusText = '[GLOBAL CASH ROUTER & HURDLE]';
+      document.getElementById('hudStatus').textContent = statusText;
+    } else {
+      hud.style.display = 'none';
+    }
+  });
+
+  container.addEventListener('mouseleave', () => {
+    hoveredNode = null;
+    hud.style.display = 'none';
+  });
+
+  window.setFilter = function(filter) {
+    currentFilter = filter;
+    document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
+    if (filter === 'all') document.getElementById('btnFilterAll').classList.add('active');
+    if (filter === 'active') document.getElementById('btnFilterActive').classList.add('active');
+    if (filter === 'equities') document.getElementById('btnFilterEquities').classList.add('active');
+    if (filter === 'havens') document.getElementById('btnFilterHavens').classList.add('active');
+  };
+
+  // Continent Labels
+  const continents = [
+    { name: 'AMERICAS EQUITY REGION', x: 0.22, y: 0.12 },
+    { name: 'EURASIA & EMERGING BELT', x: 0.78, y: 0.12 },
+    { name: 'CENTRAL LIQUIDITY CITADEL', x: 0.50, y: 0.33 },
+    { name: 'SOVEREIGN DEBT & CREDIT', x: 0.24, y: 0.94 },
+    { name: 'REAL ASSETS & COMMODITIES', x: 0.78, y: 0.94 }
+  ];
+
+  // Animation Loop
+  let animId;
+  function render() {
+    ctx.clearRect(0, 0, width, height);
+
+    // 1. Draw Continent Background Boundaries / Watermarks
+    continents.forEach(c => {
+      ctx.save();
+      ctx.font = '900 10px ui-monospace, monospace';
+      ctx.fillStyle = 'rgba(148, 163, 184, 0.15)';
+      ctx.textAlign = 'center';
+      ctx.fillText(c.name, c.x * width, c.y * height);
+      ctx.restore();
+    });
+
+    // 2. Draw Vector Streams (Curved Paths)
+    streams.forEach(s => {
+      // Filtering check
+      if (currentFilter === 'active' && s.flowType !== 'surge') return;
+      if (currentFilter === 'equities' && s.from !== 'QQQ' && s.from !== 'EEM') return;
+      if (currentFilter === 'havens' && s.to !== 'DBC' && s.to !== 'UUP') return;
+
+      const n1 = getNode(s.from);
+      const n2 = getNode(s.to);
+      const x1 = n1.xPct * width;
+      const y1 = n1.yPct * height;
+      const x2 = n2.xPct * width;
+      const y2 = n2.yPct * height;
+
+      // Arc curve control point
+      const midX = (x1 + x2) / 2;
+      const midY = (y1 + y2) / 2 + (x2 - x1) * 0.12;
+
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.quadraticCurveTo(midX, midY, x2, y2);
+      ctx.strokeStyle = s.flowType === 'surge' ? 'rgba(16, 185, 129, 0.28)' : (s.flowType === 'drain' ? 'rgba(244, 63, 94, 0.22)' : 'rgba(6, 182, 212, 0.2)');
+      ctx.lineWidth = s.flowType === 'surge' ? 3 : 1.8;
+      ctx.setLineDash([4, 6]);
+      ctx.stroke();
+      ctx.restore();
+    });
+
+    // 3. Update & Draw Particles along Streams
+    particlePool.forEach(p => {
+      const s = p.stream;
+      if (currentFilter === 'active' && s.flowType !== 'surge') return;
+      if (currentFilter === 'equities' && s.from !== 'QQQ' && s.from !== 'EEM') return;
+      if (currentFilter === 'havens' && s.to !== 'DBC' && s.to !== 'UUP') return;
+
+      p.progress += p.speedFactor;
+      if (p.progress >= 1) p.progress = 0;
+
+      const n1 = getNode(s.from);
+      const n2 = getNode(s.to);
+      const x1 = n1.xPct * width;
+      const y1 = n1.yPct * height;
+      const x2 = n2.xPct * width;
+      const y2 = n2.yPct * height;
+      const midX = (x1 + x2) / 2;
+      const midY = (y1 + y2) / 2 + (x2 - x1) * 0.12;
+
+      // Quadratic Bézier formula
+      const t = p.progress;
+      const px = (1 - t) * (1 - t) * x1 + 2 * (1 - t) * t * midX + t * t * x2;
+      const py = (1 - t) * (1 - t) * y1 + 2 * (1 - t) * t * midY + t * t * y2;
+
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(px, py, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = s.color;
+      ctx.shadowColor = s.color;
+      ctx.shadowBlur = 8;
+      ctx.fill();
+      ctx.restore();
+    });
+
+    // 4. Draw Asset Nodes
+    nodes.forEach(n => {
+      const nx = n.xPct * width;
+      const ny = n.yPct * height;
+      const isHovered = (hoveredNode && hoveredNode.id === n.id);
+
+      ctx.save();
+
+      // Node Outer Glow / Halo
+      let strokeColor = 'rgba(255, 255, 255, 0.12)';
+      let fillColor = '#0e1524';
+      let textColor = '#f1f5f9';
+
+      if (n.status === 'inflow') {
+        strokeColor = 'var(--emerald-400)';
+        fillColor = '#06261c';
+        textColor = '#34d399';
+      } else if (n.status === 'outflow') {
+        strokeColor = 'var(--rose-400)';
+        fillColor = '#240a12';
+        textColor = '#fb7185';
+      } else if (n.status === 'cash') {
+        strokeColor = 'var(--cyan-400)';
+        fillColor = '#081f2c';
+        textColor = '#22d3ee';
+      }
+
+      // Pulse ring for top sinks / sources
+      if (n.id === 'DBC' || n.id === 'BIL' || n.id === 'QQQ') {
+        const pulseRad = n.rad + Math.sin(Date.now() * 0.004) * 4 + 4;
+        ctx.beginPath();
+        ctx.arc(nx, ny, pulseRad, 0, Math.PI * 2);
+        ctx.strokeStyle = strokeColor;
+        ctx.lineWidth = 1;
+        ctx.globalAlpha = 0.35;
+        ctx.stroke();
+        ctx.globalAlpha = 1.0;
+      }
+
+      // Main Node Circle
+      ctx.beginPath();
+      ctx.arc(nx, ny, isHovered ? n.rad + 5 : n.rad, 0, Math.PI * 2);
+      ctx.fillStyle = fillColor;
+      ctx.strokeStyle = strokeColor;
+      ctx.lineWidth = isHovered ? 3 : 2;
+      ctx.shadowColor = strokeColor;
+      ctx.shadowBlur = isHovered ? 18 : 8;
+      ctx.fill();
+      ctx.stroke();
+
+      // Node Text
+      ctx.font = '900 11px ui-monospace, monospace';
+      ctx.fillStyle = textColor;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(n.label, nx, ny - (n.score !== undefined ? 4 : 0));
+
+      // Node Score subtext
+      if (n.rad >= 15) {
+        ctx.font = '700 8.5px ui-monospace, monospace';
+        ctx.fillStyle = n.score >= 0 ? '#34d399' : '#fb7185';
+        ctx.fillText((n.score >= 0 ? '+' : '') + n.score.toFixed(1), nx, ny + 7);
+      }
+
+      ctx.restore();
+    });
+
+    animId = requestAnimationFrame(render);
+  }
+  animId = requestAnimationFrame(render);
+
+  // Tab Switching
+  window.switchTab = function(tabId) {
+    document.getElementById('tab1Content').style.display = tabId === 'tab1' ? 'block' : 'none';
+    document.getElementById('tab2Content').style.display = tabId === 'tab2' ? 'block' : 'none';
+    document.getElementById('tab3Content').style.display = tabId === 'tab3' ? 'block' : 'none';
+
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    if (tabId === 'tab1') document.getElementById('tabBtn1').classList.add('active');
+    if (tabId === 'tab2') document.getElementById('tabBtn2').classList.add('active');
+    if (tabId === 'tab3') document.getElementById('tabBtn3').classList.add('active');
+  };
+
+})();
+</script>
+
+</body>
+</html>

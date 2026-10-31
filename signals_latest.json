@@ -1,0 +1,223 @@
+{
+  "as_of_date": "2026-10-30",
+  "cash_hurdle_bil_score": 1.88,
+  "valid_havens": [
+    "DBC",
+    "UUP"
+  ],
+  "strategy_qqq_rotation": {
+    "regime": "RISK-OFF ROTATION TO HAVENS",
+    "qqq_score": -0.08,
+    "qqq_vol20d": 22.64,
+    "qqq_exposure": 0.0,
+    "target_weights": {
+      "EFA": 0.0,
+      "HYG": 0.0,
+      "BIL": 0.0,
+      "VNQ": 0.0,
+      "QQQ": 0.0,
+      "GLD": 0.0,
+      "BND": 0.0,
+      "TLT": 0.0,
+      "FXY": 0.0,
+      "IEF": 0.0,
+      "UUP": 0.7133,
+      "SPY": 0.0,
+      "EEM": 0.0,
+      "DBC": 0.2867
+    },
+    "execution_plan": [
+      {
+        "Instrument": "QQQ (1x Core)",
+        "Weight": "0.0%",
+        "Action": "EXIT / ZERO EXPOSURE (Score < BIL)"
+      },
+      {
+        "Instrument": "DBC (Haven Rotation)",
+        "Weight": "28.7%",
+        "Action": "BUY / HOLD (Score: 22.70 > BIL 1.88)"
+      },
+      {
+        "Instrument": "UUP (Haven Rotation)",
+        "Weight": "71.3%",
+        "Action": "BUY / HOLD (Score: 5.02 > BIL 1.88)"
+      }
+    ]
+  },
+  "strategy_global_macro": {
+    "selected_core": "SPY",
+    "core_exposure": 1.5,
+    "target_weights": {
+      "EFA": 0.0,
+      "HYG": 0.0,
+      "BIL": 0.0,
+      "VNQ": 0.0,
+      "QQQ": 0.0,
+      "GLD": 0.0,
+      "BND": 0.0,
+      "TLT": 0.0,
+      "FXY": 0.0,
+      "IEF": 0.0,
+      "UUP": 0.0,
+      "SPY": 1.5,
+      "EEM": 0.0,
+      "DBC": 0.0
+    }
+  },
+  "full_metrics": {
+    "DBC": {
+      "Price": 33.61,
+      "Ret20d": 3.29,
+      "Ret60d": 16.46,
+      "Ret120d": 8.21,
+      "Ret252d": 52.98,
+      "Score": 22.7,
+      "Vol20d": 11.62,
+      "DistHigh40": -1.44,
+      "DistSMA200": 14.97
+    },
+    "UUP": {
+      "Price": 29.0,
+      "Ret20d": 0.38,
+      "Ret60d": 2.87,
+      "Ret120d": 6.03,
+      "Ret252d": 7.03,
+      "Score": 5.02,
+      "Vol20d": 4.67,
+      "DistHigh40": -0.45,
+      "DistSMA200": 3.85
+    },
+    "SPY": {
+      "Price": 755.72,
+      "Ret20d": -1.81,
+      "Ret60d": -1.43,
+      "Ret120d": 2.74,
+      "Ret252d": 11.13,
+      "Score": 3.17,
+      "Vol20d": 11.59,
+      "DistHigh40": -3.0,
+      "DistSMA200": 4.1
+    },
+    "EFA": {
+      "Price": 103.37,
+      "Ret20d": -0.57,
+      "Ret60d": -3.72,
+      "Ret120d": 1.22,
+      "Ret252d": 12.39,
+      "Score": 2.04,
+      "Vol20d": 9.91,
+      "DistHigh40": -4.6,
+      "DistSMA200": 0.92
+    },
+    "BIL": {
+      "Price": 91.7,
+      "Ret20d": 0.3,
+      "Ret60d": 0.87,
+      "Ret120d": 1.73,
+      "Ret252d": 3.69,
+      "Score": 1.88,
+      "Vol20d": 0.22,
+      "DistHigh40": 0.0,
+      "DistSMA200": 1.43
+    },
+    "VNQ": {
+      "Price": 93.94,
+      "Ret20d": 4.96,
+      "Ret60d": -3.35,
+      "Ret120d": -1.14,
+      "Ret252d": 10.12,
+      "Score": 0.79,
+      "Vol20d": 16.47,
+      "DistHigh40": -1.32,
+      "DistSMA200": 0.75
+    },
+    "QQQ": {
+      "Price": 690.49,
+      "Ret20d": -7.88,
+      "Ret60d": -3.28,
+      "Ret120d": -2.99,
+      "Ret252d": 9.12,
+      "Score": -0.08,
+      "Vol20d": 22.64,
+      "DistHigh40": -9.11,
+      "DistSMA200": 1.79
+    },
+    "BND": {
+      "Price": 71.56,
+      "Ret20d": 2.32,
+      "Ret60d": -0.25,
+      "Ret120d": -0.77,
+      "Ret252d": -0.32,
+      "Score": -0.45,
+      "Vol20d": 4.24,
+      "DistHigh40": -0.19,
+      "DistSMA200": -0.36
+    },
+    "HYG": {
+      "Price": 77.43,
+      "Ret20d": 0.68,
+      "Ret60d": -1.58,
+      "Ret120d": -0.79,
+      "Ret252d": 1.45,
+      "Score": -0.55,
+      "Vol20d": 3.77,
+      "DistHigh40": -1.75,
+      "DistSMA200": -0.59
+    },
+    "FXY": {
+      "Price": 58.19,
+      "Ret20d": 0.21,
+      "Ret60d": 0.52,
+      "Ret120d": -0.39,
+      "Ret252d": -3.34,
+      "Score": -0.77,
+      "Vol20d": 4.48,
+      "DistHigh40": -2.53,
+      "DistSMA200": 0.5
+    },
+    "IEF": {
+      "Price": 91.76,
+      "Ret20d": 3.04,
+      "Ret60d": -0.58,
+      "Ret120d": -1.37,
+      "Ret252d": -1.57,
+      "Score": -1.11,
+      "Vol20d": 5.51,
+      "DistHigh40": -0.19,
+      "DistSMA200": -0.81
+    },
+    "TLT": {
+      "Price": 81.84,
+      "Ret20d": 5.63,
+      "Ret60d": -0.04,
+      "Ret120d": -2.47,
+      "Ret252d": -5.99,
+      "Score": -2.38,
+      "Vol20d": 10.64,
+      "DistHigh40": -0.05,
+      "DistSMA200": -1.67
+    },
+    "EEM": {
+      "Price": 61.04,
+      "Ret20d": -9.8,
+      "Ret60d": -6.12,
+      "Ret120d": -9.62,
+      "Ret252d": 11.11,
+      "Score": -3.04,
+      "Vol20d": 21.63,
+      "DistHigh40": -11.66,
+      "DistSMA200": -4.2
+    },
+    "GLD": {
+      "Price": 355.78,
+      "Ret20d": -6.41,
+      "Ret60d": -8.7,
+      "Ret120d": -18.15,
+      "Ret252d": -1.99,
+      "Score": -10.33,
+      "Vol20d": 21.14,
+      "DistHigh40": -12.54,
+      "DistSMA200": -13.84
+    }
+  }
+}
