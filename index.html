@@ -277,22 +277,43 @@ table.flow-table tr:hover { background: var(--bg-hover); }
     </div>
   </header>
 
-  <!-- Macro Verdict Banner -->
-  <section class="verdict-banner">
-    <div>
-      <span class="verdict-tag">[STAGFLATION / FLIGHT TO COMMODITIES &amp; USD]</span>
+  <!-- Actionable Portfolio Verdict Banner -->
+  <section class="verdict-banner" style="background:linear-gradient(135deg, rgba(244,63,94,0.08) 0%, rgba(6,182,212,0.06) 100%); border-left:4px solid var(--rose-400); border-color:var(--rose-border);">
+    <div style="display:flex; flex-direction:column; gap:8px;">
+      <span class="verdict-tag" style="background:var(--red-bg); color:var(--red-bright); border:1px solid var(--red-border);">[STATUS: RISK-OFF / ROTATE TO HAVENS]</span>
+      <div style="font-family:var(--font-mono); font-size:10.5px; color:var(--slate-400);">
+        รอบประเมินสัปดาห์นี้ · Causal Close
+      </div>
     </div>
     <div class="verdict-text">
-      <h3>การวินิจฉัยกระแสเงินทุนโลก: ตอนนี้เงินหนีไปไหน และทำไม SMA200 ถึงล้าหลัง?</h3>
-      <p>
-        <strong>1. ทิศทางการหมุนของเงิน (Where is the money?):</strong> เงินโลกถูกดูดออกจากสินทรัพย์เสี่ยงสูง (Tech/QQQ -7.88% 20D, EM/EEM -9.80% 20D, และ Gold/GLD -6.41% 20D) ไหลตรงเข้าสู่ 2 หลุมหลบภัยหลัก: <strong>สินค้าโภคภัณฑ์/พลังงาน (DBC Score 22.70, +16.46% 60D, +52.98% 252D)</strong> และ <strong>ดอลลาร์สหรัฐ (UUP Score 5.02)</strong><br>
-        <strong>2. ข้อผิดพลาดร้ายแรงของ SMA200 (The Lag Problem):</strong> สังเกตว่า <strong>QQQ ยังอยู่เหนือ SMA200 (+1.79%)</strong> แต่มูลค่าได้ร่วงลงไปแล้ว -9.11% จากจุดสูงสุด 40 วัน และความผันผวนดีดขึ้นสู่ 22.64%! หากใช้ SMA200 เป็นสวิตช์เปิด/ปิด พอร์ตจะไม่ทำอะไรเลยจนกว่าจะขาดทุนหนัก แต่ระบบ <strong>Multi-Horizon Score (-0.08)</strong> และ <strong>Continuous Vol-Targeting</strong> ตรวจพบการรั่วไหลของเงินและสั่งตัดลด exposure อัตโนมัติล่วงหน้าเรียบร้อยแล้ว
+      <h3 style="font-size:15px; margin:0 0 10px; color:var(--text-primary); font-weight:850;">
+        สรุปภาพรวมคำแนะนำพอร์ต: ปัจจุบันควรถืออะไร และสัดส่วนเท่าไหร่?
+      </h3>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:8px;">
+        <div style="background:var(--bg-canvas); border:1px solid var(--red-border); border-radius:6px; padding:8px 14px; font-family:var(--font-mono); min-width:160px;">
+          <span style="color:var(--slate-400); font-size:10.5px; display:block;">1. หุ้นเทคโนโลยี (Core QQQ)</span>
+          <span style="font-size:18px; font-weight:900; color:var(--red-bright);">0.0%</span>
+          <span style="font-size:10px; color:var(--red-bright); display:block; font-weight:800;">[EXIT · แพ้เงินสด BIL]</span>
+        </div>
+        <div style="background:var(--bg-canvas); border:1px solid var(--teal-border); border-radius:6px; padding:8px 14px; font-family:var(--font-mono); min-width:160px;">
+          <span style="color:var(--slate-400); font-size:10.5px; display:block;">2. ดอลลาร์สหรัฐ (UUP)</span>
+          <span style="font-size:18px; font-weight:900; color:var(--teal-bright);">71.3%</span>
+          <span style="font-size:10px; color:var(--teal-bright); display:block; font-weight:800;">[ALLOCATE · หลุมหลบภัยหลัก]</span>
+        </div>
+        <div style="background:var(--bg-canvas); border:1px solid var(--teal-border); border-radius:6px; padding:8px 14px; font-family:var(--font-mono); min-width:160px;">
+          <span style="color:var(--slate-400); font-size:10.5px; display:block;">3. สินค้าโภคภัณฑ์ (DBC)</span>
+          <span style="font-size:18px; font-weight:900; color:var(--teal-bright);">28.7%</span>
+          <span style="font-size:10px; color:var(--teal-bright); display:block; font-weight:800;">[ALLOCATE · ป้องกันเงินเฟ้อ]</span>
+        </div>
+      </div>
+      <p style="margin:0; font-size:11.5px; color:var(--slate-400); line-height:1.5;">
+        <strong>กลไกการสลับ:</strong> หากเลือก <em>โหมดพื้นฐาน (Simple Cash Switch)</em> จะสลับไปถือ <strong>เงินสด (BIL) 100%</strong> เพื่อรอตลาดฟื้นตัว | หากเลือก <em>โหมดสร้างผลตอบแทน (Haven Alpha)</em> จะหมุนไปถือ <strong>UUP 71.3% + DBC 28.7%</strong> เพื่อสร้างผลตอบแทนขณะที่หุ้นตก
       </p>
     </div>
-    <div class="verdict-kpi">
-      <span class="kpi-title">Cash Hurdle (BIL)</span>
-      <span class="kpi-num">1.88 pts</span>
-      <span style="font-size:10px; color:var(--text-muted); display:block;">4 จาก 14 สินทรัพย์ชนะเงินสด</span>
+    <div class="verdict-kpi" style="border-left:1px solid var(--border-subtle); padding-left:16px;">
+      <span class="kpi-title">คำสั่งปฏิบัติการ (Action)</span>
+      <span class="kpi-num" style="color:var(--red-bright); font-size:16px;">หมุนเงินหนี QQQ</span>
+      <span style="font-size:10px; color:var(--slate-400); display:block; margin-top:4px;">ย้ายเข้า UUP+DBC หรือ BIL</span>
     </div>
   </section>
 
