@@ -1,59 +1,61 @@
 {
-  "as_of_date": "2026-11-03",
-  "cash_hurdle_bil_score": 0.59,
+  "as_of_date": "2026-11-04",
+  "cash_hurdle_bil_score": 0.57,
   "qualifying_tournament_assets": [
+    "SPY",
     "DBC",
+    "TLT",
     "UUP"
   ],
   "strategy_dynamic_tournament": {
     "name": "Pure Dynamic Market Tournament (Zero-Bias)",
-    "regime": "DUOPOLY LEADERS (DBC 75.8% + UUP 24.2%)",
+    "regime": "DUOPOLY LEADERS (DBC 68.4% + UUP 31.6%)",
     "target_weights": {
-      "BND": 0.0,
-      "EFA": 0.0,
-      "EEM": 0.0,
+      "UUP": 0.3164,
       "HYG": 0.0,
-      "TLT": 0.0,
-      "GLD": 0.0,
-      "DBC": 0.7582,
-      "SPY": 0.0,
-      "VNQ": 0.0,
+      "DBC": 0.6836,
+      "EEM": 0.0,
+      "BND": 0.0,
       "FXY": 0.0,
-      "IEF": 0.0,
+      "VNQ": 0.0,
+      "EFA": 0.0,
+      "SPY": 0.0,
       "BIL": 0.0,
-      "UUP": 0.2418,
-      "QQQ": 0.0
+      "TLT": 0.0,
+      "QQQ": 0.0,
+      "GLD": 0.0,
+      "IEF": 0.0
     },
     "execution_plan": [
       {
         "Instrument": "DBC (Market Champion)",
-        "Weight": "75.8%",
-        "Action": "BUY / HOLD (Score: 7.55 \u00b7 Spread: +6.96 pts \u0e40\u0e2b\u0e19\u0e37\u0e2d BIL)"
+        "Weight": "68.4%",
+        "Action": "BUY / HOLD (Score: 3.94 \u00b7 Spread: +3.37 pts \u0e40\u0e2b\u0e19\u0e37\u0e2d BIL)"
       },
       {
         "Instrument": "UUP (Market Runner-Up)",
-        "Weight": "24.2%",
-        "Action": "BUY / HOLD (Score: 2.81 \u00b7 Spread: +2.22 pts \u0e40\u0e2b\u0e19\u0e37\u0e2d BIL)"
+        "Weight": "31.6%",
+        "Action": "BUY / HOLD (Score: 2.13 \u00b7 Spread: +1.56 pts \u0e40\u0e2b\u0e19\u0e37\u0e2d BIL)"
       },
       {
         "Instrument": "QQQ (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -5.21 vs BIL 0.59)"
+        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -4.28 vs BIL 0.57)"
       },
       {
         "Instrument": "SPY (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -0.32 vs BIL 0.59)"
+        "Action": "EXIT / ZERO (EXCLUDED (OUTSIDE TOP-2) \u00b7 Score: 1.34 vs BIL 0.57)"
       },
       {
         "Instrument": "GLD (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -9.18 vs BIL 0.59)"
+        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -4.95 vs BIL 0.57)"
       },
       {
         "Instrument": "TLT (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: 0.54 vs BIL 0.59)"
+        "Action": "EXIT / ZERO (EXCLUDED (OUTSIDE TOP-2) \u00b7 Score: 1.36 vs BIL 0.57)"
       }
     ],
     "historical_metrics": {
@@ -71,233 +73,233 @@
     }
   },
   "strategy_qqq_rotation": {
-    "regime": "DUOPOLY LEADERS (DBC 75.8% + UUP 24.2%)",
-    "qqq_score": -5.21,
-    "qqq_vol20d": 22.45,
+    "regime": "DUOPOLY LEADERS (DBC 68.4% + UUP 31.6%)",
+    "qqq_score": -4.28,
+    "qqq_vol20d": 23.05,
     "qqq_exposure": 0.0,
     "target_weights": {
-      "BND": 0.0,
-      "EFA": 0.0,
-      "EEM": 0.0,
+      "UUP": 0.3164,
       "HYG": 0.0,
-      "TLT": 0.0,
-      "GLD": 0.0,
-      "DBC": 0.7582,
-      "SPY": 0.0,
-      "VNQ": 0.0,
+      "DBC": 0.6836,
+      "EEM": 0.0,
+      "BND": 0.0,
       "FXY": 0.0,
-      "IEF": 0.0,
+      "VNQ": 0.0,
+      "EFA": 0.0,
+      "SPY": 0.0,
       "BIL": 0.0,
-      "UUP": 0.2418,
-      "QQQ": 0.0
+      "TLT": 0.0,
+      "QQQ": 0.0,
+      "GLD": 0.0,
+      "IEF": 0.0
     },
     "execution_plan": [
       {
         "Instrument": "DBC (Market Champion)",
-        "Weight": "75.8%",
-        "Action": "BUY / HOLD (Score: 7.55 \u00b7 Spread: +6.96 pts \u0e40\u0e2b\u0e19\u0e37\u0e2d BIL)"
+        "Weight": "68.4%",
+        "Action": "BUY / HOLD (Score: 3.94 \u00b7 Spread: +3.37 pts \u0e40\u0e2b\u0e19\u0e37\u0e2d BIL)"
       },
       {
         "Instrument": "UUP (Market Runner-Up)",
-        "Weight": "24.2%",
-        "Action": "BUY / HOLD (Score: 2.81 \u00b7 Spread: +2.22 pts \u0e40\u0e2b\u0e19\u0e37\u0e2d BIL)"
+        "Weight": "31.6%",
+        "Action": "BUY / HOLD (Score: 2.13 \u00b7 Spread: +1.56 pts \u0e40\u0e2b\u0e19\u0e37\u0e2d BIL)"
       },
       {
         "Instrument": "QQQ (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -5.21 vs BIL 0.59)"
+        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -4.28 vs BIL 0.57)"
       },
       {
         "Instrument": "SPY (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -0.32 vs BIL 0.59)"
+        "Action": "EXIT / ZERO (EXCLUDED (OUTSIDE TOP-2) \u00b7 Score: 1.34 vs BIL 0.57)"
       },
       {
         "Instrument": "GLD (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -9.18 vs BIL 0.59)"
+        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -4.95 vs BIL 0.57)"
       },
       {
         "Instrument": "TLT (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: 0.54 vs BIL 0.59)"
+        "Action": "EXIT / ZERO (EXCLUDED (OUTSIDE TOP-2) \u00b7 Score: 1.36 vs BIL 0.57)"
       }
     ]
   },
   "strategy_global_macro": {
-    "selected_core": "DBC",
+    "selected_core": "SPY",
     "core_exposure": 1.0,
     "target_weights": {
-      "BND": 0.0,
-      "EFA": 0.0,
-      "EEM": 0.0,
+      "UUP": 0.3164,
       "HYG": 0.0,
-      "TLT": 0.0,
-      "GLD": 0.0,
-      "DBC": 0.7582,
-      "SPY": 0.0,
-      "VNQ": 0.0,
+      "DBC": 0.6836,
+      "EEM": 0.0,
+      "BND": 0.0,
       "FXY": 0.0,
-      "IEF": 0.0,
+      "VNQ": 0.0,
+      "EFA": 0.0,
+      "SPY": 0.0,
       "BIL": 0.0,
-      "UUP": 0.2418,
-      "QQQ": 0.0
+      "TLT": 0.0,
+      "QQQ": 0.0,
+      "GLD": 0.0,
+      "IEF": 0.0
     }
   },
   "full_metrics": {
-    "DBC": {
-      "Price": 32.44,
-      "Ret20d": -0.76,
-      "Ret60d": 8.39,
-      "Ret120d": 3.41,
-      "Ret252d": 46.56,
-      "Score": 7.55,
-      "Vol20d": 16.83,
-      "DistHigh40": -4.87,
-      "DistSMA200": 10.62
-    },
     "VNQ": {
-      "Price": 95.01,
-      "Ret20d": 5.65,
-      "Ret60d": -1.31,
-      "Ret120d": 0.82,
-      "Ret252d": 10.57,
-      "Score": 3.09,
-      "Vol20d": 16.53,
-      "DistHigh40": -0.05,
-      "DistSMA200": 1.84
+      "Price": 98.03,
+      "Ret20d": 10.53,
+      "Ret60d": 2.59,
+      "Ret120d": 4.65,
+      "Ret252d": 14.25,
+      "Score": 7.35,
+      "Vol20d": 18.29,
+      "DistHigh40": 0.0,
+      "DistSMA200": 5.02
+    },
+    "DBC": {
+      "Price": 31.29,
+      "Ret20d": -3.75,
+      "Ret60d": 4.4,
+      "Ret120d": 0.45,
+      "Ret252d": 40.32,
+      "Score": 3.94,
+      "Vol20d": 20.91,
+      "DistHigh40": -8.24,
+      "DistSMA200": 6.56
+    },
+    "EFA": {
+      "Price": 105.72,
+      "Ret20d": 2.54,
+      "Ret60d": -2.19,
+      "Ret120d": 3.8,
+      "Ret252d": 15.67,
+      "Score": 2.69,
+      "Vol20d": 13.09,
+      "DistHigh40": -0.92,
+      "DistSMA200": 3.11
     },
     "UUP": {
-      "Price": 29.01,
-      "Ret20d": 0.38,
-      "Ret60d": 3.09,
-      "Ret120d": 5.45,
-      "Ret252d": 6.35,
-      "Score": 2.81,
-      "Vol20d": 4.43,
-      "DistHigh40": -0.41,
-      "DistSMA200": 3.83
+      "Price": 28.9,
+      "Ret20d": -0.48,
+      "Ret60d": 2.7,
+      "Ret120d": 4.63,
+      "Ret252d": 5.87,
+      "Score": 2.13,
+      "Vol20d": 4.28,
+      "DistHigh40": -0.79,
+      "DistSMA200": 3.4
+    },
+    "TLT": {
+      "Price": 81.76,
+      "Ret20d": 5.98,
+      "Ret60d": -0.14,
+      "Ret120d": -2.22,
+      "Ret252d": -5.39,
+      "Score": 1.36,
+      "Vol20d": 11.09,
+      "DistHigh40": -0.1,
+      "DistSMA200": -2.05
+    },
+    "SPY": {
+      "Price": 766.81,
+      "Ret20d": -1.34,
+      "Ret60d": -0.24,
+      "Ret120d": 3.01,
+      "Ret252d": 13.43,
+      "Score": 1.34,
+      "Vol20d": 12.85,
+      "DistHigh40": -1.58,
+      "DistSMA200": 5.46
     },
     "BIL": {
       "Price": 91.42,
-      "Ret20d": -0.03,
-      "Ret60d": 0.24,
-      "Ret120d": 1.12,
-      "Ret252d": 3.05,
-      "Score": 0.59,
+      "Ret20d": -0.04,
+      "Ret60d": 0.23,
+      "Ret120d": 1.1,
+      "Ret252d": 3.04,
+      "Score": 0.57,
       "Vol20d": 1.2,
       "DistHigh40": -0.31,
-      "DistSMA200": 0.84
-    },
-    "TLT": {
-      "Price": 81.11,
-      "Ret20d": 4.96,
-      "Ret60d": -0.78,
-      "Ret120d": -2.86,
-      "Ret252d": -6.38,
-      "Score": 0.54,
-      "Vol20d": 11.04,
-      "DistHigh40": -0.89,
-      "DistSMA200": -2.85
+      "DistSMA200": 0.83
     },
     "BND": {
-      "Price": 71.2,
-      "Ret20d": 1.69,
-      "Ret60d": -0.97,
-      "Ret120d": -1.36,
-      "Ret252d": -0.98,
-      "Score": 0.01,
-      "Vol20d": 4.56,
-      "DistHigh40": -0.74,
-      "DistSMA200": -1.16
+      "Price": 71.5,
+      "Ret20d": 2.14,
+      "Ret60d": -0.64,
+      "Ret120d": -0.92,
+      "Ret252d": -0.45,
+      "Score": 0.44,
+      "Vol20d": 4.69,
+      "DistHigh40": -0.08,
+      "DistSMA200": -0.74
     },
     "IEF": {
-      "Price": 91.16,
-      "Ret20d": 2.28,
-      "Ret60d": -1.37,
-      "Ret120d": -2.02,
-      "Ret252d": -2.45,
-      "Score": -0.15,
-      "Vol20d": 5.9,
-      "DistHigh40": -0.81,
-      "DistSMA200": -1.74
-    },
-    "SPY": {
-      "Price": 754.35,
-      "Ret20d": -3.18,
-      "Ret60d": -2.17,
-      "Ret120d": 2.14,
-      "Ret252d": 11.79,
-      "Score": -0.32,
-      "Vol20d": 11.14,
-      "DistHigh40": -3.18,
-      "DistSMA200": 3.81
-    },
-    "EFA": {
-      "Price": 103.08,
-      "Ret20d": -1.09,
-      "Ret60d": -4.56,
-      "Ret120d": 0.85,
-      "Ret252d": 12.83,
-      "Score": -0.35,
-      "Vol20d": 10.16,
-      "DistHigh40": -3.39,
-      "DistSMA200": 0.58
+      "Price": 91.66,
+      "Ret20d": 2.86,
+      "Ret60d": -0.95,
+      "Ret120d": -1.42,
+      "Ret252d": -1.87,
+      "Score": 0.39,
+      "Vol20d": 6.07,
+      "DistHigh40": -0.11,
+      "DistSMA200": -1.19
     },
     "FXY": {
-      "Price": 57.69,
-      "Ret20d": -0.41,
-      "Ret60d": 0.12,
-      "Ret120d": -0.83,
-      "Ret252d": -3.3,
-      "Score": -0.62,
-      "Vol20d": 5.05,
-      "DistHigh40": -3.37,
-      "DistSMA200": -0.36
+      "Price": 57.82,
+      "Ret20d": -0.29,
+      "Ret60d": 0.33,
+      "Ret120d": -0.31,
+      "Ret252d": -3.05,
+      "Score": -0.39,
+      "Vol20d": 5.1,
+      "DistHigh40": -3.12,
+      "DistSMA200": -0.13
     },
     "HYG": {
-      "Price": 76.98,
-      "Ret20d": -0.38,
-      "Ret60d": -2.61,
-      "Ret120d": -1.72,
-      "Ret252d": 0.6,
-      "Score": -1.22,
-      "Vol20d": 4.36,
-      "DistHigh40": -2.53,
-      "DistSMA200": -1.55
+      "Price": 77.52,
+      "Ret20d": 0.44,
+      "Ret60d": -1.97,
+      "Ret120d": -0.95,
+      "Ret252d": 1.62,
+      "Score": -0.44,
+      "Vol20d": 5.04,
+      "DistHigh40": -1.52,
+      "DistSMA200": -0.86
     },
     "QQQ": {
-      "Price": 685.28,
-      "Ret20d": -9.79,
-      "Ret60d": -4.84,
-      "Ret120d": -3.91,
-      "Ret252d": 9.45,
-      "Score": -5.21,
-      "Vol20d": 22.45,
-      "DistHigh40": -9.79,
-      "DistSMA200": 0.92
-    },
-    "EEM": {
-      "Price": 61.1,
-      "Ret20d": -10.5,
-      "Ret60d": -6.25,
-      "Ret120d": -8.62,
-      "Ret252d": 12.65,
-      "Score": -6.53,
-      "Vol20d": 20.46,
-      "DistHigh40": -11.58,
-      "DistSMA200": -4.16
+      "Price": 691.95,
+      "Ret20d": -8.68,
+      "Ret60d": -3.59,
+      "Ret120d": -3.66,
+      "Ret252d": 9.99,
+      "Score": -4.28,
+      "Vol20d": 23.05,
+      "DistHigh40": -8.91,
+      "DistSMA200": 1.84
     },
     "GLD": {
-      "Price": 359.26,
-      "Ret20d": -6.02,
-      "Ret60d": -10.75,
-      "Ret120d": -16.55,
-      "Ret252d": -2.41,
-      "Score": -9.18,
-      "Vol20d": 22.03,
-      "DistHigh40": -10.93,
-      "DistSMA200": -12.86
+      "Price": 372.49,
+      "Ret20d": -0.9,
+      "Ret60d": -7.1,
+      "Ret120d": -12.81,
+      "Ret252d": 1.01,
+      "Score": -4.95,
+      "Vol20d": 25.53,
+      "DistHigh40": -7.15,
+      "DistSMA200": -9.58
+    },
+    "EEM": {
+      "Price": 61.62,
+      "Ret20d": -8.53,
+      "Ret60d": -5.82,
+      "Ret120d": -8.07,
+      "Ret252d": 12.9,
+      "Score": -5.49,
+      "Vol20d": 20.82,
+      "DistHigh40": -10.82,
+      "DistSMA200": -3.38
     }
   }
 }
