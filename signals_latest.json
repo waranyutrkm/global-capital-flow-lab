@@ -1,60 +1,56 @@
 {
   "as_of_date": "2026-11-09",
-  "cash_hurdle_bil_score": 0.77,
-  "qualifying_tournament_assets": [
-    "DBC",
-    "TLT",
-    "UUP"
-  ],
+  "cash_hurdle_bil_score": NaN,
+  "qualifying_tournament_assets": [],
   "strategy_dynamic_tournament": {
     "name": "Pure Dynamic Market Tournament (Zero-Bias)",
-    "regime": "DUOPOLY LEADERS (UUP 56.4% + TLT 43.6%)",
+    "regime": "FULL CAPITAL PRESERVATION (100% BIL CASH)",
     "target_weights": {
+      "EFA": 0.0,
+      "BIL": 1.0,
+      "HYG": 0.0,
+      "FXY": 0.0,
+      "TLT": 0.0,
+      "DBC": 0.0,
       "EEM": 0.0,
       "SPY": 0.0,
-      "VNQ": 0.0,
-      "HYG": 0.0,
-      "DBC": 0.0,
-      "BIL": 0.0,
-      "GLD": 0.0,
-      "IEF": 0.0,
-      "EFA": 0.0,
-      "UUP": 0.564,
-      "BND": 0.0,
-      "FXY": 0.0,
       "QQQ": 0.0,
-      "TLT": 0.436
+      "UUP": 0.0,
+      "VNQ": 0.0,
+      "BND": 0.0,
+      "IEF": 0.0,
+      "GLD": 0.0
     },
     "execution_plan": [
       {
-        "Instrument": "UUP (Market Champion)",
-        "Weight": "56.4%",
-        "Action": "BUY / HOLD (Score: 2.18 \u00b7 Spread: +1.41 pts \u0e40\u0e2b\u0e19\u0e37\u0e2d BIL)"
-      },
-      {
-        "Instrument": "TLT (Market Runner-Up)",
-        "Weight": "43.6%",
-        "Action": "BUY / HOLD (Score: 1.86 \u00b7 Spread: +1.09 pts \u0e40\u0e2b\u0e19\u0e37\u0e2d BIL)"
+        "Instrument": "BIL (Cash T-Bills)",
+        "Weight": "100.0%",
+        "Action": "HOLD CASH (\u0e17\u0e38\u0e01\u0e2a\u0e34\u0e19\u0e17\u0e23\u0e31\u0e1e\u0e22\u0e4c\u0e43\u0e19\u0e15\u0e25\u0e32\u0e14\u0e41\u0e1e\u0e49\u0e14\u0e2d\u0e01\u0e40\u0e1a\u0e35\u0e49\u0e22\u0e40\u0e07\u0e34\u0e19\u0e2a\u0e14 nan pts)"
       },
       {
         "Instrument": "QQQ (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -5.10 vs BIL 0.77)"
+        "Action": "EXIT / ZERO (EXCLUDED (OUTSIDE TOP-2) \u00b7 Score: -5.10 vs BIL nan)"
       },
       {
         "Instrument": "SPY (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -0.18 vs BIL 0.77)"
+        "Action": "EXIT / ZERO (EXCLUDED (OUTSIDE TOP-2) \u00b7 Score: -0.18 vs BIL nan)"
       },
       {
         "Instrument": "GLD (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -3.10 vs BIL 0.77)"
+        "Action": "EXIT / ZERO (EXCLUDED (OUTSIDE TOP-2) \u00b7 Score: -3.10 vs BIL nan)"
       },
       {
         "Instrument": "DBC (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (EXCLUDED (OUTSIDE TOP-2) \u00b7 Score: 1.78 vs BIL 0.77)"
+        "Action": "EXIT / ZERO (EXCLUDED (OUTSIDE TOP-2) \u00b7 Score: 1.78 vs BIL nan)"
+      },
+      {
+        "Instrument": "TLT (Unallocated)",
+        "Weight": "0.0%",
+        "Action": "EXIT / ZERO (EXCLUDED (OUTSIDE TOP-2) \u00b7 Score: 1.86 vs BIL nan)"
       }
     ],
     "historical_metrics": {
@@ -72,77 +68,77 @@
     }
   },
   "strategy_qqq_rotation": {
-    "regime": "DUOPOLY LEADERS (UUP 56.4% + TLT 43.6%)",
+    "regime": "FULL CAPITAL PRESERVATION (100% BIL CASH)",
     "qqq_score": -5.1,
     "qqq_vol20d": 35.34,
     "qqq_exposure": 0.0,
     "target_weights": {
+      "EFA": 0.0,
+      "BIL": 1.0,
+      "HYG": 0.0,
+      "FXY": 0.0,
+      "TLT": 0.0,
+      "DBC": 0.0,
       "EEM": 0.0,
       "SPY": 0.0,
-      "VNQ": 0.0,
-      "HYG": 0.0,
-      "DBC": 0.0,
-      "BIL": 0.0,
-      "GLD": 0.0,
-      "IEF": 0.0,
-      "EFA": 0.0,
-      "UUP": 0.564,
-      "BND": 0.0,
-      "FXY": 0.0,
       "QQQ": 0.0,
-      "TLT": 0.436
+      "UUP": 0.0,
+      "VNQ": 0.0,
+      "BND": 0.0,
+      "IEF": 0.0,
+      "GLD": 0.0
     },
     "execution_plan": [
       {
-        "Instrument": "UUP (Market Champion)",
-        "Weight": "56.4%",
-        "Action": "BUY / HOLD (Score: 2.18 \u00b7 Spread: +1.41 pts \u0e40\u0e2b\u0e19\u0e37\u0e2d BIL)"
-      },
-      {
-        "Instrument": "TLT (Market Runner-Up)",
-        "Weight": "43.6%",
-        "Action": "BUY / HOLD (Score: 1.86 \u00b7 Spread: +1.09 pts \u0e40\u0e2b\u0e19\u0e37\u0e2d BIL)"
+        "Instrument": "BIL (Cash T-Bills)",
+        "Weight": "100.0%",
+        "Action": "HOLD CASH (\u0e17\u0e38\u0e01\u0e2a\u0e34\u0e19\u0e17\u0e23\u0e31\u0e1e\u0e22\u0e4c\u0e43\u0e19\u0e15\u0e25\u0e32\u0e14\u0e41\u0e1e\u0e49\u0e14\u0e2d\u0e01\u0e40\u0e1a\u0e35\u0e49\u0e22\u0e40\u0e07\u0e34\u0e19\u0e2a\u0e14 nan pts)"
       },
       {
         "Instrument": "QQQ (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -5.10 vs BIL 0.77)"
+        "Action": "EXIT / ZERO (EXCLUDED (OUTSIDE TOP-2) \u00b7 Score: -5.10 vs BIL nan)"
       },
       {
         "Instrument": "SPY (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -0.18 vs BIL 0.77)"
+        "Action": "EXIT / ZERO (EXCLUDED (OUTSIDE TOP-2) \u00b7 Score: -0.18 vs BIL nan)"
       },
       {
         "Instrument": "GLD (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -3.10 vs BIL 0.77)"
+        "Action": "EXIT / ZERO (EXCLUDED (OUTSIDE TOP-2) \u00b7 Score: -3.10 vs BIL nan)"
       },
       {
         "Instrument": "DBC (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (EXCLUDED (OUTSIDE TOP-2) \u00b7 Score: 1.78 vs BIL 0.77)"
+        "Action": "EXIT / ZERO (EXCLUDED (OUTSIDE TOP-2) \u00b7 Score: 1.78 vs BIL nan)"
+      },
+      {
+        "Instrument": "TLT (Unallocated)",
+        "Weight": "0.0%",
+        "Action": "EXIT / ZERO (EXCLUDED (OUTSIDE TOP-2) \u00b7 Score: 1.86 vs BIL nan)"
       }
     ]
   },
   "strategy_global_macro": {
-    "selected_core": "DBC",
+    "selected_core": "NONE",
     "core_exposure": 1.0,
     "target_weights": {
+      "EFA": 0.0,
+      "BIL": 1.0,
+      "HYG": 0.0,
+      "FXY": 0.0,
+      "TLT": 0.0,
+      "DBC": 0.0,
       "EEM": 0.0,
       "SPY": 0.0,
-      "VNQ": 0.0,
-      "HYG": 0.0,
-      "DBC": 0.0,
-      "BIL": 0.0,
-      "GLD": 0.0,
-      "IEF": 0.0,
-      "EFA": 0.0,
-      "UUP": 0.564,
-      "BND": 0.0,
-      "FXY": 0.0,
       "QQQ": 0.0,
-      "TLT": 0.436
+      "UUP": 0.0,
+      "VNQ": 0.0,
+      "BND": 0.0,
+      "IEF": 0.0,
+      "GLD": 0.0
     }
   },
   "full_metrics": {
@@ -211,17 +207,6 @@
       "Vol20d": 4.68,
       "DistHigh40": -0.04,
       "DistSMA200": -0.25
-    },
-    "BIL": {
-      "Price": 91.48,
-      "Ret20d": -0.02,
-      "Ret60d": 0.54,
-      "Ret120d": 1.41,
-      "Ret252d": 3.37,
-      "Score": 0.77,
-      "Vol20d": 1.19,
-      "DistHigh40": -0.24,
-      "DistSMA200": 1.12
     },
     "IEF": {
       "Price": 91.8,
@@ -299,6 +284,17 @@
       "Vol20d": 31.45,
       "DistHigh40": -11.68,
       "DistSMA200": -4.33
+    },
+    "BIL": {
+      "Price": NaN,
+      "Ret20d": NaN,
+      "Ret60d": NaN,
+      "Ret120d": NaN,
+      "Ret252d": NaN,
+      "Score": NaN,
+      "Vol20d": NaN,
+      "DistHigh40": NaN,
+      "DistSMA200": NaN
     }
   }
 }
