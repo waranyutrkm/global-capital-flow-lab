@@ -1,6 +1,6 @@
 {
-  "as_of_date": "2026-11-17",
-  "cash_hurdle_bil_score": 1.1,
+  "as_of_date": "2026-11-18",
+  "cash_hurdle_bil_score": 1.09,
   "qualifying_tournament_assets": [
     "UUP"
   ],
@@ -8,51 +8,51 @@
     "name": "Pure Dynamic Market Tournament (Zero-Bias)",
     "regime": "SOLO MARKET LEADER (100% UUP)",
     "target_weights": {
-      "DBC": 0.0,
-      "HYG": 0.0,
-      "IEF": 0.0,
-      "VNQ": 0.0,
       "GLD": 0.0,
+      "IEF": 0.0,
       "EEM": 0.0,
+      "EFA": 0.0,
+      "TLT": 0.0,
+      "DBC": 0.0,
+      "VNQ": 0.0,
       "UUP": 1.0,
       "SPY": 0.0,
-      "QQQ": 0.0,
-      "EFA": 0.0,
-      "BND": 0.0,
       "FXY": 0.0,
-      "TLT": 0.0,
+      "HYG": 0.0,
+      "BND": 0.0,
+      "QQQ": 0.0,
       "BIL": 0.0
     },
     "execution_plan": [
       {
         "Instrument": "UUP (Sole Market Champion)",
         "Weight": "100.0%",
-        "Action": "ALLOCATE (\u0e04\u0e30\u0e41\u0e19\u0e19\u0e19\u0e33\u0e40\u0e14\u0e35\u0e48\u0e22\u0e27 4.78 > BIL 1.10)"
+        "Action": "ALLOCATE (\u0e04\u0e30\u0e41\u0e19\u0e19\u0e19\u0e33\u0e40\u0e14\u0e35\u0e48\u0e22\u0e27 5.06 > BIL 1.09)"
       },
       {
         "Instrument": "QQQ (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -6.71 vs BIL 1.10)"
+        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -6.88 vs BIL 1.09)"
       },
       {
         "Instrument": "SPY (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -2.52 vs BIL 1.10)"
+        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -3.06 vs BIL 1.09)"
       },
       {
         "Instrument": "GLD (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -11.43 vs BIL 1.10)"
+        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -14.53 vs BIL 1.09)"
       },
       {
         "Instrument": "DBC (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -0.85 vs BIL 1.10)"
+        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -2.35 vs BIL 1.09)"
       },
       {
         "Instrument": "TLT (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -2.49 vs BIL 1.10)"
+        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -2.08 vs BIL 1.09)"
       }
     ],
     "historical_metrics": {
@@ -71,55 +71,55 @@
   },
   "strategy_qqq_rotation": {
     "regime": "SOLO MARKET LEADER (100% UUP)",
-    "qqq_score": -6.71,
-    "qqq_vol20d": 36.04,
+    "qqq_score": -6.88,
+    "qqq_vol20d": 35.75,
     "qqq_exposure": 0.0,
     "target_weights": {
-      "DBC": 0.0,
-      "HYG": 0.0,
-      "IEF": 0.0,
-      "VNQ": 0.0,
       "GLD": 0.0,
+      "IEF": 0.0,
       "EEM": 0.0,
+      "EFA": 0.0,
+      "TLT": 0.0,
+      "DBC": 0.0,
+      "VNQ": 0.0,
       "UUP": 1.0,
       "SPY": 0.0,
-      "QQQ": 0.0,
-      "EFA": 0.0,
-      "BND": 0.0,
       "FXY": 0.0,
-      "TLT": 0.0,
+      "HYG": 0.0,
+      "BND": 0.0,
+      "QQQ": 0.0,
       "BIL": 0.0
     },
     "execution_plan": [
       {
         "Instrument": "UUP (Sole Market Champion)",
         "Weight": "100.0%",
-        "Action": "ALLOCATE (\u0e04\u0e30\u0e41\u0e19\u0e19\u0e19\u0e33\u0e40\u0e14\u0e35\u0e48\u0e22\u0e27 4.78 > BIL 1.10)"
+        "Action": "ALLOCATE (\u0e04\u0e30\u0e41\u0e19\u0e19\u0e19\u0e33\u0e40\u0e14\u0e35\u0e48\u0e22\u0e27 5.06 > BIL 1.09)"
       },
       {
         "Instrument": "QQQ (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -6.71 vs BIL 1.10)"
+        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -6.88 vs BIL 1.09)"
       },
       {
         "Instrument": "SPY (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -2.52 vs BIL 1.10)"
+        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -3.06 vs BIL 1.09)"
       },
       {
         "Instrument": "GLD (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -11.43 vs BIL 1.10)"
+        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -14.53 vs BIL 1.09)"
       },
       {
         "Instrument": "DBC (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -0.85 vs BIL 1.10)"
+        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -2.35 vs BIL 1.09)"
       },
       {
         "Instrument": "TLT (Unallocated)",
         "Weight": "0.0%",
-        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -2.49 vs BIL 1.10)"
+        "Action": "EXIT / ZERO (FAIL (SCORE <= BIL) \u00b7 Score: -2.08 vs BIL 1.09)"
       }
     ]
   },
@@ -127,176 +127,176 @@
     "selected_core": "UUP",
     "core_exposure": 1.0,
     "target_weights": {
-      "DBC": 0.0,
-      "HYG": 0.0,
-      "IEF": 0.0,
-      "VNQ": 0.0,
       "GLD": 0.0,
+      "IEF": 0.0,
       "EEM": 0.0,
+      "EFA": 0.0,
+      "TLT": 0.0,
+      "DBC": 0.0,
+      "VNQ": 0.0,
       "UUP": 1.0,
       "SPY": 0.0,
-      "QQQ": 0.0,
-      "EFA": 0.0,
-      "BND": 0.0,
       "FXY": 0.0,
-      "TLT": 0.0,
+      "HYG": 0.0,
+      "BND": 0.0,
+      "QQQ": 0.0,
       "BIL": 0.0
     }
   },
   "full_metrics": {
     "UUP": {
-      "Price": 29.54,
-      "Ret20d": 2.21,
-      "Ret60d": 5.65,
-      "Ret120d": 6.64,
-      "Ret252d": 8.68,
-      "Score": 4.78,
-      "Vol20d": 5.29,
-      "DistHigh40": -0.07,
-      "DistSMA200": 5.28
-    },
-    "BIL": {
-      "Price": 91.55,
-      "Ret20d": 0.3,
-      "Ret60d": 0.87,
-      "Ret120d": 1.74,
-      "Ret252d": 3.68,
-      "Score": 1.1,
-      "Vol20d": 0.19,
+      "Price": 29.62,
+      "Ret20d": 2.42,
+      "Ret60d": 6.01,
+      "Ret120d": 7.09,
+      "Ret252d": 8.7,
+      "Score": 5.06,
+      "Vol20d": 5.32,
       "DistHigh40": 0.0,
-      "DistSMA200": 1.44
+      "DistSMA200": 5.51
     },
     "VNQ": {
-      "Price": 94.89,
-      "Ret20d": 2.83,
-      "Ret60d": -3.42,
-      "Ret120d": 0.01,
-      "Ret252d": 9.92,
-      "Score": 1.1,
-      "Vol20d": 19.52,
-      "DistHigh40": -3.2,
-      "DistSMA200": 1.25
+      "Price": 95.18,
+      "Ret20d": 4.03,
+      "Ret60d": -3.27,
+      "Ret120d": 1.2,
+      "Ret252d": 11.18,
+      "Score": 1.99,
+      "Vol20d": 19.16,
+      "DistHigh40": -2.91,
+      "DistSMA200": 1.51
+    },
+    "BIL": {
+      "Price": 91.56,
+      "Ret20d": 0.29,
+      "Ret60d": 0.87,
+      "Ret120d": 1.72,
+      "Ret252d": 3.69,
+      "Score": 1.09,
+      "Vol20d": 0.19,
+      "DistHigh40": 0.0,
+      "DistSMA200": 1.43
     },
     "BND": {
-      "Price": 70.71,
-      "Ret20d": 0.3,
-      "Ret60d": -1.25,
-      "Ret120d": -1.66,
-      "Ret252d": -0.72,
-      "Score": -0.66,
-      "Vol20d": 5.33,
-      "DistHigh40": -1.31,
-      "DistSMA200": -1.13
+      "Price": 70.87,
+      "Ret20d": 0.53,
+      "Ret60d": -1.43,
+      "Ret120d": -1.49,
+      "Ret252d": -0.55,
+      "Score": -0.57,
+      "Vol20d": 5.38,
+      "DistHigh40": -1.09,
+      "DistSMA200": -0.91
     },
     "FXY": {
-      "Price": 57.5,
-      "Ret20d": -0.71,
-      "Ret60d": -0.24,
-      "Ret120d": -0.26,
-      "Ret252d": -3.41,
-      "Score": -0.75,
+      "Price": 57.51,
+      "Ret20d": -0.67,
+      "Ret60d": -0.21,
+      "Ret120d": -0.19,
+      "Ret252d": -2.92,
+      "Score": -0.66,
       "Vol20d": 6.38,
-      "DistHigh40": -1.61,
-      "DistSMA200": -0.56
+      "DistHigh40": -1.59,
+      "DistSMA200": -0.53
     },
     "HYG": {
-      "Price": 76.63,
-      "Ret20d": 0.26,
-      "Ret60d": -2.39,
-      "Ret120d": -1.61,
-      "Ret252d": 1.32,
-      "Score": -0.8,
-      "Vol20d": 4.79,
-      "DistHigh40": -1.15,
-      "DistSMA200": -1.1
-    },
-    "DBC": {
-      "Price": 30.19,
-      "Ret20d": -10.07,
-      "Ret60d": -2.42,
-      "Ret120d": 1.58,
-      "Ret252d": 35.86,
-      "Score": -0.85,
-      "Vol20d": 20.1,
-      "DistHigh40": -11.47,
-      "DistSMA200": 1.79
+      "Price": 76.65,
+      "Ret20d": 0.09,
+      "Ret60d": -2.63,
+      "Ret120d": -1.68,
+      "Ret252d": 1.51,
+      "Score": -0.94,
+      "Vol20d": 4.74,
+      "DistHigh40": -1.12,
+      "DistSMA200": -1.07
     },
     "IEF": {
-      "Price": 90.41,
-      "Ret20d": 0.52,
-      "Ret60d": -1.78,
-      "Ret120d": -2.39,
-      "Ret252d": -2.48,
-      "Score": -1.05,
-      "Vol20d": 7.14,
-      "DistHigh40": -1.7,
-      "DistSMA200": -1.83
-    },
-    "EFA": {
-      "Price": 101.35,
-      "Ret20d": -2.26,
-      "Ret60d": -6.18,
-      "Ret120d": -1.66,
-      "Ret252d": 10.04,
-      "Score": -2.09,
-      "Vol20d": 20.66,
-      "DistHigh40": -4.13,
-      "DistSMA200": -1.34
+      "Price": 90.67,
+      "Ret20d": 0.83,
+      "Ret60d": -2.02,
+      "Ret120d": -2.22,
+      "Ret252d": -2.31,
+      "Score": -0.95,
+      "Vol20d": 7.2,
+      "DistHigh40": -1.41,
+      "DistSMA200": -1.54
     },
     "TLT": {
-      "Price": 79.55,
-      "Ret20d": -0.31,
-      "Ret60d": -2.48,
-      "Ret120d": -5.0,
-      "Ret252d": -6.28,
-      "Score": -2.49,
-      "Vol20d": 11.87,
-      "DistHigh40": -2.94,
-      "DistSMA200": -3.78
+      "Price": 80.22,
+      "Ret20d": 0.4,
+      "Ret60d": -2.73,
+      "Ret120d": -4.22,
+      "Ret252d": -5.72,
+      "Score": -2.08,
+      "Vol20d": 12.24,
+      "DistHigh40": -2.12,
+      "DistSMA200": -2.94
+    },
+    "DBC": {
+      "Price": 29.51,
+      "Ret20d": -11.91,
+      "Ret60d": -3.02,
+      "Ret120d": 0.1,
+      "Ret252d": 32.97,
+      "Score": -2.35,
+      "Vol20d": 20.97,
+      "DistHigh40": -13.46,
+      "DistSMA200": -0.59
     },
     "SPY": {
-      "Price": 732.44,
-      "Ret20d": -4.76,
-      "Ret60d": -3.83,
-      "Ret120d": -2.44,
-      "Ret252d": 10.18,
-      "Score": -2.52,
-      "Vol20d": 23.06,
-      "DistHigh40": -5.99,
-      "DistSMA200": 0.36
+      "Price": 730.2,
+      "Ret20d": -5.55,
+      "Ret60d": -4.43,
+      "Ret120d": -2.98,
+      "Ret252d": 10.88,
+      "Score": -3.06,
+      "Vol20d": 22.88,
+      "DistHigh40": -6.28,
+      "DistSMA200": 0.02
+    },
+    "EFA": {
+      "Price": 100.26,
+      "Ret20d": -3.65,
+      "Ret60d": -7.86,
+      "Ret120d": -2.82,
+      "Ret252d": 10.29,
+      "Score": -3.35,
+      "Vol20d": 20.86,
+      "DistHigh40": -5.16,
+      "DistSMA200": -2.4
     },
     "QQQ": {
-      "Price": 656.95,
-      "Ret20d": -8.46,
-      "Ret60d": -6.89,
-      "Ret120d": -10.5,
-      "Ret252d": 8.41,
-      "Score": -6.71,
-      "Vol20d": 36.04,
-      "DistHigh40": -13.52,
-      "DistSMA200": -3.61
+      "Price": 659.51,
+      "Ret20d": -9.06,
+      "Ret60d": -7.11,
+      "Ret120d": -10.48,
+      "Ret252d": 9.77,
+      "Score": -6.88,
+      "Vol20d": 35.75,
+      "DistHigh40": -13.18,
+      "DistSMA200": -3.27
     },
     "EEM": {
-      "Price": 58.27,
-      "Ret20d": -7.98,
-      "Ret60d": -11.86,
-      "Ret120d": -14.63,
-      "Ret252d": 8.1,
-      "Score": -8.86,
-      "Vol20d": 33.92,
-      "DistHigh40": -15.22,
-      "DistSMA200": -8.69
+      "Price": 57.88,
+      "Ret20d": -8.95,
+      "Ret60d": -13.93,
+      "Ret120d": -15.19,
+      "Ret252d": 8.66,
+      "Score": -9.93,
+      "Vol20d": 33.8,
+      "DistHigh40": -15.79,
+      "DistSMA200": -9.29
     },
     "GLD": {
-      "Price": 352.48,
-      "Ret20d": -6.66,
-      "Ret60d": -17.39,
-      "Ret120d": -14.61,
-      "Ret252d": -6.25,
-      "Score": -11.43,
-      "Vol20d": 28.02,
-      "DistHigh40": -10.4,
-      "DistSMA200": -13.52
+      "Price": 341.19,
+      "Ret20d": -9.96,
+      "Ret60d": -20.3,
+      "Ret120d": -18.2,
+      "Ret252d": -8.2,
+      "Score": -14.53,
+      "Vol20d": 29.67,
+      "DistHigh40": -13.27,
+      "DistSMA200": -16.17
     }
   }
 }
