@@ -2822,8 +2822,8 @@
     "SPY": 0.0,
     "GLD": 0.0,
     "DBC": 0.0,
-    "TLT": 86.2,
-    "UUP": 13.8,
+    "TLT": 86.3,
+    "UUP": 13.7,
     "BIL": 0.0,
     "equity_breadth": 60.0,
     "credit_breadth": 100.0,
@@ -14849,7 +14849,7 @@
   },
   {
     "date": "2026-11-13",
-    "regime": "SOLO MARKET LEADER (100% UUP)",
+    "regime": "SOLO CHAMPION (100% UUP)",
     "QQQ": 0.0,
     "SPY": 0.0,
     "GLD": 0.0,
@@ -14862,5 +14862,21 @@
     "commodity_breadth": 0.0,
     "haven_breadth": 25.0,
     "net_flow_breadth": 14.3
+  },
+  {
+    "date": "2026-11-20",
+    "regime": "SOLO MARKET LEADER (100% UUP)",
+    "QQQ": 0.0,
+    "SPY": 0.0,
+    "GLD": 0.0,
+    "DBC": 0.0,
+    "TLT": 0.0,
+    "UUP": 100.0,
+    "BIL": 0.0,
+    "equity_breadth": 0.0,
+    "credit_breadth": 0.0,
+    "commodity_breadth": 0.0,
+    "haven_breadth": 25.0,
+    "net_flow_breadth": 7.1
   }
 ]
